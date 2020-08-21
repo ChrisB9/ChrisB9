@@ -1,0 +1,30 @@
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    router.request_context.host:   cben.dev
+    router.request_context.scheme: https
+
+imports:
+    - { resource: packages/openweathermap.php }
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    App\:
+        public: true
+        resource: '../src/*'
+        exclude: '../src/{DependencyInjection,Model,Tests,Kernel.php,functions.php}'
+
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']
+
+    ParsedownExtended:
+        class: \ParsedownExtended
+
+    templateFromString:
+        class: \Twig\Extension\StringLoaderExtension
+        tags:
+            - { name: twig.extension }

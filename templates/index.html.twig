@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="header flex flex-col">
+        <header class="px-4 py-2 m-2 h-1/3">
+            <h1 class="text-3xl text-white rounded py-2 px-4">cben.dev</h1>
+        </header>
+        <div class="text-center px-4 py-2 m-2 h-1/3" role="region" aria-label="Welcome to my Website">
+            <div class="flex flex-col w-full self-center items-center justify-center" role="img" aria-label="cben.dev Logo">
+                <img class="w-40 h-40 bg-white text-center rounded-full shadow-lg p-2" src="/image/7099583.png" alt="cben.dev Logo">
+            </div>
+        </div>
+        <main class="flex flex-col md:flex-row text-center px-4 py-2 m-2 self-center items-center justify-center">
+            <div class="max-w-sm rounded w-full h-full overflow-hidden shadow-lg bg-white m-1">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2"><a href="/projects">Projects</a></div>
+                    <p class="text-gray-700 text-base">
+                        My current and past opensource projects.
+                    </p>
+                </div>
+            </div>
+            <div class="max-w-sm rounded w-full h-full overflow-hidden shadow-lg bg-white m-1">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2"><a href="/about">About me</a></div>
+                    <p class="text-gray-700 text-base">
+                        I am a full-stack developer and freelancer
+                    </p>
+                </div>
+            </div>
+            <div class="max-w-sm rounded w-full h-full overflow-hidden shadow-lg bg-white m-1">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2"><a href="/freelancing">Freelancing</a></div>
+                    <p class="text-gray-700 text-base">
+                        Client projects I manage and develop.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock %}

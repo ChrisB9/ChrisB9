@@ -1,0 +1,14 @@
+<div x-data="{weather: []}" x-init="fetch('/api/weather').then(response => response.json()).then(data => weather = Object.values(data))" class="flex justify-center">
+    <template x-for="city in weather" :key="city.key">
+        <div class="flex rounded-lg p-6 items-center">
+            <img class="w-10 h-10 rounded-full mr-4" x-bind:src="city.icon" />
+            <div class="text-gray-900 leading-none">
+                <div x-text="city.name"></div>
+                <div class="text-gray-600 pt-2">
+                    <span x-text="city.temp"></span>
+                    <span x-text="city.unit"></span>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>

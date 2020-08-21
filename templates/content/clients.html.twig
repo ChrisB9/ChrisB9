@@ -1,0 +1,16 @@
+{% import 'macro/element.html.twig' as helper %}
+<div class="markdown--disabled" x-data="{query: ''}">
+    {{ helper.projectSearch('clients') }}
+    <section>
+        <h1 class="text-2xl text-gray-700 font-bold">Client Projects</h1>
+        {% for project in data.activeClients %}
+            {{ helper.projectHelper(project) }}
+        {% endfor %}
+    </section>
+    <section>
+        <h1 class="text-xl text-gray-700 font-bold">Past Client References</h1>
+        {% for project in data.inactiveClients %}
+            {{ helper.projectHelper(project) }}
+        {% endfor %}
+    </section>
+</div>

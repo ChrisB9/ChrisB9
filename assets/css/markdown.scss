@@ -1,0 +1,8 @@
+.py-05 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.markdown pre code {
+  @apply block p-2 overflow-visible rounded-none;
+}

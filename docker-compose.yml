@@ -1,0 +1,30 @@
+version: '3.5'
+
+services:
+  web:
+    image: chrisb9/php8-nginx-xdebug:latest
+    volumes:
+      - .:/app
+      - ~/.ssh:/home/application/.ssh
+      - ~/.gitconfig_gitlab:/home/application/.gitconfig
+      - ./vhost.conf:/opt/docker/nginx/conf.d/vhost.conf
+      - ./xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    environment:
+      - VIRTUAL_HOST=website.local.cben.dev
+
+  node:
+    image: node:latest
+    expose:
+      - 8080
+    volumes:
+      - ./:/app
+    working_dir: /app
+    environment:
+      - VIRTUAL_HOST=node.website.local.cben.dev
+      - VIRTUAL_PORT=8080
+    command: tail -f /dev/null
+
+networks:
+  default:
+    external:
+      name: global

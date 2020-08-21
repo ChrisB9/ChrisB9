@@ -1,0 +1,43 @@
+#root .board {
+    margin: 0 auto;
+    display: flex;
+    width: 600px;
+    height: 600px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#root .square {
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+    border: 5px solid black;
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root .square:hover {
+    cursor: pointer;
+    background-color: #80cd92;
+}
+
+#root .square-is-set:hover {
+    cursor: not-allowed;
+    background-color: #cdb780;;
+}
+
+#root .sq-won {
+    background-color: #FFa092;
+}
+
+#root .message {
+    margin: 0 auto;
+    width: 600px;
+    line-height: 1.5;
+    font-size: 2em;
+    font-family: "Ubuntu", Arial;
+    text-align: center;
+}

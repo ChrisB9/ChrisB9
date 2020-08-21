@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include "snippets/head.html.twig" %}
+    <body>
+        {% block body %}{% endblock %}
+        {% include "snippets/footer.html.twig" %}
+        {% block javascripts %}
+            {% for js in encore_entry_js_files('app') %}
+                <script src="{{ asset(js) }}" type="text/javascript" defer="defer"></script>
+            {% endfor %}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+{% import 'macro/pageHeader.html.twig' as page %}
+
+{% block body %}
+    {{ page.header(title) }}
+    <main class="w-full bg-gray-100">
+        <div class="max-w-4xl py-12 sm:py-20 px-10 sm:px-16 mx-auto">
+            <div class="text-lg markdown content">
+                {% block content %}
+                    {{ content.content|raw }}
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+{% endblock %}

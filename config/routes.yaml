@@ -1,0 +1,5 @@
+pages:
+    resource: 'routes/pages.php'
+
+presta_sitemap:
+    resource: "@PrestaSitemapBundle/Resources/config/routing.yml"

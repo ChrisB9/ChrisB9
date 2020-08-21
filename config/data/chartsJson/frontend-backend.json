@@ -1,0 +1,58 @@
+{
+  "type": "horizontalBar",
+  "data": {
+    "labels": [
+      "January"
+    ],
+    "datasets": [
+      {
+        "label": "Backend-Development",
+        "data": [
+          71
+        ],
+        "fill": true,
+        "backgroundColor": [
+          "#4F5D95"
+        ],
+        "borderWidth": 0,
+        "barPercentage": 0.5,
+        "barThickness": 1,
+        "maxBarThickness": 8,
+        "minBarLength": 2
+      },
+      {
+        "label": "Frontend-Development",
+        "data": [
+          29
+        ],
+        "fill": true,
+        "backgroundColor": [
+          "#f1e05a"
+        ],
+        "borderWidth": 0
+      }
+    ]
+  },
+  "options": {
+    "maintainAspectRatio": false,
+    "responsive": true,
+    "tooltips": {"enabled": false},
+    "scales": {
+      "yAxes": [
+        {
+          "display": false,
+          "ticks": {
+            "beginAtZero": true
+          },
+          "stacked": true,
+          "barThickness": 10
+        }
+      ],
+      "xAxes": [{
+        "display": false,
+        "barThickness": 10,
+        "stacked": true
+      }]
+    }
+  }
+}

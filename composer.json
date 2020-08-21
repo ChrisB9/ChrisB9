@@ -1,0 +1,77 @@
+{
+  "name": "cbenco/website",
+  "description": "Personal Website",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Chris Ben",
+      "email": "chris@cben.co"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/BenjaminHoegh/ParsedownExtended"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/ChrisB9/OpenWeatherMap-PHP-API"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    },
+    "files": [
+      "src/functions.php",
+      "vendor/benjaminhoegh/parsedown-extreme/ParsedownExtended.php"
+    ]
+  },
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "benjaminhoegh/parsedown-extreme": "dev-master",
+    "symfony/http-foundation": "^5.1",
+    "symfony/asset": "^5.1",
+    "symfony/twig-bridge": "^5.1",
+    "symfony/flex": "^1.9",
+    "symplify/flex-loader": "^8.1",
+    "symplify/autodiscovery": "^8.1",
+    "symfony/framework-bundle": "^5.1",
+    "symfony/dotenv": "^5.1",
+    "doctrine/cache": "^1.10",
+    "erusev/parsedown": "1.8.0-beta-7",
+    "erusev/parsedown-extra": "0.8.0-beta-1",
+    "symplify/symfony-static-dumper": "^8.1",
+    "symfony/webpack-encore-bundle": "^1.7",
+    "sensio/framework-extra-bundle": "^5.5",
+    "taufik-nurrohman/parsedown-extra-plugin": "^1.2",
+    "symfony/web-link": "^5.1",
+    "nette/utils": "3.1.2",
+    "doctrine/annotations": "1.10.3",
+    "knplabs/knp-time-bundle": "^1.12",
+    "presta/sitemap-bundle": "^2.1",
+    "ocramius/lazy-property": "^2.0",
+    "cbenco/timestamp-generator": "^0.1.1",
+    "ext-json": "*",
+    "cmfcmf/openweathermap-php-api": "dev-master as 3.2",
+    "guzzlehttp/guzzle": "^7.0",
+    "http-interop/http-factory-guzzle": "^1.0"
+  },
+  "scripts": {
+    "auto-scripts": {
+      "cache:clear": "symfony-cmd",
+      "assets:install %PUBLIC_DIR%": "symfony-cmd"
+    }
+  },
+  "require-dev": {
+    "symfony/stopwatch": "^5.1",
+    "symfony/twig-bundle": "^5.1",
+    "symfony/web-profiler-bundle": "^5.1"
+  }
+}

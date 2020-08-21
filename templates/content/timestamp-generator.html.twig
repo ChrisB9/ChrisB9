@@ -1,0 +1,48 @@
+<form x-data="{
+    form: {
+        start: '2020-07-22',
+        end: '2020-07-31',
+        limit: 10,
+    },
+    result: [],
+    submitData() {
+        this.result = [];
+        fetch('/api/generate-timestamps', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'same-origin',
+            cache: 'no-cache',
+            body: JSON.stringify(this.form),
+        })
+        .then((res) => res.json())
+        .then((res) => this.result = res);
+    },
+}" @submit.prevent="submitData">
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="start">Start date:</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+               type="date" id="start" x-model="form.start">
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="end">End date:</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+               type="date" id="end"
+               x-model="form.end">
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="limit">How many should be generated:</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+               type="number" id="limit"
+               min="1" max="10000" x-model="form.limit">
+    </div>
+    <div class="flex items-center justify-between">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit">
+            Generate!
+        </button>
+    </div>
+    <template x-for="timestamp in result" :key="timestamp">
+        <p x-text="timestamp"></p>
+    </template>
+</form>
+

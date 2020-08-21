@@ -1,0 +1,81 @@
+.timeline {
+  @apply w-full relative;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: #ddd;
+  z-index: 10;
+}
+
+.timeline:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.timeline .entry {
+  @apply text-left relative flex flex-col mb-4 bg-white border rounded-sm;
+}
+
+.timeline .entry .title {
+  @apply w-full relative mb-1 py-2 bg-gray-100 flex text-brand-blue-dark;
+
+  padding-left: 1.5rem;
+}
+
+.timeline .entry .title:before {
+  @apply absolute;
+
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 4px solid #050f45;
+  background-color:#fff;
+  border-radius:100%;
+  top: 35%;
+  left: -4px;
+  z-index: 99;
+}
+
+.timeline .entry .title h3 {
+  margin: 0;
+  font-size: 110%;
+}
+
+.timeline .entry .title p {
+  margin: 0;
+  margin-left: 5px;
+}
+
+.timeline .entry .title p:before {
+  content: '>';
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.timeline .entry .body {
+  @apply px-2;
+}
+
+.timeline .entry .body p {
+  line-height: 1.4em;
+  margin: 0.5em;
+  font-weight: 400;
+}
+
+.timeline .entry .body ul {
+  color: #aaa;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.timeline .entry .body ul li:before {
+  content: '-';
+  margin-right: 0.5em;
+}

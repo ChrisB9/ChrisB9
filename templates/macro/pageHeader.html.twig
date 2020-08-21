@@ -1,0 +1,18 @@
+{% macro header(title) %}
+    <header class="header header--small flex flex-col">
+        <div class="px-4 py-2 m-2 h-1/3 flex justify-between">
+            <div class="text-2xl text-white rounded py-2 px-4">
+                <a href="/" title="back to the root">cben.dev</a>
+            </div>
+            <nav class="py-3 px-4 hidden md:block">
+                <a class="ml-4 cursor-pointer rounded-lg px-2 md:px-3 xl:px-4 py-3 md:py-2 xl:py-3 bg-white hover:bg-gray-200 xl:text-base text-gray-800 leading-tight shadow-md" href="/projects">Projects</a>
+                <a class="ml-4 cursor-pointer rounded-lg px-2 md:px-3 xl:px-4 py-3 md:py-2 xl:py-3 bg-white hover:bg-gray-200 xl:text-base text-gray-800 leading-tight shadow-md" href="/about">About me</a>
+                <a class="ml-4 cursor-pointer rounded-lg px-2 md:px-3 xl:px-4 py-3 md:py-2 xl:py-3 bg-white hover:bg-gray-200 xl:text-base text-gray-800 leading-tight shadow-md" href="/contact">Contact</a>
+            </nav>
+        </div>
+        <div class="text-center px-4 py-2 m-2 h-1/3 text-center text-white text-3xl md:text-6xl">
+            <h1>{{ title }}</h1>
+        </div>
+        <div class="h-1/3"></div>
+    </header>
+{% endmacro %}

@@ -1,0 +1,47 @@
+{% macro projectHelper(project) %}
+    <article id="project-active-{{ project.id }}" data-json="{{ project | json_encode }}"
+             class="project border rounded-1 shadow-md bg-gray-100 my-4 border-white hover:shadow-2xl hover:border-brand-blue cursor-pointer"
+             x-ref="project-{{ project.id }}"
+             x-show="!query || $refs['project-{{ project.id }}'].dataset.json.includes(query)"
+             @click="$refs['project-{{ project.id }}-link'].click()"
+    >
+        <div class="px-3">
+            <div class="flex justify-between my-3">
+                <h1 class="font-medium tracking-wide text-brand-blue-dark">
+                    {% if project.icon is iterable %}
+                        <i class="{{ project.icon[0] }} la-{{ project.icon[1] }}"></i>
+                    {% else %}
+                        <i class="las la-{{ project.icon }}"></i>
+                    {% endif %}
+                    <a x-ref="project-{{ project.id }}-link" href="{{ project.url }}"
+                       target="_blank">{{ project.title }}</a>
+                </h1>
+            </div>
+        </div>
+        <div class="border-bottom bg-white py-2 px-3">
+            <div class="flex flex-col">
+                {{ project.description|raw }}
+            </div>
+            {% if project.tags %}
+                <div class="mt-2 pt-1 border-t border-gray-200">
+                    {% for tag in project.tags %}
+                        <div class="text-xs inline-flex items-center leading-sm uppercase px-3 py-1 bg-blue-100 text-blue-800 rounded-full">{{ tag }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </article>
+{% endmacro %}
+
+{% macro projectSearch(type) %}
+    <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="search">
+                Search
+            </label>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                   type="search" id="search" x-model="query" autocomplete="off">
+            <p class="text-gray-800 text-xs italic">Search through the {{ type }}</p>
+        </div>
+    </div>
+{% endmacro %}
