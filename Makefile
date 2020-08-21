@@ -37,7 +37,7 @@ login:
 deploy:
 	$(call call_docker_prod, pull)
 	$(call call_docker_prod, up -d)
-	docker-compose -f $(PROD_FILE) exec -u $(DOCKER_UID):$(DOCKER_GID) $(DOCKER_CONTAINER) $(CINSTALL)
+	docker-compose -f $(PROD_FILE) exec -T -u $(DOCKER_UID):$(DOCKER_GID) $(DOCKER_CONTAINER) $(CINSTALL)
 
 do:
 	$(call call_docker, $(ARGS))
