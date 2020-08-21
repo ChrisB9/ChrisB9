@@ -6,7 +6,7 @@ DOCKER_UID=1000
 DOCKER_GID=1000
 DOCKER_CONTAINER=web
 PROD_FILE=docker-compose.prod.yml
-CINSTALL=bash -c 'composer install --no-dev --ignore-platform-reqs'
+CINSTALL=bash -c 'composer2 install --no-dev --ignore-platform-req=php'
 
 define call_docker
 	APPLICATION_UID=$(id -u) APPLICATION_GID=$(id -g) docker-compose $(1) $(2)

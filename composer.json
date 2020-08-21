@@ -61,6 +61,7 @@
     "ext-json": "*",
     "cmfcmf/openweathermap-php-api": "dev-master as 3.2",
     "guzzlehttp/guzzle": "^7.0",
+    "symfony/twig-bundle": "^5.1",
     "http-interop/http-factory-guzzle": "^1.0"
   },
   "scripts": {
@@ -71,7 +72,6 @@
   },
   "require-dev": {
     "symfony/stopwatch": "^5.1",
-    "symfony/twig-bundle": "^5.1",
     "symfony/web-profiler-bundle": "^5.1"
   }
 }
