@@ -13,7 +13,9 @@ jobs:
       with:
         node-version: '14.x'
     - run: yarn
+    - run: touch .env
     - run: yarn build
+    - run: rm .env
     - name: ssh deploy
       uses: easingthemes/ssh-deploy@v2.1.4
       with:
