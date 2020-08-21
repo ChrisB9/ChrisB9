@@ -5,9 +5,15 @@ MAKEFLAGS += --silent
 DOCKER_UID=1000
 DOCKER_GID=1000
 DOCKER_CONTAINER=web
+PROD_FILE=docker-compose.prod.yml
+CINSTALL=bash -c 'composer install --no-dev --ignore-platform-reqs'
 
 define call_docker
 	APPLICATION_UID=$(id -u) APPLICATION_GID=$(id -g) docker-compose $(1) $(2)
+endef
+
+define call_docker_prod
+	APPLICATION_UID=$(id -u) APPLICATION_GID=$(id -g) docker-compose -f $(PROD_FILE) $(1) $(2)
 endef
 
 list:
@@ -28,8 +34,10 @@ down:
 login:
 	docker-compose exec -u $(DOCKER_UID):$(DOCKER_GID) $(DOCKER_CONTAINER) bash
 
-# logs:
-#     $(call call_docker, logs, "$(DOCKER_CONTAINER) -f")
+deploy:
+	$(call call_docker_prod, pull)
+	$(call call_docker_prod, up -d)
+	docker-compose -f $(PROD_FILE) exec -u $(DOCKER_UID):$(DOCKER_GID) $(DOCKER_CONTAINER) $(CINSTALL)
 
 do:
 	$(call call_docker, $(ARGS))

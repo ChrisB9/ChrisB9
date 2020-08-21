@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  web:
+    image: chrisb9/php8-nginx-xdebug:latest
+    volumes:
+      - .:/app
+      - ~/.ssh:/home/application/.ssh
+      - ~/.gitconfig_gitlab:/home/application/.gitconfig
+      - ./vhost.conf:/opt/docker/nginx/conf.d/vhost.conf
+      - ./xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    environment:
+      - VIRTUAL_HOST=cben.dev,cben.co,projects.cben.co
+      - LETSENCRYPT_HOST=cben.co,cben.dev,projects.cben.co
+      - LETSENCRYPT_EMAIL=chris@cben.co
+
+networks:
+  default:
+    external:
+      name: global

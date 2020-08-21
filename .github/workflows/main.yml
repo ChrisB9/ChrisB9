@@ -8,16 +8,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: ssh deploy
       uses: easingthemes/ssh-deploy@v2.1.4
       with:
-        SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
-        # Remote host
-        REMOTE_HOST: $SSH_HOST
-        # Remote user
-        REMOTE_USER: $SSH_USER
-        # Remote port
-        REMOTE_PORT: $SSH_PORT
-        # Target directory
-        TARGET: /var/www/
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        REMOTE_HOST: ${{ secrets.SSH_HOST }}
+        REMOTE_USER: ${{ secrets.SSH_USER }}
+        REMOTE_PORT: ${{ secrets.SSH_PORT }}
+        TARGET: ${{ secrets.TARGET_DIR }}
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: |
+          cd ${{ secrets.TARGET_DIR }}
+          make deploy
