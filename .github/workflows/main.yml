@@ -8,7 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
+    - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+          - run: yarn
+          - run: yarn build
     - name: ssh deploy
       uses: easingthemes/ssh-deploy@v2.1.4
       with:
@@ -27,5 +32,5 @@ jobs:
         script: |
           cd ${{ secrets.TARGET_DIR }}
           chown -R 1000:1000 ${{ secrets.TARGET_DIR }}
-          chmod -R 775 ${{ secrets.TARGET_DIR }}/var/{cache,logs}
+          chmod -R 777 ${{ secrets.TARGET_DIR }}/var/{cache,logs}
           make deploy
