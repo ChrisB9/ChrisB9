@@ -26,4 +26,5 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd ${{ secrets.TARGET_DIR }}
+          chown -R 1000:1000 ${{ secrets.TARGET_DIR }}
           make deploy
