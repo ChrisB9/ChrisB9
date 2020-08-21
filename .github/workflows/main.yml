@@ -9,11 +9,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-          - run: yarn
-          - run: yarn build
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+        - run: yarn
+        - run: yarn build
     - name: ssh deploy
       uses: easingthemes/ssh-deploy@v2.1.4
       with:
