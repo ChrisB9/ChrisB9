@@ -27,4 +27,5 @@ jobs:
         script: |
           cd ${{ secrets.TARGET_DIR }}
           chown -R 1000:1000 ${{ secrets.TARGET_DIR }}
+          chmod -R 775 ${{ secrets.TARGET_DIR }}/var/{cache,logs}
           make deploy
