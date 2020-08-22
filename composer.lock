@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6d1c087d490f34848db2a6bcef498d1",
+    "content-hash": "5388c8e47774c8d117f2e3813de0b395",
     "packages": [
         {
             "name": "benjaminhoegh/parsedown-extreme",
@@ -28,7 +28,6 @@
             "require-dev": {
                 "phpunit/phpunit": "^4.8.35"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -115,13 +114,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ChrisB9/OpenWeatherMap-PHP-API.git",
-                "reference": "f1e8556ce234c550792881b83ac221e8085cb471"
+                "url": "https://github.com/cmfcmf/OpenWeatherMap-PHP-API.git",
+                "reference": "5073af6efd4e65b3ee889f12515c57c092bc1c5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ChrisB9/OpenWeatherMap-PHP-API/zipball/f1e8556ce234c550792881b83ac221e8085cb471",
-                "reference": "f1e8556ce234c550792881b83ac221e8085cb471",
+                "url": "https://api.github.com/repos/cmfcmf/OpenWeatherMap-PHP-API/zipball/5073af6efd4e65b3ee889f12515c57c092bc1c5b",
+                "reference": "5073af6efd4e65b3ee889f12515c57c092bc1c5b",
                 "shasum": ""
             },
             "require": {
@@ -139,13 +138,13 @@
                 "php-http/guzzle6-adapter": "^2.0 || ^1.0",
                 "phpunit/phpunit": "^5.0.5"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Cmfcmf\\": "Cmfcmf"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -166,30 +165,26 @@
                 "owm",
                 "weather"
             ],
-            "support": {
-                "issues": "https://github.com/cmfcmf/OpenWeatherMap-PHP-API/issues",
-                "source": "https://github.com/cmfcmf/OpenWeatherMap-PHP-API.git"
-            },
             "funding": [
                 {
-                    "type": "ko_fi",
-                    "url": "https://ko-fi.com/cmfcmf"
+                    "url": "https://ko-fi.com/cmfcmf",
+                    "type": "ko_fi"
                 }
             ],
-            "time": "2020-08-21T08:29:19+00:00"
+            "time": "2020-08-21T09:59:12+00:00"
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.10.3",
+            "version": "1.10.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "5db60a4969eba0e0c197a19c077780aadbc43c5d"
+                "reference": "bfe91e31984e2ba76df1c1339681770401ec262f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/5db60a4969eba0e0c197a19c077780aadbc43c5d",
-                "reference": "5db60a4969eba0e0c197a19c077780aadbc43c5d",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/bfe91e31984e2ba76df1c1339681770401ec262f",
+                "reference": "bfe91e31984e2ba76df1c1339681770401ec262f",
                 "shasum": ""
             },
             "require": {
@@ -199,7 +194,8 @@
             },
             "require-dev": {
                 "doctrine/cache": "1.*",
-                "phpunit/phpunit": "^7.5"
+                "phpstan/phpstan": "^0.12.20",
+                "phpunit/phpunit": "^7.5 || ^9.1.5"
             },
             "type": "library",
             "extra": {
@@ -245,11 +241,7 @@
                 "docblock",
                 "parser"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.10.x"
-            },
-            "time": "2020-05-25T17:24:27+00:00"
+            "time": "2020-08-10T19:35:50+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -331,10 +323,6 @@
                 "redis",
                 "xcache"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/1.10.x"
-            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -411,10 +399,6 @@
                 "parser",
                 "php"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/lexer/issues",
-                "source": "https://github.com/doctrine/lexer/tree/1.2.1"
-            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -475,10 +459,6 @@
                 "markdown",
                 "parser"
             ],
-            "support": {
-                "issues": "https://github.com/erusev/parsedown/issues",
-                "source": "https://github.com/erusev/parsedown/tree/1.8.0-beta-7"
-            },
             "time": "2019-03-17T18:47:21+00:00"
         },
         {
@@ -529,10 +509,6 @@
                 "parsedown",
                 "parser"
             ],
-            "support": {
-                "issues": "https://github.com/erusev/parsedown-extra/issues",
-                "source": "https://github.com/erusev/parsedown-extra/tree/master"
-            },
             "time": "2018-05-08T21:54:32+00:00"
         },
         {
@@ -935,24 +911,20 @@
                 "iterator",
                 "nette"
             ],
-            "support": {
-                "issues": "https://github.com/nette/finder/issues",
-                "source": "https://github.com/nette/finder/tree/v2.5.2"
-            },
             "time": "2020-01-03T20:35:40+00:00"
         },
         {
             "name": "nette/utils",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "488f58378bba71767e7831c83f9e0fa808bf83b9"
+                "reference": "c09937fbb24987b2a41c6022ebe84f4f1b8eec0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/488f58378bba71767e7831c83f9e0fa808bf83b9",
-                "reference": "488f58378bba71767e7831c83f9e0fa808bf83b9",
+                "url": "https://api.github.com/repos/nette/utils/zipball/c09937fbb24987b2a41c6022ebe84f4f1b8eec0f",
+                "reference": "c09937fbb24987b2a41c6022ebe84f4f1b8eec0f",
                 "shasum": ""
             },
             "require": {
@@ -1017,11 +989,7 @@
                 "utility",
                 "validation"
             ],
-            "support": {
-                "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v3.1.2"
-            },
-            "time": "2020-05-27T09:58:51+00:00"
+            "time": "2020-08-07T10:34:21+00:00"
         },
         {
             "name": "ocramius/lazy-property",
@@ -1083,10 +1051,6 @@
                 "lazy loading",
                 "utility"
             ],
-            "support": {
-                "issues": "https://github.com/Ocramius/LazyProperty/issues",
-                "source": "https://github.com/Ocramius/LazyProperty/tree/2.0.0"
-            },
             "time": "2019-03-04T19:28:23+00:00"
         },
         {
@@ -1202,9 +1166,6 @@
                 "psr",
                 "psr-6"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/cache/tree/master"
-            },
             "time": "2016-08-06T20:24:11+00:00"
         },
         {
@@ -1254,10 +1215,6 @@
                 "container-interop",
                 "psr"
             ],
-            "support": {
-                "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/master"
-            },
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
@@ -1304,10 +1261,6 @@
                 "psr",
                 "psr-14"
             ],
-            "support": {
-                "issues": "https://github.com/php-fig/event-dispatcher/issues",
-                "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
-            },
             "time": "2019-01-08T18:20:26+00:00"
         },
         {
@@ -1517,9 +1470,6 @@
                 "psr-13",
                 "rest"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/link/tree/master"
-            },
             "time": "2016-10-28T16:06:13+00:00"
         },
         {
@@ -1567,9 +1517,6 @@
                 "psr",
                 "psr-3"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/log/tree/1.1.3"
-            },
             "time": "2020-03-23T09:12:05+00:00"
         },
         {
@@ -1687,10 +1634,6 @@
                 "annotations",
                 "controllers"
             ],
-            "support": {
-                "issues": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/issues",
-                "source": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/tree/master"
-            },
             "time": "2020-06-15T20:28:02+00:00"
         },
         {
@@ -1924,9 +1867,6 @@
                 "interoperability",
                 "standards"
             ],
-            "support": {
-                "source": "https://github.com/symfony/cache-contracts/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2262,9 +2202,6 @@
             ],
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.1.3"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2579,9 +2516,6 @@
                 "interoperability",
                 "standards"
             ],
-            "support": {
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2778,10 +2712,6 @@
                 }
             ],
             "description": "Composer plugin for Symfony",
-            "support": {
-                "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3783,9 +3713,6 @@
                 "interoperability",
                 "standards"
             ],
-            "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v2.1.3"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4044,9 +3971,6 @@
                 "interoperability",
                 "standards"
             ],
-            "support": {
-                "source": "https://github.com/symfony/translation-contracts/tree/v2.1.3"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4588,10 +4512,6 @@
                 }
             ],
             "description": "Integration with your Symfony app & Webpack Encore!",
-            "support": {
-                "issues": "https://github.com/symfony/webpack-encore-bundle/issues",
-                "source": "https://github.com/symfony/webpack-encore-bundle/tree/master"
-            },
             "time": "2020-01-31T15:31:59+00:00"
         },
         {
@@ -4680,12 +4600,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/autodiscovery.git",
-                "reference": "abcfceb70aee3473d5c3cfff5545f90cc58a586a"
+                "reference": "2cd0b3803c6c959057f2932da3c22a1a755cab32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/autodiscovery/zipball/abcfceb70aee3473d5c3cfff5545f90cc58a586a",
-                "reference": "abcfceb70aee3473d5c3cfff5545f90cc58a586a",
+                "url": "https://api.github.com/repos/symplify/autodiscovery/zipball/2cd0b3803c6c959057f2932da3c22a1a755cab32",
+                "reference": "2cd0b3803c6c959057f2932da3c22a1a755cab32",
                 "shasum": ""
             },
             "require": {
@@ -4749,12 +4669,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/autowire-array-parameter.git",
-                "reference": "19f4d9c38131475fbd648a8d3d165203f81a99e8"
+                "reference": "a5b1ea1a07e579cb3d5e6449a0c899a13aff2c6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/autowire-array-parameter/zipball/19f4d9c38131475fbd648a8d3d165203f81a99e8",
-                "reference": "19f4d9c38131475fbd648a8d3d165203f81a99e8",
+                "url": "https://api.github.com/repos/symplify/autowire-array-parameter/zipball/a5b1ea1a07e579cb3d5e6449a0c899a13aff2c6f",
+                "reference": "a5b1ea1a07e579cb3d5e6449a0c899a13aff2c6f",
                 "shasum": ""
             },
             "require": {
@@ -4799,12 +4719,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/flex-loader.git",
-                "reference": "ce99fe62cd257b13a69709049155a55eb58ccd83"
+                "reference": "c359b7caf3e43d75e40cf004f5e979f4f9df8090"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/flex-loader/zipball/ce99fe62cd257b13a69709049155a55eb58ccd83",
-                "reference": "ce99fe62cd257b13a69709049155a55eb58ccd83",
+                "url": "https://api.github.com/repos/symplify/flex-loader/zipball/c359b7caf3e43d75e40cf004f5e979f4f9df8090",
+                "reference": "c359b7caf3e43d75e40cf004f5e979f4f9df8090",
                 "shasum": ""
             },
             "require": {
@@ -4851,12 +4771,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/package-builder.git",
-                "reference": "cd8368ae350b540d87f021da39522955472b933d"
+                "reference": "f0c8efd0e3cd0b7aa3ae8c6d4499c5694add2a27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/package-builder/zipball/cd8368ae350b540d87f021da39522955472b933d",
-                "reference": "cd8368ae350b540d87f021da39522955472b933d",
+                "url": "https://api.github.com/repos/symplify/package-builder/zipball/f0c8efd0e3cd0b7aa3ae8c6d4499c5694add2a27",
+                "reference": "f0c8efd0e3cd0b7aa3ae8c6d4499c5694add2a27",
                 "shasum": ""
             },
             "require": {
@@ -4906,12 +4826,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/smart-file-system.git",
-                "reference": "b920ffb52dc0bab0766249dc089ad875dba3467a"
+                "reference": "580d2fd0255ba94a18be74b29603339f1c1a309d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/smart-file-system/zipball/b920ffb52dc0bab0766249dc089ad875dba3467a",
-                "reference": "b920ffb52dc0bab0766249dc089ad875dba3467a",
+                "url": "https://api.github.com/repos/symplify/smart-file-system/zipball/580d2fd0255ba94a18be74b29603339f1c1a309d",
+                "reference": "580d2fd0255ba94a18be74b29603339f1c1a309d",
                 "shasum": ""
             },
             "require": {
@@ -4957,12 +4877,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/symfony-static-dumper.git",
-                "reference": "cc9ecf76f0b92bf9d8adba928af8033619c2d7f9"
+                "reference": "e4c90f9ab151bad721f7d25ef83ee291e6b56ecf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/symfony-static-dumper/zipball/cc9ecf76f0b92bf9d8adba928af8033619c2d7f9",
-                "reference": "cc9ecf76f0b92bf9d8adba928af8033619c2d7f9",
+                "url": "https://api.github.com/repos/symplify/symfony-static-dumper/zipball/e4c90f9ab151bad721f7d25ef83ee291e6b56ecf",
+                "reference": "e4c90f9ab151bad721f7d25ef83ee291e6b56ecf",
                 "shasum": ""
             },
             "require": {
@@ -5049,9 +4969,6 @@
                 "parsedown",
                 "parser"
             ],
-            "support": {
-                "source": "https://github.com/pixeline/parsedown-extra-plugin/tree/v1.2.0"
-            },
             "time": "2020-03-13T02:32:19+00:00"
         },
         {
@@ -5300,5 +5217,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "1.1.0"
 }

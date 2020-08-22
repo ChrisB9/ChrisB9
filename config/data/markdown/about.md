@@ -8,7 +8,7 @@
 ~!~
 
 My name is Christian Rodriguez Benthake, a {%-test.html.twig%} full-stack webdeveloper and freelancer with an emphasis on backend development in PHP. 
-Additionally to that, i am engaged in the OSS-Community - e.g translating documentations, building software or contributing to existing minor and major projects, (pre-corona) goind to meetups, conferences and co-working spaces e.g TYPO3 DevDays.<br />
+Additionally to that, i am engaged in the OSS-Community - e.g translating documentations, building software or contributing to existing minor and major projects, (pre-corona) going to meetups, conferences and co-working spaces e.g TYPO3 DevDays.<br />
 I currently live in and work remotely from Kiel, Germany. In my freetime I hike, travel and paraglide - or just read a book and spend time with my wife.
 <br />
 

@@ -7,6 +7,7 @@ services:
       - .:/app
       - ~/.ssh:/home/application/.ssh
       - ~/.gitconfig_gitlab:/home/application/.gitconfig
+      - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./vhost.conf:/opt/docker/nginx/conf.d/vhost.conf
       - ./xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
     environment:

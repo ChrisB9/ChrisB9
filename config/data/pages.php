@@ -35,9 +35,9 @@ return [
         'file' => 'imprint',
         'contentType' => PageRepository::CONTENT_TYPE_MARKDOWN,
     ],
-    'engagement' => [
+    'readinglist' => [
         'id' => 4,
-        'title' => 'Engagement',
+        'title' => 'Readinglist',
         'file' => 'readinglist',
         'contentType' => PageRepository::CONTENT_TYPE_MARKDOWN,
         'sitemap' => [
