@@ -60,7 +60,7 @@ return [
         'icon' => 'wrench',
         'url' => '#',
         'title' => 'Gutenberg+Elementor YouTube Block',
-        'description' => 'WIP (not public yet): An advanced youtube block that works for Gutenberg and the Elementor Page Builder',
+        'description' => '(not public yet): An advanced youtube block that works for Gutenberg and the Elementor Page Builder',
         'tags' => ['wordpress', 'elementor', 'gutenberg', 'typescript'],
     ],
     [
@@ -78,9 +78,9 @@ return [
         'active' => true,
         'client' => false,
         'icon' => 'laptop-code',
-        'url' => 'https://cben.dev',
+        'url' => 'https://github.com/ChrisB9/ChrisB9',
         'title' => 'cben.dev',
-        'description' => 'WIP (not public yet): Static file based website built with tailwindcss and symfony running on php 8.0',
+        'description' => 'Static file based website built with tailwindcss and symfony running on php 8.0',
         'tags' => ['personal website', 'symfony 5', 'php 8.0', 'tailwindcss', 'alpinejs', 'markdown'],
     ],
     [
