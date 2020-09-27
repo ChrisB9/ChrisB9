@@ -48,19 +48,24 @@ final class PageController extends AbstractController
         $seo = array_merge(
             [
                 'robots' => 'follow, index',
-                'og:title' => $page->title,
-                'og:image' => $image,
                 'twitter:title' => $page->title,
                 'twitter:image' => $image,
             ],
             $page->seo
         );
-        $seo['og:description'] = $page->seo['description'] ?? '';
         $seo['twitter:description'] = $page->seo['description'] ?? '';
+        $metaTags = [
+            'name' => $seo,
+            'property' => [
+                'og:title' => $page->title,
+                'og:image' => $image,
+                'og:description' => $page->seo['description'] ?? '',
+            ],
+        ];
         return $this->render($file, array_merge([
             'title' => $page->title,
             'content' => $page,
-            'seo' => $seo,
+            'seo' => $metaTags,
         ], $page->metadata));
     }
 }

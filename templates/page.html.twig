@@ -2,8 +2,10 @@
 {% import 'macro/pageHeader.html.twig' as page %}
 
 {% block metatags %}
-    {% for meta,value in seo %}
-        <meta property="{{ meta }}" content="{{ value }}"/>
+    {% for type,metatags in seo %}
+        {% for meta,value in metatags %}
+            <meta {{ type }}="{{ meta }}" content="{{ value }}"/>
+        {% endfor %}
     {% endfor %}
 {% endblock %}
 
