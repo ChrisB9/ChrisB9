@@ -177,6 +177,9 @@
             "src/Kernel.php"
         ]
     },
+    "symfony/http-client-contracts": {
+        "version": "2.2-dev"
+    },
     "symfony/http-foundation": {
         "version": "v5.1.2"
     },
