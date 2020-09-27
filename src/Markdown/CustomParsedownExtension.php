@@ -155,6 +155,7 @@ final class CustomParsedownExtension extends \ParsedownExtraPlugin
             $source['element']['name'] = 'source';
             $source['element']['attributes']['srcset'] = $webPSrc;
             unset($source['element']['attributes']['src']);
+            unset($source['element']['attributes']['class']);
             $sourceList[] = $source;
         }
         $sourceList[] = $image;
