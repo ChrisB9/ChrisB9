@@ -1,0 +1,66 @@
+<form x-data="{
+    form: {
+        number: 10
+    },
+    result: [],
+    chart: {
+        type: 'line',
+        data: {
+            datasets: [],
+        },
+        options: {
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    type: 'linear',
+                }]
+            }
+        },
+    },
+    submitData() {
+        if (this.result.includes(this.form.number)) {
+            return;
+        }
+        if (this.result.length > 10) {
+            return;
+        }
+        fetch('/api/collatz/' + this.form.number, {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'same-origin',
+            cache: 'no-cache',
+        })
+        .then((res) => res.json())
+        .then((res) => {
+            this.result.push(this.form.number);
+            let canvas = window.charts['collatzconjecture-chart'];
+            canvas.data.datasets.push({
+                label: 'Orbits for ' + this.form.number,
+                data: res.steps,
+                backgroundColor: '#' + Math.floor(Math.random()*16777215).toString(16),
+                fill: false,
+                ticks: {
+                    suggestedMin: 1,
+                    suggestedMax: 200,
+                },
+            });
+            canvas.update();
+        });
+    },
+}" @submit.prevent="submitData">
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="limit">What number do you want to check?:</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+               type="number" id="number"
+               min="1" max="1000000" x-model="form.number">
+    </div>
+    <div class="flex items-center justify-between">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit">
+            Calculate!
+        </button>
+    </div>
+    <div x-show="result" class="chartjs-container dark-mode-inverted" :data-json="JSON.stringify(chart)">
+        <canvas class="chartjs" id="collatzconjecture-chart"></canvas>
+    </div>
+</form>

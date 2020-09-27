@@ -16,7 +16,7 @@ final class CustomParsedownExtension extends \ParsedownExtraPlugin
     protected string $timelineRegex = '([\w\W\-,\.\d\(\)\_\s\#]+)';
 
     public static array $tagClassMap = [
-        'h1' => 'leading-tight border-b text-4xl font-semibold mb-4 mt-6 pb-2',
+        'h1' => 'leading-tight border-b text-4xl font-semibold mb-4 mt-6 pb-2 print:hidden',
         'h2' => 'leading-tight border-b text-2xl font-semibold mb-4 mt-6 pb-2',
         'h3' => 'leading-snug text-lg font-semibold mb-4 mt-6',
         'h4' => 'leading-none text-base font-semibold mb-4 mt-6',
@@ -70,7 +70,7 @@ final class CustomParsedownExtension extends \ParsedownExtraPlugin
         if (isset($element['attributes'], $element['attributes']['class'])) {
             $class = $element['attributes']['class'];
         }
-        if (isset(self::$tagClassMap[$element['name']])) {
+        if (isset(self::$tagClassMap[$element['name'] ?? ''])) {
             if (!isset($element['attributes'])) {
                 $element['attributes'] = [];
             }
@@ -91,6 +91,80 @@ final class CustomParsedownExtension extends \ParsedownExtraPlugin
         if (!str_contains($this->inlineMarkerList, $token)) {
             $this->inlineMarkerList .= $token;
         }
+    }
+
+    /**
+     * This method is completely copied downstream to fix a bug between multiple versions
+     * @param $Line
+     * @return array[]|void|null
+     */
+    protected function blockHeader($Line)
+    {
+        $level = strspn($Line['text'], '#');
+
+        if ($level > 6) {
+            return;
+        }
+
+        $text = trim($Line['text'], '#');
+
+        if ($this->strictMode and isset($text[0]) and $text[0] !== ' ') {
+            return;
+        }
+
+        $text = trim($text, ' ');
+
+        $Block = array(
+            'element' => array(
+                'name' => 'h' . min(6, $level),
+                'handler' => array(
+                    'function' => 'lineElements',
+                    'argument' => $text,
+                    'destination' => 'elements',
+                )
+            ),
+        );
+
+        if (!isset($Block)) {
+            return null;
+        }
+
+        if (preg_match('/[ #]*{(' . $this->regexAttribute . '+)}[ ]*$/', $Line['text'], $matches, PREG_OFFSET_CAPTURE)) {
+            $attributeString = $matches[1][0];
+
+            $Block['element']['attributes'] = $this->parseAttributeData($attributeString);
+
+            $Block['element']['text'] = substr($Block['element']['text'], 0, $matches[0][1]);
+        }
+        $Level = strspn($Line['text'], '#');
+        $this->doSetAttributes($Block['element'], $this->headerAttributes, array($Level));
+        $this->doSetContent($Block['element'], $this->headerText, false, 'argument', array($Level));
+        return $Block;
+    }
+
+    public function inlineImage($excerpt): array
+    {
+        $image = parent::inlineImage($excerpt);
+        $src = $image['element']['attributes']['src'] ?? '';
+        $image['element']['attributes']['loading'] = 'lazy';
+        $sourceList = [];
+        if ($src) {
+            $pathInfo = pathinfo($src);
+            $webPSrc = str_replace($pathInfo['basename'], sprintf('%s.webp', $pathInfo['filename']), $src);
+            $source = $image;
+            $source['element']['name'] = 'source';
+            $source['element']['attributes']['srcset'] = $webPSrc;
+            unset($source['element']['attributes']['src']);
+            $sourceList[] = $source;
+        }
+        $sourceList[] = $image;
+        return [
+            'extent' => $image['extent'],
+            'element' => [
+                'name' => 'picture',
+                'elements' => $sourceList,
+            ],
+        ];
     }
 
     protected function blockTimelineBlock($line, $block): ?array

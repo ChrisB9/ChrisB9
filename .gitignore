@@ -12,6 +12,7 @@
 /var/log/*
 !/var/log/.gitkeep
 /vendor/
+/src/.preload.php
 ###< symfony/framework-bundle ###
 
 ###> symfony/webpack-encore-bundle ###

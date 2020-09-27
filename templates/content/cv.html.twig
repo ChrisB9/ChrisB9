@@ -1,0 +1,96 @@
+<h2 class="hidden print:block text-3xl text-center mb-8">Lebenslauf</h2>
+<div class="w-full flow-root print:hidden mb-8">
+    <button class="bg-blue-500 hover:bg-blue-700 float-right text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            onclick="window.print()">
+        Drucken
+    </button>
+</div>
+<div class="flex text-base print:text-sm">
+    <div class="w-1/2">
+        <table class="table-auto" border="0">
+            <tbody>
+            <tr>
+                <td class="px-4 py-2 print:py-1"><i class="fa fa-user"></i> Christian Rodriguez Benthake</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 print:py-1"><i class="fa fa-home"></i> Reventlouallee 9</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 print:py-1"><i class="fa fa-city"></i> 24105 Kiel</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 print:py-1"><i class="fa fa-birthday-cake"></i> Geboren am 14.02.1996 in
+                    Ostfriesland
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="w-1/2">
+        <table border="0">
+            <tbody>
+            <tr>
+                <td class="px-4 py-2 print:py-1">
+                    <span><i class="las la-phone-alt"></i> Tel.</span>
+                </td>
+                <td class="px-4 py-2 print:py-1">
+                    <a class="text-blue-600" href="tel:+49 151 75 00 45 09">+49 151 75 00 45 09</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 print:py-1">
+                    <span><i class="las la-envelope"></i> Mail</span>
+                </td>
+                <td class="px-4 py-2 print:py-1">
+                    <a class="text-blue-600" href="mailto:chris@cben.co">chris@cben.co</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 print:py-1">
+                    <span><i class="las la-globe-europe"></i> Website</span>
+                </td>
+                <td class="px-4 py-2 print:py-1">
+                    <a class="text-blue-600" href="https://cben.dev">cben.dev</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 print:py-1">
+                    <span><i class="lab la-github"></i> GitHub</span>
+                </td>
+                <td class="px-4 py-2 print:py-1">
+                    <a class="text-blue-600" href="https://github.com/ChrisB9">@ChrisB9</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br/>
+{% for title,entry in data.curriculum %}
+    <div class="text-base print:text-sm py-1">
+        <table class="table-auto w-full">
+            <thead>
+            <tr class="border-b py-3 px-2 border-gray-400">
+                <th colspan="2" class="text-left px-4 py-2">{{ title }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for year in entry %}
+                <tr class="py-1 px-2">
+                    <td class="w-1/6 px-4 py-1 align-baseline">{{ year.year }}</td>
+                    <td class="w-5/6 px-4 py-1">
+                        {{ year.title | raw }}
+                        {% if year.notes is defined %}
+                            <ul class="pl-8 list-disc">
+                                {% for note in year.notes %}
+                                    <li>{{ note | raw }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endfor %}

@@ -6,6 +6,8 @@
 
 @import "timeline";
 
+@import "dark-mode";
+
 .header {
   margin: 0;
   padding: 0;
@@ -16,9 +18,24 @@
   background-position: center;
 }
 
+@screen print {
+  header,
+  footer {
+    display: none !important;
+  }
+}
+
+.webp .header {
+  background-image: linear-gradient(15deg, #0c35decc 0%, #050f458a 100%), url(/image/background.webp);
+}
+
+//.avif .header {
+//  background-url: url(/image/background.avif);
+//}
+
 .header--small {
   position: relative;
-  height: 30vh;
+  height: 40vh;
 }
 
 .content > * {

@@ -48,7 +48,7 @@ return [
         'active' => true,
         'client' => false,
         'icon' => ['lab', 'docker'],
-        'url' => 'hub.docker.com/r/pluswerk/php-dev/',
+        'url' => 'https://hub.docker.com/r/pluswerk/php-dev/',
         'title' => 'pluswerk/php-dev',
         'description' => 'A docker container that is based on webdevops and has all necessary development tools for developing, debugging and profiling',
         'tags' => ['docker image', 'dev-tools'],
@@ -159,7 +159,7 @@ return [
         'client' => true,
         'icon' => 'lab',
         'url' => 'https://geniocon.com',
-        'title' => 'geniocon.com & geniocon Akademie',
+        'title' => 'geniocon.com',
         'description' => '<i>Online-Marketing and business-oriented marketing courses</i><p>Maintenance and continuous development of multiple wordpress instances</p>',
         'tags' => ['wordpress', 'woocommerce'],
     ],
@@ -194,16 +194,6 @@ return [
         'tags' => ['wordpress-plugin', 'customer-management', 'invoices', 'pdf-creation'],
     ],
     [
-        'id' => 20,
-        'active' => false,
-        'client' => true,
-        'icon' => 'lab',
-        'url' => 'https://inesglaesle.de/',
-        'title' => 'Ines Gläsle',
-        'description' => '<i>make-up artist and hair-stylist</i><p>Support and consultation with the online-presence</p>',
-        'tags' => ['consulting'],
-    ],
-    [
         'id' => 22,
         'active' => true,
         'client' => false,
@@ -212,5 +202,15 @@ return [
         'title' => 'Timestamp Generator',
         'description' => 'generate many random timestamps between two dates',
         'tags' => ['alpinejs', 'php', 'timestamp']
+    ],
+    [
+        'id' => 23,
+        'active' => true,
+        'client' => false,
+        'icon' => 'laptop-code',
+        'url' => '/projects/collatz-conjecture',
+        'title' => 'Collatz Conjecture',
+        'description' => 'Experimenting with collatz conjecture',
+        'tags' => ['php', 'math']
     ],
 ];

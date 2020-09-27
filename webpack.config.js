@@ -43,7 +43,9 @@ Encore
         config.corejs = 3;
     })
     .enablePostCssLoader()
-    .enableSassLoader()
+    .enableSassLoader(function (options) {}, {
+      resolveUrlLoader: false
+    })
     //.enableTypeScriptLoader()
     //.enableIntegrityHashes(Encore.isProduction())
 ;

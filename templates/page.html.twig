@@ -1,11 +1,20 @@
 {% extends "base.html.twig" %}
 {% import 'macro/pageHeader.html.twig' as page %}
 
+{% block metatags %}
+    {% for meta,value in seo %}
+        <meta property="{{ meta }}" content="{{ value }}"/>
+    {% endfor %}
+{% endblock %}
+
 {% block body %}
     {{ page.header(title) }}
-    <main class="w-full bg-gray-100">
-        <div class="max-w-4xl py-12 sm:py-20 px-10 sm:px-16 mx-auto">
-            <div class="text-lg markdown content">
+    <main :class="darkmode ? 'w-full bg-gray-100 dark-mode print:bg-white' : 'w-full bg-gray-100 print:bg-white'"
+          x-data="{darkmode: false}" x-on:toggle-darkmode.window="darkmode = $event.detail.darkMode"
+          x-init="darkmode = localStorage.getItem('darkmode') === 'true' || window.matchMedia('(prefers-color-scheme: dark)').matches"
+    >
+        <div class="max-w-4xl print:max-w-full py-12 print:py-2 sm:py-20 px-10 sm:px-16 mx-auto">
+            <div class="text-lg print:text-base markdown content">
                 {% block content %}
                     {{ content.content|raw }}
                 {% endblock %}

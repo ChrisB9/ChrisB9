@@ -20,6 +20,7 @@ final class Page
         public string $file,
         public string $contentType,
         public array $metadata,
+        public ?array $seo,
         public array $data,
     )
     {

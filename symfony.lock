@@ -1,7 +1,4 @@
 {
-    "benjaminhoegh/parsedown-extreme": {
-        "version": "dev-master"
-    },
     "cbenco/timestamp-generator": {
         "version": "0.1.1"
     },
@@ -326,8 +323,8 @@
     "symplify/symfony-static-dumper": {
         "version": "v8.1.13"
     },
-    "taufik-nurrohman/parsedown-extra-plugin": {
-        "version": "v1.2.0"
+    "tovic/parsedown-extra-plugin": {
+        "version": "dev-master"
     },
     "twig/twig": {
         "version": "v3.0.4"

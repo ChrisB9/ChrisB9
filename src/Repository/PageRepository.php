@@ -32,6 +32,7 @@ final class PageRepository extends ElementRepository
                 $page['file'],
                 $page['contentType'] ?? self::CONTENT_TYPE_MARKDOWN,
                 $page['metadata'] ?? [],
+                $page['seo'] ?? [],
                 $page,
             );
             $page->getContent();

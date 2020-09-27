@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Model\Page;
 use App\Repository\PageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,10 +21,7 @@ final class PageController extends AbstractController
     {
         $route = ltrim($request->getPathInfo(), '/');
         $page = $pageRepository->getPage($route);
-        return $this->render('page.html.twig', array_merge([
-            'title' => $page->title,
-            'content' => $page,
-        ], $page->metadata));
+        return $this->generate($page);
     }
 
     /**
@@ -33,10 +31,36 @@ final class PageController extends AbstractController
      */
     public function renderAction(Request $request, PageRepository $pageRepository): Response
     {
+        $page = $this->getPage($request, $pageRepository);
+        return $this->generate($page, $page->file);
+    }
+
+    private function getPage(Request $request, PageRepository $pageRepository)
+    {
         $route = ltrim($request->getPathInfo(), '/');
-        $page = $pageRepository->getPage($route);
-        return $this->render($page->file, array_merge([
+        return $pageRepository->getPage($route);
+    }
+
+    private function generate(Page $page, string $file = 'page.html.twig'): Response
+    {
+        $host = $this->container->get('router')->getContext()->getHost();
+        $image = sprintf('https://%s%s', $host, '/image/background.jpg');
+        $seo = array_merge(
+            [
+                'robots' => 'follow, index',
+                'og:title' => $page->title,
+                'og:image' => $image,
+                'twitter:title' => $page->title,
+                'twitter:image' => $image,
+            ],
+            $page->seo
+        );
+        $seo['og:description'] = $page->seo['description'] ?? '';
+        $seo['twitter:description'] = $page->seo['description'] ?? '';
+        return $this->render($file, array_merge([
             'title' => $page->title,
+            'content' => $page,
+            'seo' => $seo,
         ], $page->metadata));
     }
 }

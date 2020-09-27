@@ -1,5 +1,11 @@
 module.exports = {
-  purge: [],
+  purge: {
+    mode: 'all',
+    content: [
+      '.templates/**/*',
+      '.config/data/**/*',
+    ],
+  },
   theme: {
     extend: {
       height: {
@@ -9,7 +15,11 @@ module.exports = {
         brand: {
           blue: '#0c35de',
           'blue-dark': '#0c165e',
+          purple: '#414a9e',
         },
+      },
+      screens: {
+        'print': {'raw': 'print'},
       },
     },
   },
@@ -17,4 +27,4 @@ module.exports = {
     fontSize: ['responsive'],
   },
   plugin: [],
-}
+};

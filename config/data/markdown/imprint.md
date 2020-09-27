@@ -1,16 +1,16 @@
-_Note: entire content is currently in german_
+## Impressum
 
 ### Angaben gemäß § 5 TMG
 
 Christian Rodriguez Benthake  
 cben.co Projektentwicklung  
-Hauptstraße 17  
-73760 Ostfildern  
+Reventlouallee 9  
+24105 Kiel  
 
 ### Kontakt
 
-Telefon: +49 151 75004509  
-E-Mail: contact@cben.co
+Telefon: (de) 151 75004509  
+E-Mail: contact (at) cben (punkt) co
 
 ### Haftung für Inhalte
 

@@ -3,16 +3,12 @@
   "description": "Personal Website",
   "type": "project",
   "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": false,
   "authors": [
     {
       "name": "Chris Ben",
       "email": "chris@cben.co"
-    }
-  ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/BenjaminHoegh/ParsedownExtended"
     }
   ],
   "autoload": {
@@ -20,8 +16,7 @@
       "App\\": "src/"
     },
     "files": [
-      "src/functions.php",
-      "vendor/benjaminhoegh/parsedown-extreme/ParsedownExtended.php"
+      "src/functions.php"
     ]
   },
   "config": {
@@ -31,23 +26,22 @@
   },
   "require": {
     "php": ">=8.0",
-    "benjaminhoegh/parsedown-extreme": "dev-master",
-    "symfony/http-foundation": "^5.1",
-    "symfony/asset": "^5.1",
-    "symfony/twig-bridge": "^5.1",
+    "symfony/http-foundation": "^5.2-dev",
+    "symfony/asset": "^5.2-dev",
+    "symfony/twig-bridge": "^5.2-dev",
     "symfony/flex": "^1.9",
     "symplify/flex-loader": "^8.1",
     "symplify/autodiscovery": "^8.1",
-    "symfony/framework-bundle": "^5.1",
-    "symfony/dotenv": "^5.1",
+    "symfony/framework-bundle": "^5.2-dev",
+    "symfony/dotenv": "^5.2-dev",
     "doctrine/cache": "^1.10",
     "erusev/parsedown": "1.8.0-beta-7",
-    "erusev/parsedown-extra": "0.8.0-beta-1",
+    "erusev/parsedown-extra": "0.8.1",
     "symplify/symfony-static-dumper": "^8.1",
     "symfony/webpack-encore-bundle": "^1.7",
     "sensio/framework-extra-bundle": "^5.5",
-    "taufik-nurrohman/parsedown-extra-plugin": "^1.2",
-    "symfony/web-link": "^5.1",
+    "tovic/parsedown-extra-plugin": "dev-master",
+    "symfony/web-link": "^5.2-dev",
     "nette/utils": "^3.1",
     "doctrine/annotations": "^1.10",
     "knplabs/knp-time-bundle": "^1.12",
@@ -57,7 +51,7 @@
     "ext-json": "*",
     "cmfcmf/openweathermap-php-api": "dev-master",
     "guzzlehttp/guzzle": "^7.0",
-    "symfony/twig-bundle": "^5.1",
+    "symfony/twig-bundle": "^5.2-dev",
     "http-interop/http-factory-guzzle": "^1.0"
   },
   "scripts": {
@@ -67,7 +61,7 @@
     }
   },
   "require-dev": {
-    "symfony/stopwatch": "^5.1",
-    "symfony/web-profiler-bundle": "^5.1"
+    "symfony/stopwatch": "^5.2-dev",
+    "symfony/web-profiler-bundle": "^5.2-dev"
   }
 }

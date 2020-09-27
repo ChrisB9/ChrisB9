@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
       const ctx = document.body.querySelector('.chartjs');
       const ctxContainer = document.body.querySelector('.chartjs-container');
       const chart = new Chart(ctx.getContext('2d'), JSON.parse(ctxContainer.dataset['json']));
+      if (ctx.hasAttribute('id')) {
+        window.charts = window.charts || {};
+        window.charts[ctx.getAttribute('id')] = chart;
+      }
     };
 
     document.body.appendChild(script);

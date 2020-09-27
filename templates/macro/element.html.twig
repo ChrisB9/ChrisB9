@@ -5,7 +5,7 @@
              x-show="!query || $refs['project-{{ project.id }}'].dataset.json.includes(query)"
              @click="$refs['project-{{ project.id }}-link'].click()"
     >
-        <div class="px-3">
+        <div class="project__header px-3">
             <div class="flex justify-between my-3">
                 <h1 class="font-medium tracking-wide text-brand-blue-dark">
                     {% if project.icon is iterable %}
@@ -18,12 +18,12 @@
                 </h1>
             </div>
         </div>
-        <div class="border-bottom bg-white py-2 px-3">
+        <div class="project__body border-bottom bg-white py-2 px-3">
             <div class="flex flex-col">
                 {{ project.description|raw }}
             </div>
             {% if project.tags %}
-                <div class="mt-2 pt-1 border-t border-gray-200">
+                <div class="project__tags mt-2 pt-1 border-t border-gray-200">
                     {% for tag in project.tags %}
                         <div class="text-xs inline-flex items-center leading-sm uppercase px-3 py-1 bg-blue-100 text-blue-800 rounded-full">{{ tag }}</div>
                     {% endfor %}
@@ -34,7 +34,7 @@
 {% endmacro %}
 
 {% macro projectSearch(type) %}
-    <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="dark-mode-inverted flex flex-wrap -mx-3 mb-6">
         <div class="w-full px-3">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="search">
                 Search
