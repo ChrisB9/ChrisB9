@@ -1,9 +1,10 @@
 module.exports = {
   purge: {
-    mode: 'all',
+    enabled: true,
     content: [
-      '.templates/**/*',
-      '.config/data/**/*',
+      './templates/**/*',
+      './src/**/*',
+      './config/data/**/*',
     ],
   },
   theme: {
