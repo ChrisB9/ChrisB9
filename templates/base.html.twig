@@ -11,9 +11,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block metatags %}
     {% endblock %}
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="cben.dev">
+    <meta name="apple-mobile-web-app-title" content="cben.dev">
+    <meta name="theme-color" content="#414a9e">
+    <meta name="msapplication-navbutton-color" content="#414a9e">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+
+    <link rel="icon" sizes="96x96" href="/static/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="/static/favicon-96x96.png">
     <link rel="preload" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
-    <link rel="icon" type="image/png" href="/static/favicon-96x96.png">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <!-- credit for webp/avif feature detection: https://github.com/djpogo/avif-webp-css-support/blob/main/avif-webp.min.js -->
     <script>!function(document){"use strict";var webpImage,avifImage="data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAF0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgS0AAAAAABNjb2xybmNseAACAAIAAIAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAGVtZGF0EgAKBzgAPtAgIAkyUBAAAPWc41TP///4gHBX9H8XVK7gGeDllq8TYARA+8Tfsv7L+zPE24eIoIzE0WhHbrqcrTK9VEgEG/hwgB5rdCbvP8g3KYPdV88CvPJnptgQ",webpClass="webp",avifClass="avif";function alreadyTested(format){if(window.sessionStorage){var test=window.sessionStorage.getItem(format+"Support");if("false"===test||"true"===test)return"true"===test}return null}function testFormat(format,imageSrc,callback){var tested=alreadyTested(format);if(null===tested){var image=new Image;return image.onload=image.onerror=function(){callback(format,2===image.height)},void(image.src=imageSrc)}addClass(format,tested)}function addClass(format,support){if(support){var el=document.documentElement;el.classList?el.classList.add("webp"===format?"webp":"avif"):el.className+=" "+format=="webp"?"webp":"avif",window.sessionStorage.setItem(format+"Support",!0)}else window.sessionStorage.setItem(format+"Support",!1)}testFormat("webp","data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA",addClass),testFormat("avif",avifImage,addClass)}(document);</script>
