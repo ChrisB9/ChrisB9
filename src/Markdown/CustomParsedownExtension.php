@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace App\Markdown;
 
+use Symfony\Component\Asset\Packages;
 use Twig\Environment;
 
 final class CustomParsedownExtension extends \ParsedownExtraPlugin
 {
     public $blockCodeClassFormat = '%s';
     public Environment $twig;
+    public Packages $packages;
     public array $context;
     public string $chartJsDir = '';
 
@@ -151,6 +153,10 @@ final class CustomParsedownExtension extends \ParsedownExtraPlugin
         if ($src) {
             $pathInfo = pathinfo($src);
             $webPSrc = str_replace($pathInfo['basename'], sprintf('%s.webp', $pathInfo['filename']), $src);
+            if (!str_starts_with($src, 'http')) {
+                $image['element']['attributes']['src'] = $this->packages->getUrl($src);
+                $webPSrc = $this->packages->getUrl($webPSrc);
+            }
             $source = $image;
             $source['element']['name'] = 'source';
             $source['element']['attributes']['srcset'] = $webPSrc;
@@ -362,12 +368,16 @@ final class CustomParsedownExtension extends \ParsedownExtraPlugin
 
     protected function blockChartJsCodeComplete($block): ?array
     {
+        $aria = json_decode($block['element']['attributes']['data-json'])->aria;
         $block['element']['elements'] = [
             [
                 'name' => 'canvas',
                 'text' => '',
                 'attributes' => [
                     'class' => 'chartjs max-h-full',
+                    'aria-label' => $aria->label,
+                    'tabindex' => 0,
+                    '@keydown.enter' => "console.log('TODO: add a11y to chartjs-canvas')"
                 ],
             ]
         ];

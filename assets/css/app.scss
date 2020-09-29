@@ -4,46 +4,50 @@
 
 @tailwind components;
 
-@import "timeline";
+@tailwind utilities;
 
-@import "dark-mode";
+@layer utilities {
+  @import "timeline";
 
-.header {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(15deg, #0c35decc 0%, #050f458a 100%), url(/image/background.jpg);
-  background-size:cover;
-  background-position: center;
-}
+  @import "dark-mode";
 
-@screen print {
-  header,
-  footer {
-    display: none !important;
+  @import "~line-awesome/dist/line-awesome/scss/line-awesome";
+
+  .header {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(15deg, #0c35decc 0%, #050f458a 100%), url(../image/background.jpg);
+    background-size:cover;
+    background-position: center;
+  }
+
+  @screen print {
+    header,
+    footer {
+      display: none !important;
+    }
+  }
+
+  .webp .header {
+    background-image: linear-gradient(15deg, #0c35decc 0%, #050f458a 100%), url(../image/background.webp);
+  }
+
+  //.avif .header {
+  //  background-url: url(/image/background.avif);
+  //}
+
+  .header--small {
+    position: relative;
+    height: 40vh;
+  }
+
+  .content > * {
+    margin-bottom: 1.5em;
+  }
+
+  .content > .project {
+    margin-bottom: 2.5em;
   }
 }
-
-.webp .header {
-  background-image: linear-gradient(15deg, #0c35decc 0%, #050f458a 100%), url(/image/background.webp);
-}
-
-//.avif .header {
-//  background-url: url(/image/background.avif);
-//}
-
-.header--small {
-  position: relative;
-  height: 40vh;
-}
-
-.content > * {
-  margin-bottom: 1.5em;
-}
-
-.content > .project {
-  margin-bottom: 2.5em;
-}
-
-@tailwind utilities;

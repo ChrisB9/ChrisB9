@@ -1,4 +1,4 @@
-![Image of myself](/image/IMG_5233.JPG) {.rounded-full .w-64 .h-64 .object-center .object-cover .m-auto .shadow-lg}
+![Image of myself](build/images/IMG_5233.JPG) {.rounded-full .w-64 .h-64 .object-center .object-cover .m-auto .shadow-lg}
 
 <br />
 

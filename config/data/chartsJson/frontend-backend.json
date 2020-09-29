@@ -1,5 +1,8 @@
 {
   "type": "horizontalBar",
+  "aria": {
+    "label": "My passion is 30% Frontend-Dev and 70% Backend-Dev"
+  },
   "data": {
     "labels": [
       "January"

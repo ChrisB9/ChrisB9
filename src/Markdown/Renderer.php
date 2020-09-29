@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Markdown;
 
 use App\Model\Page;
+use Symfony\Component\Asset\Packages;
 use Symfony\Contracts\Cache\CacheInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 use Twig\Environment;
@@ -16,17 +17,12 @@ final class Renderer
     private CustomParsedownExtension $parsedown;
     private CacheInterface $cache;
 
-    /**
-     * Renderer constructor.
-     * @param Environment $twig
-     * @param CustomParsedownExtension $parsedown
-     * @param CacheInterface $cache
-     */
-    public function __construct(Environment $twig, CustomParsedownExtension $parsedown, CacheInterface $cache)
+    public function __construct(Environment $twig, CustomParsedownExtension $parsedown, CacheInterface $cache, Packages $packages)
     {
         $parsedown->setSafeMode(false);
         $parsedown->setBreaksEnabled(true);
         $parsedown->twig = $twig;
+        $parsedown->packages = $packages;
         $parsedown->chartJsDir = PROJECT_ROOT . '/config/data/chartsJson';
         $this->parsedown = $parsedown;
         $this->twig = $twig;

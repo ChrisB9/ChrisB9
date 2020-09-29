@@ -7,11 +7,19 @@ namespace App\Controller;
 use App\Model\Page;
 use App\Repository\PageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Asset\Packages;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 final class PageController extends AbstractController
 {
+    private Packages $packages;
+
+    public function __construct(Packages $packages)
+    {
+        $this->packages = $packages;
+    }
+
     /**
      * @param Request $request
      * @param PageRepository $pageRepository
@@ -43,8 +51,7 @@ final class PageController extends AbstractController
 
     private function generate(Page $page, string $file = 'page.html.twig'): Response
     {
-        $host = $this->container->get('router')->getContext()->getHost();
-        $image = sprintf('https://%s%s', $host, '/image/background.jpg');
+        $image = $this->packages->getUrl('/image/background.jpg');
         $seo = array_merge(
             [
                 'robots' => 'follow, index',

@@ -22,6 +22,10 @@
     color: theme('colors.white');
   }
 
+  .dark-mode .timeline .entry .body ul li:before {
+    color: theme('colors.white') !important;
+  }
+
   .dark-mode .timeline .entry .body {
     background-color: #00000088 !important;
   }
@@ -61,5 +65,14 @@
     background-color: theme('colors.gray.900') !important;
     color: white;
   }
+
+  .dark-mode .text-light {
+    color: theme('colors.gray.200') !important;
+  }
+
+  .dark-mode .text-lighter {
+    color: theme('colors.gray.100') !important;
+  }
+
 }
 
