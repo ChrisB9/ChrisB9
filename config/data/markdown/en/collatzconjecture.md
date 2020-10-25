@@ -1,5 +1,5 @@
 ## Collatz Conjecture
-  
+
 
 The collatz-conjecture is a simple-looking but still unsolved math problem.
 Given any number **n**, will it always break down to 1 after applying the two rules?

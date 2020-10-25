@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use JetBrains\PhpStorm\Pure;
+
 final class Project
 {
     public function __construct(
@@ -17,19 +19,32 @@ final class Project
         public array $tags,
     )
     {
-        # php 8.0 takes care of the rest
     }
 
-    public static function fromArray(array $project): static
+    public function getLink(): string
     {
-        return new static(
+        if ($this->isInternal()) {
+            return str_replace('route:/', '', $this->url);
+        }
+        return $this->url;
+    }
+
+    public function isInternal(): bool
+    {
+        return str_starts_with(haystack: $this->url, needle: 'route:');
+    }
+
+    #[Pure]
+    public static function fromArray(array $project): Project
+    {
+        return new Project(
             $project['id'],
             $project['active'],
             $project['client'] ?? false,
             $project['icon'],
             $project['url'],
-            $project['title'],
-            $project['description'],
+            $project['title'] ?? $project['label'] . '.title',
+            $project['description'] ?? $project['label'] . '.description',
             $project['tags'] ?? [],
         );
     }

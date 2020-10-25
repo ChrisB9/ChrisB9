@@ -13,20 +13,19 @@ use Twig\Environment;
 final class Renderer
 {
     private static Page $context;
-    private Environment $twig;
-    private CustomParsedownExtension $parsedown;
-    private CacheInterface $cache;
 
-    public function __construct(Environment $twig, CustomParsedownExtension $parsedown, CacheInterface $cache, Packages $packages)
+    public function __construct(
+        private Environment $twig,
+        private CustomParsedownExtension $parsedown,
+        private CacheInterface $cache,
+        Packages $packages
+    )
     {
         $parsedown->setSafeMode(false);
         $parsedown->setBreaksEnabled(true);
         $parsedown->twig = $twig;
         $parsedown->packages = $packages;
         $parsedown->chartJsDir = PROJECT_ROOT . '/config/data/chartsJson';
-        $this->parsedown = $parsedown;
-        $this->twig = $twig;
-        $this->cache = $cache;
     }
 
     public function parseMarkdown(?string $markdown = null): string

@@ -4,9 +4,9 @@
              x-ref="project-{{ project.id }}"
              x-show="!query || $refs['project-{{ project.id }}'].dataset.json.includes(query)"
              tabindex="0"
-             @click="$refs['project-{{ project.id }}-link'].click()"
+             @click="window.location = $refs['project-{{ project.id }}-link']"
              aria-keyshortcuts="enter"
-             @keydown.enter="$refs['project-{{ project.id }}-link'].click()"
+             @keydown.enter="window.location = $refs['project-{{ project.id }}-link']"
     >
         <div class="project__header px-3">
             <div class="flex justify-between my-3">
@@ -16,14 +16,19 @@
                     {% else %}
                         <i class="las la-{{ project.icon }}"></i>
                     {% endif %}
-                    <a x-ref="project-{{ project.id }}-link" href="{{ project.url }}"
-                       target="_blank" @click.prevent>{{ project.title }}</a>
+                    {% if project.isInternal %}
+                        <a x-ref="project-{{ project.id }}-link" href="{{ path(project.getLink()) }}"
+                           target="_blank" @click.prevent hreflang="{{ app.request.locale }}">{{ project.title|trans({}, 'projects') }}</a>
+                    {% else %}
+                        <a x-ref="project-{{ project.id }}-link" href="{{ project.url }}"
+                           target="_blank" @click.prevent>{{ project.title|trans({}, 'projects') }}</a>
+                    {% endif %}
                 </h1>
             </div>
         </div>
         <div class="project__body border-bottom bg-white py-2 px-3">
             <div class="flex flex-col">
-                {{ project.description|raw }}
+                {{ project.description|trans({}, 'projects')|raw }}
             </div>
             {% if project.tags %}
                 <div class="project__tags mt-2 pt-1 border-t border-gray-200">
@@ -40,11 +45,11 @@
     <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full px-3">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-lighter" for="search">
-                Search
+                {% trans %}search.label{% endtrans %}
             </label>
             <input class="dark-mode-inverted appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                    type="search" id="search" x-model="query" autocomplete="off">
-            <p class="text-gray-800 text-xs italic text-light">Search through the {{ type }}</p>
+            <p class="text-gray-800 text-xs italic text-light">{% trans %}search.description{% endtrans %} {{ type }}</p>
         </div>
     </div>
 {% endmacro %}

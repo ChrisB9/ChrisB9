@@ -1,4 +1,9 @@
 presta_sitemap:
+  alternate:
+    enabled: true
+    default_locale: 'en'
+    locales: ['de', 'en']
+    i18n: symfony
   defaults:
     priority: 1
     changefreq: daily

@@ -1,7 +1,7 @@
 {
   "type": "horizontalBar",
   "aria": {
-    "label": "My passion is 30% Frontend-Dev and 70% Backend-Dev"
+    "label": "My passion is 20% Frontend-Dev and 80% Backend-Dev"
   },
   "data": {
     "labels": [
@@ -11,7 +11,7 @@
       {
         "label": "Backend-Development",
         "data": [
-          71
+          80
         ],
         "fill": true,
         "backgroundColor": [
@@ -19,20 +19,21 @@
         ],
         "borderWidth": 0,
         "barPercentage": 0.5,
-        "barThickness": 1,
+        "barThickness": 10,
         "maxBarThickness": 8,
         "minBarLength": 2
       },
       {
         "label": "Frontend-Development",
         "data": [
-          29
+          20
         ],
         "fill": true,
         "backgroundColor": [
           "#f1e05a"
         ],
-        "borderWidth": 0
+        "borderWidth": 0,
+        "barThickness": 10
       }
     ]
   },
@@ -47,13 +48,11 @@
           "ticks": {
             "beginAtZero": true
           },
-          "stacked": true,
-          "barThickness": 10
+          "stacked": true
         }
       ],
       "xAxes": [{
         "display": false,
-        "barThickness": 10,
         "stacked": true
       }]
     }

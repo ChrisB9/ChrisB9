@@ -9,8 +9,7 @@ return [
         'client' => false,
         'icon' => ['lab', 'php'],
         'url' => 'https://github.com/phpsu/ShellCommandBuilder',
-        'title' => 'phpsu/ShellCommandBuilder',
-        'description' => 'Creating basic and more complex shell commands in an fluid object-oriented fashion. This makes it very straight forward to abstract the general mechanisms of bash behind a readable and debuggable layer.',
+        'label' => 'phpsu/ShellCommandBuilder',
         'tags' => ['bash', 'dsl'],
     ],
     [
@@ -19,8 +18,7 @@ return [
         'client' => false,
         'icon' => ['lab', 'php'],
         'url' => 'https://phpsu.de',
-        'title' => 'phpsu/phpsu',
-        'description' => 'Synchronize your local and/or remote database and filesystem between your projects',
+        'label' => 'phpsu/phpsu',
         'tags' => ['synchronization-tool', 'dev-tools'],
     ],
     [
@@ -29,8 +27,7 @@ return [
         'client' => false,
         'icon' => ['lab', 'docker'],
         'url' => 'https://hub.docker.com/r/chrisb9/php8-nginx-xdebug',
-        'title' => 'chrisb9/php8-nginx-xdebug',
-        'description' => 'A docker container with PHP 8.0 and nginx (with brotli enabled) and xdebug, pcov and composer preinstalled',
+        'label' => 'chrisb9/php8-nginx-xdebug',
         'tags' => ['php 8.0', 'docker image', 'nginx', 'dev-tools'],
     ],
     [
@@ -39,8 +36,7 @@ return [
         'client' => false,
         'icon' => ['lab', 'docker'],
         'url' => 'https://hub.docker.com/r/chrisb9/pimcore-dev',
-        'title' => 'chrisb9/pimcore-dev',
-        'description' => 'A docker container that is based on webdevops and pluswerk/php-dev and provides the toolchain for pimcore projects',
+        'label' => 'chrisb9/pimcore-dev',
         'tags' => ['docker image', 'pimcore'],
     ],
     [
@@ -49,8 +45,7 @@ return [
         'client' => false,
         'icon' => ['lab', 'docker'],
         'url' => 'https://hub.docker.com/r/pluswerk/php-dev/',
-        'title' => 'pluswerk/php-dev',
-        'description' => 'A docker container that is based on webdevops and has all necessary development tools for developing, debugging and profiling',
+        'label' => 'pluswerk/php-dev',
         'tags' => ['docker image', 'dev-tools'],
     ],
     [
@@ -59,8 +54,7 @@ return [
         'client' => false,
         'icon' => 'wrench',
         'url' => '#',
-        'title' => 'Gutenberg+Elementor YouTube Block',
-        'description' => '(not public yet): An advanced youtube block that works for Gutenberg and the Elementor Page Builder',
+        'label' => 'Gutenberg+Elementor YouTube Block',
         'tags' => ['wordpress', 'elementor', 'gutenberg', 'typescript'],
     ],
     [
@@ -69,8 +63,7 @@ return [
         'client' => false,
         'icon' => 'wrench',
         'url' => 'https://github.com/ChrisB9/PimcorePageBuilderBundle',
-        'title' => 'Page Builder for PimCore',
-        'description' => 'A basic page builder for pimcore based on grapes.js',
+        'label' => 'Page Builder for PimCore',
         'tags' => ['pimcore', 'pagebuilder', 'grapesjs'],
     ],
     [
@@ -79,8 +72,7 @@ return [
         'client' => false,
         'icon' => 'laptop-code',
         'url' => 'https://github.com/ChrisB9/ChrisB9',
-        'title' => 'cben.dev',
-        'description' => 'Static file based website built with tailwindcss and symfony running on php 8.0',
+        'label' => 'cben.dev',
         'tags' => ['personal website', 'symfony 5', 'php 8.0', 'tailwindcss', 'alpinejs', 'markdown'],
     ],
     [
@@ -89,8 +81,7 @@ return [
         'client' => false,
         'icon' => 'language',
         'url' => 'https://github.com/reactjs/de.reactjs.org/',
-        'title' => 'React.js translation',
-        'description' => 'Co-Maintainer of the reactjs documentation effort to translate the entire documentation into german',
+        'label' => 'React.js translation',
         'tags' => ['react', 'translation', 'documentation']
     ],
     [
@@ -99,8 +90,7 @@ return [
         'client' => false,
         'icon' => 'archive',
         'url' => 'https://github.com/ChrisB9/Smart-Weather-Prediction',
-        'title' => 'Weather-Prediction for the Bosch IoT Controller',
-        'description' => 'University project: experimenting with Bosch IoT, React Native, and RethinkDB',
+        'label' => 'Weather-Prediction for the Bosch IoT Controller',
         'tags' => ['IoT', 'react', 'react-native', 'rethink-db']
     ],
     [
@@ -109,8 +99,7 @@ return [
         'client' => false,
         'icon' => 'archive',
         'url' => 'https://github.com/derRest/derRest',
-        'title' => 'Labyrinth solving game against an AI',
-        'description' => 'University project: Solving randomly generated labyrinth',
+        'label' => 'Labyrinth solving game against an AI',
         'tags' => ['algorithm', 'php']
     ],
     [
@@ -118,9 +107,8 @@ return [
         'active' => false,
         'client' => false,
         'icon' => 'lab',
-        'url' => '/projects/tictactoe',
-        'title' => 'Tic Tac Toe',
-        'description' => 'Play a round of tic tac toe',
+        'url' => 'route:/projects/tictactoe',
+        'label' => 'Tic Tac Toe',
         'tags' => ['game', 'javascript']
     ],
     [
@@ -129,8 +117,7 @@ return [
         'client' => true,
         'icon' => 'lab',
         'url' => 'https://sitzkrieger.com',
-        'title' => 'Sitzkrieger.com',
-        'description' => '<i>A videoplatform to help people in offices & at home to prevent pain</i><p>From Hosting to Implementation, this is a highly customized project with modern technologies and symfony powered backend</p>',
+        'label' => 'Sitzkrieger.com',
         'tags' => ['pimcore', 'react', 'chakra-ui', 'elasticsearch', 'symfony'],
     ],
     [
@@ -139,8 +126,7 @@ return [
         'client' => true,
         'icon' => 'lab',
         'url' => 'https://sanogym.com',
-        'title' => 'Sanogym.com',
-        'description' => '<i>Expert for healthoriented personal training, pilates and grouptraining</i><p>This is a website, developed from scratch, with WordPress and many custom made GutenBerg-Plugins</p>',
+        'label' => 'Sanogym.com',
         'tags' => ['wordpress', 'react', 'tailwindcss', 'design', 'PWA'],
     ],
     [
@@ -149,8 +135,7 @@ return [
         'client' => true,
         'icon' => 'lab',
         'url' => 'https://sitzkrieger.com',
-        'title' => 'Trainingsinsel.de',
-        'description' => '<i>Personal Training for companies</i><p>Support and maintenance of a wordpress-system</p>',
+        'label' => 'Trainingsinsel.de',
         'tags' => ['wordpress'],
     ],
     [
@@ -159,8 +144,7 @@ return [
         'client' => true,
         'icon' => 'lab',
         'url' => 'https://geniocon.com',
-        'title' => 'geniocon.com',
-        'description' => '<i>Online-Marketing and business-oriented marketing courses</i><p>Maintenance and continuous development of multiple wordpress instances</p>',
+        'label' => 'geniocon.com',
         'tags' => ['wordpress', 'woocommerce'],
     ],
     [
@@ -169,8 +153,7 @@ return [
         'client' => true,
         'icon' => 'lab',
         'url' => 'https://scheckhefte.com',
-        'title' => 'Scheckhefte.com',
-        'description' => '<i>check - and service-books for the car industry</i><p>Maintenance and Relaunch of a wordpress instance</p>',
+        'label' => 'Scheckhefte.com',
         'tags' => ['wordpress', 'woocommerce'],
     ],
     [
@@ -179,8 +162,7 @@ return [
         'client' => true,
         'icon' => 'lab',
         'url' => 'https://stiftung-managerohnegrenzen.de',
-        'title' => 'Stiftung managerohnegrenzen',
-        'description' => '<i>Foundation: Business people against poverty</i><p>Continuous developement and improvement of a multi-language wordpress system</p>',
+        'label' => 'Stiftung managerohnegrenzen',
         'tags' => ['wordpress', 'multi-language', 'vuejs', 'newsletter-system'],
     ],
     [
@@ -189,8 +171,7 @@ return [
         'client' => true,
         'icon' => 'lab',
         'url' => 'https://lauer-repair.de',
-        'title' => 'Lauer-Repair.de',
-        'description' => '<i>Specialist in fixing smartphones and tables in stuttgart</i><p>Development of a fully-customized invoice and customer management tool with automated pdf-creation</p>',
+        'label' => 'Lauer-Repair.de',
         'tags' => ['wordpress-plugin', 'customer-management', 'invoices', 'pdf-creation'],
     ],
     [
@@ -198,9 +179,8 @@ return [
         'active' => true,
         'client' => false,
         'icon' => 'laptop-code',
-        'url' => '/projects/timestamp-generator',
-        'title' => 'Timestamp Generator',
-        'description' => 'generate many random timestamps between two dates',
+        'url' => 'route:/projects/timestamp-generator',
+        'label' => 'Timestamp Generator',
         'tags' => ['alpinejs', 'php', 'timestamp']
     ],
     [
@@ -208,9 +188,8 @@ return [
         'active' => true,
         'client' => false,
         'icon' => 'laptop-code',
-        'url' => '/projects/collatz-conjecture',
-        'title' => 'Collatz Conjecture',
-        'description' => 'Experimenting with collatz conjecture',
+        'url' => 'route:/projects/collatz-conjecture',
+        'label' => 'Collatz Conjecture',
         'tags' => ['php', 'math']
     ],
 ];

@@ -35,4 +35,5 @@ jobs:
           cd ${{ secrets.TARGET_DIR }}
           chown -R 1000:1000 ${{ secrets.TARGET_DIR }}
           chmod -R 777 ${{ secrets.TARGET_DIR }}/var/{cache,logs}
+          rm -rf ${{ secrets.TARGET_DIR }}/var/cache/pro*
           make deploy

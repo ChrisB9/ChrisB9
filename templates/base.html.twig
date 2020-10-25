@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app.request.locale }}">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{{ title |default('Welcome!') }}{% endblock %} | cben.dev</title>
+    <meta http-equiv="content-language" content="{{ app.request.locale }}">
+    <title>{% block title %}{{ title|default('Welcome!')|trans({}, 'page') }}{% endblock %} | cben.dev</title>
     {% block stylesheets %}
         {% for css in encore_entry_css_files('app') %}
             <link rel="stylesheet" href="{{ preload(asset(css), { as: 'style', nopush: true }) }}">
@@ -11,8 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block metatags %}
     {% endblock %}
-    <link rel="manifest" href="manifest.json">
-
+    <link rel="manifest" href="manifest.webmanifest">
+    {% if canonical is defined %}
+        <link rel="canonical" href="{{ canonical }}" />
+    {% endif %}
+    {% if link is defined %}
+        {% if canonical is defined %}
+            <link rel="alternate" href="{{ canonical }}" hreflang="x-default" />
+        {% endif %}
+        <link rel="alternate" href="{{ link.alternate }}" hreflang="{{ link.lang }}" />
+    {% endif %}
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="cben.dev">
@@ -21,12 +30,25 @@
     <meta name="msapplication-navbutton-color" content="#414a9e">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="msapplication-starturl" content="/">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Person",
+            "name": "Christian Rodriguez Benthake",
+            "url": "https://cben.dev",
+            "image": "{{ asset('build/images/IMG_5233.JPG') }}",
+            "sameAs": "https://github.com/ChrisB9",
+            "jobTitle": "Software Developer"
+        }
+    </script>
 
     <link rel="icon" sizes="96x96" href="/static/favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="96x96" href="/static/favicon-96x96.png">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" async defer></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" async defer></script>
+    <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine-ie11.min.js" async defer></script>
     <!-- credit for webp/avif feature detection: https://github.com/djpogo/avif-webp-css-support/blob/main/avif-webp.min.js -->
-    <script>!function(document){"use strict";var webpImage,avifImage="data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAF0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgS0AAAAAABNjb2xybmNseAACAAIAAIAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAGVtZGF0EgAKBzgAPtAgIAkyUBAAAPWc41TP///4gHBX9H8XVK7gGeDllq8TYARA+8Tfsv7L+zPE24eIoIzE0WhHbrqcrTK9VEgEG/hwgB5rdCbvP8g3KYPdV88CvPJnptgQ",webpClass="webp",avifClass="avif";function alreadyTested(format){if(window.sessionStorage){var test=window.sessionStorage.getItem(format+"Support");if("false"===test||"true"===test)return"true"===test}return null}function testFormat(format,imageSrc,callback){var tested=alreadyTested(format);if(null===tested){var image=new Image;return image.onload=image.onerror=function(){callback(format,2===image.height)},void(image.src=imageSrc)}addClass(format,tested)}function addClass(format,support){if(support){var el=document.documentElement;el.classList?el.classList.add("webp"===format?"webp":"avif"):el.className+=" "+format=="webp"?"webp":"avif",window.sessionStorage.setItem(format+"Support",!0)}else window.sessionStorage.setItem(format+"Support",!1)}testFormat("webp","data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA",addClass),testFormat("avif",avifImage,addClass)}(document);</script>
+    <script>!function(A){"use strict";function e(A,e,t){var l=function(A){if(window.localStorage){var e=window.localStorage.getItem(A+"Support");if("false"===e||"true"===e)return"true"===e}return null}(A);if(null===l){var o=new Image;return o.onload=o.onerror=function(){t(A,2===o.height)},void(o.src=e)}a(A,l)}function a(e,a){if(a){var t=A.documentElement;t.classList?t.classList.add("webp"===e?"webp":"avif"):t.className+=" "+e=="webp"?"webp":"avif",window.localStorage.setItem(e+"Support",!0)}else window.localStorage.setItem(e+"Support",!1)}e("webp","data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA",a),e("avif","data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAF0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgS0AAAAAABNjb2xybmNseAACAAIAAIAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAGVtZGF0EgAKBzgAPtAgIAkyUBAAAPWc41TP///4gHBX9H8XVK7gGeDllq8TYARA+8Tfsv7L+zPE24eIoIzE0WhHbrqcrTK9VEgEG/hwgB5rdCbvP8g3KYPdV88CvPJnptgQ",a)}(document);</script>
+    <script>"serviceWorker" in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js",{registrationStrategy:"registerImmediately"})});</script>
     {% block additionalStyles %}
         {% if enableTicTacToe is defined %}
             {{ encore_entry_link_tags('tictactoe') }}
@@ -35,10 +57,12 @@
 </head>
 <body>
 {% block body %}{% endblock %}
-{% include "snippets/footer.html.twig" %}
+{% if noFooter is not defined %}
+    {% include "snippets/footer.html.twig" %}
+{% endif %}
 {% block javascripts %}
     {% for js in encore_entry_js_files('app') %}
-        <script src="{{ asset(js) }}" type="text/javascript" defer="defer"></script>
+        <script src="{{ asset(js) }}" type="text/javascript" async defer></script>
     {% endfor %}
 {% endblock %}
 </body>

@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace App\Model;
 
 use App\Repository\PageRepository;
-use LazyProperty\LazyPropertiesTrait;
+use JetBrains\PhpStorm\ExpectedValues;
+use JetBrains\PhpStorm\Pure;
+use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 
 final class Page
 {
-    use LazyPropertiesTrait;
-
     private ?string $content;
 
     public function __construct(
@@ -18,13 +18,13 @@ final class Page
         public string $title,
         public string $slug,
         public string $file,
-        public string $contentType,
+        #[ExpectedValues([PageRepository::CONTENT_TYPE_MARKDOWN, PageRepository::CONTENT_TYPE_TWIG])] public string $contentType,
         public array $metadata,
         public ?array $seo,
         public array $data,
+        #[ExpectedValues(['de', 'en'])] public string $language,
     )
     {
-        $this->initLazyProperties(['content']);
     }
 
     public function setContent(string $content): void
@@ -37,13 +37,31 @@ final class Page
         if (!isset($this->content)) {
             $content = '';
             if ($this->contentType === PageRepository::CONTENT_TYPE_MARKDOWN) {
-                $content = file_get_contents(PROJECT_ROOT . '/config/data/markdown/' . $this->file . '.md');
+                $file = sprintf(
+                    '%s/config/data/markdown/%s/%s.md',
+                    PROJECT_ROOT,
+                    $this->language,
+                    $this->file
+                );
+                if (!file_exists($file)) {
+                    throw new FileNotFoundException('File not found.');
+                }
+                $content = file_get_contents($file);
             }
             $this->content = $content;
         }
         return $this->content;
     }
 
+    public function getTemplateFile(): string
+    {
+        return match($this->contentType){
+            PageRepository::CONTENT_TYPE_TWIG => $this->file,
+            default => 'page.html.twig',
+        };
+    }
+
+    #[Pure]
     public function toArray(): array
     {
         return get_object_vars($this);

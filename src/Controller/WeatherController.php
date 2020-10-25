@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cmfcmf\OpenWeatherMap;
-use Psr\Cache\InvalidArgumentException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,15 +18,8 @@ final class WeatherController extends AbstractController
         'stuttgart' => 'Stuttgart,DE',
     ];
 
-    /**
-     * @Route("/api/weather", methods={"GET"})
-     *
-     * @param OpenWeatherMap $openWeatherMap
-     * @param CacheInterface $cache
-     * @return JsonResponse
-     * @throws InvalidArgumentException
-     */
-    public function getWeatherAction(OpenWeatherMap $openWeatherMap, CacheInterface $cache)
+    #[Route(path: '/api/weather', methods: ['GET'])]
+    public function getWeatherAction(OpenWeatherMap $openWeatherMap, CacheInterface $cache): JsonResponse
     {
         $result = [];
         foreach (self::CITIES as $key => $city) {

@@ -19,18 +19,18 @@
     },
 }" @submit.prevent="submitData">
     <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="start">Start date:</label>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="start">{% trans %}timestamp.startdate{% endtrans %}</label>
         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                type="date" id="start" x-model="form.start">
     </div>
     <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="end">End date:</label>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="end">{% trans %}timestamp.enddate{% endtrans %}</label>
         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                type="date" id="end"
                x-model="form.end">
     </div>
     <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="limit">How many should be generated:</label>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="limit">{% trans %}timestamp.amound{% endtrans %}</label>
         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                type="number" id="limit"
                min="1" max="10000" x-model="form.limit">
@@ -38,7 +38,7 @@
     <div class="flex items-center justify-between">
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit">
-            Generate!
+            {% trans %}timestamp.generate{% endtrans %}
         </button>
     </div>
     <template x-for="timestamp in result" :key="timestamp">

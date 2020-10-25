@@ -18,7 +18,7 @@ final class PageRepository extends ElementRepository
     {
     }
 
-    public function getPage(string $route): ?Page
+    public function getPage(string $route, string $locale = 'en'): ?Page
     {
         if (empty($this->elements)) {
             $this->loadFromStorage();
@@ -26,23 +26,22 @@ final class PageRepository extends ElementRepository
         $page = $this->elements[$route] ?? null;
         if ($page) {
             $page = new Page(
-                $page['id'] ?? throw new \Exception('A page has to have an id'),
-                $page['title'] ?? '',
-                $route,
-                $page['file'],
-                $page['contentType'] ?? self::CONTENT_TYPE_MARKDOWN,
-                $page['metadata'] ?? [],
-                $page['seo'] ?? [],
-                $page,
+                id: $page['id'] ?? throw new \Exception('A page has to have an id'),
+                title: $page['title'] ?? '',
+                slug: $route,
+                file: $page['file'],
+                contentType: $page['contentType'] ?? self::CONTENT_TYPE_MARKDOWN,
+                metadata: $page['metadata'] ?? [],
+                seo: $page['seo'] ?? [],
+                data: $page,
+                language: $locale,
             );
             $page->getContent();
             Renderer::setContext($page);
-            if ($page->contentType === self::CONTENT_TYPE_MARKDOWN) {
-                $content = $this->renderer->parseMarkdown();
-            }
-            if ($page->contentType === self::CONTENT_TYPE_TWIG) {
-                $content = $page->file;
-            }
+            $content = match($page->contentType) {
+                self::CONTENT_TYPE_MARKDOWN => $this->renderer->parseMarkdown(),
+                self::CONTENT_TYPE_TWIG => $page->file,
+            };
             $page->setContent($content);
             return $page;
         }

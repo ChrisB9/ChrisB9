@@ -8,57 +8,49 @@ use App\Repository\ProjectRepository;
 return [
     '' => [
         'id' => 0,
-        'title' => 'Christian Rodriguez Benthake - Developer and Freelancer',
+        'title' => 'index',
         'file' => 'index.html.twig',
         'contentType' => PageRepository::CONTENT_TYPE_TWIG,
         'sitemap' => [
             'priority' => 1
         ],
-        'seo' => [
-            'description' => 'Software engineer and web developer for primarly modern PHP, and JavaScript + Freelancer in Kiel and Stuttgart',
-        ],
+        'seo' => [],
     ],
     'about' => [
         'id' => 1,
-        'title' => 'About Me',
+        'title' => 'about',
         'file' => 'about',
         'contentType' => PageRepository::CONTENT_TYPE_MARKDOWN,
-        'seo' => [
-            'description' => 'I am a full-stack webdeveloper and freelancer, working primarily with Docker, PHP, WordPress, PimCore, TYPO3, Vue, and ReactJS',
-        ],
+        'seo' => [],
     ],
     'freelancing' => [
         'id' => 2,
-        'title' => 'Freelancing',
+        'title' => 'freelancing',
         'file' => 'freelancing',
         'contentType' => PageRepository::CONTENT_TYPE_MARKDOWN,
         'activeClients' => fn() => ProjectRepository::loadActiveClient(),
         'inactiveClients' => fn() => ProjectRepository::loadInactiveClient(),
-        'seo' => [
-            'description' => 'References as a freelancing web developer',
-        ],
+        'seo' => [],
     ],
     'imprint' => [
         'id' => 3,
-        'title' => 'Imprint',
+        'title' => 'imprint',
         'file' => 'imprint',
         'contentType' => PageRepository::CONTENT_TYPE_MARKDOWN,
-        'seo' => [
-            'description' => 'Impressum',
-            'robots' => 'noindex, nofollow',
+        'sitemap' => [
+            'enabled' => false
         ],
+        'seo' => [],
     ],
     'readinglist' => [
         'id' => 4,
-        'title' => 'Readinglist',
+        'title' => 'readinglist',
         'file' => 'readinglist',
         'contentType' => PageRepository::CONTENT_TYPE_MARKDOWN,
         'sitemap' => [
             'enabled' => false
         ],
-        'seo' => [
-            'description' => 'Relevant Links and Resources for topics such as climate change and racism',
-        ],
+        'seo' => [],
     ],
     'projects/tictactoe' => [
         'id' => 5,
@@ -84,9 +76,7 @@ return [
         'sitemap' => [
             'enabled' => true,
         ],
-        'seo' => [
-            'description' => 'Generate multiple random timestamps between two dates - useful for mock-data',
-        ],
+        'seo' => [],
     ],
     'projects/collatz-conjecture' => [
         'id' => 16,
@@ -266,22 +256,18 @@ HTML,
     ],
     'contact' => [
         'id' => 6,
-        'title' => 'Contact me',
+        'title' => 'contact',
         'file' => 'contact',
         'contentType' => PageRepository::CONTENT_TYPE_MARKDOWN,
-        'seo' => [
-            'description' => 'Contact me via E-Mail or connect with on GitHub, Twitter, Xing, or LinkedIn',
-        ],
+        'seo' => [],
     ],
     'projects' => [
         'id' => 7,
-        'title' => 'Projects',
+        'title' => 'projects',
         'file' => 'projects',
         'contentType' => PageRepository::CONTENT_TYPE_MARKDOWN,
         'activeProjects' => fn() => ProjectRepository::loadActive(),
         'inactiveProjects' => fn() => ProjectRepository::loadInactive(),
-        'seo' => [
-            'description' => 'Projects I have worked on or am actively working on',
-        ],
+        'seo' => [],
     ],
 ];

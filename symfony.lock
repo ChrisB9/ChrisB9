@@ -50,9 +50,6 @@
     "nette/utils": {
         "version": "v3.1.2"
     },
-    "ocramius/lazy-property": {
-        "version": "2.0.0"
-    },
     "php": {
         "version": "7.4"
     },
@@ -323,8 +320,8 @@
     "symplify/smart-file-system": {
         "version": "v8.1.13"
     },
-    "symplify/symfony-static-dumper": {
-        "version": "v8.1.13"
+    "symplify/symplify-kernel": {
+        "version": "8.4-dev"
     },
     "tovic/parsedown-extra-plugin": {
         "version": "dev-master"

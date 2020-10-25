@@ -2,13 +2,13 @@
 <div class="markdown--disabled" x-data="{query: ''}">
     {{ helper.projectSearch('clients') }}
     <section>
-        <h1 class="text-2xl text-gray-700 font-bold text-lighter">Client Projects</h1>
+        <h1 class="text-2xl text-gray-700 font-bold text-lighter">{% trans %}client.active{% endtrans %}</h1>
         {% for project in data.activeClients %}
             {{ helper.projectHelper(project) }}
         {% endfor %}
     </section>
     <section>
-        <h1 class="text-xl text-gray-700 font-bold text-lighter">Past Client References</h1>
+        <h1 class="text-xl text-gray-700 font-bold text-lighter">{% trans %}client.inactive{% endtrans %}</h1>
         {% for project in data.inactiveClients %}
             {{ helper.projectHelper(project) }}
         {% endfor %}

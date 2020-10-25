@@ -10,6 +10,7 @@ abstract class ElementRepository
 
     /** @var array<mixed> */
     protected array $elements = [];
+    protected string $storageFile;
 
     public function loadFromStorage(): array
     {

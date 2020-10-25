@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block body %}
-    {{ page.header(title) }}
+    {{ page.header(title, link) }}
     <main :class="darkmode ? 'w-full bg-gray-100 dark-mode print:bg-white' : 'w-full bg-gray-100 print:bg-white'"
           x-data="{darkmode: false}" x-on:toggle-darkmode.window="darkmode = $event.detail.darkMode"
           x-init="darkmode = localStorage.getItem('darkmode') === 'true' || window.matchMedia('(prefers-color-scheme: dark)').matches"

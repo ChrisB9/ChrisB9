@@ -1,5 +1,13 @@
 {% extends "base.html.twig" %}
 
+{% block metatags %}
+    {% for type,metatags in seo %}
+        {% for meta,value in metatags %}
+            <meta {{ type }}="{{ meta }}" content="{{ value }}"/>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
+
 {% block body %}
     <div class="header flex flex-col">
         <header class="px-4 py-2 m-2 h-1/3">
@@ -16,25 +24,25 @@
         <main class="flex flex-col md:flex-row text-center px-4 py-2 m-2 self-center items-center justify-center">
             <div class="max-w-sm rounded w-full h-full overflow-hidden shadow-lg bg-white m-1">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2"><a href="/projects">Projects</a></div>
+                    <div class="font-bold text-xl mb-2"><a href="{{ path('projects') }}">{% trans from 'page' %}projects{% endtrans %}</a></div>
                     <p class="text-gray-700 text-base">
-                        My current and past opensource projects.
+                        {% trans %}projects.label{% endtrans %}
                     </p>
                 </div>
             </div>
             <div class="max-w-sm rounded w-full h-full overflow-hidden shadow-lg bg-white m-1">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2"><a href="/about">About me</a></div>
+                    <div class="font-bold text-xl mb-2"><a href="{{ path('about') }}">{% trans from 'page' %}about{% endtrans %}</a></div>
                     <p class="text-gray-700 text-base">
-                        I am a full-stack developer and freelancer
+                        {% trans %}basic.whoami{% endtrans %}
                     </p>
                 </div>
             </div>
             <div class="max-w-sm rounded w-full h-full overflow-hidden shadow-lg bg-white m-1">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2"><a href="/freelancing">Freelancing</a></div>
+                    <div class="font-bold text-xl mb-2"><a href="{{ path('freelancing') }}">{% trans from 'page' %}freelancing{% endtrans %}</a></div>
                     <p class="text-gray-700 text-base">
-                        Client projects I manage and develop.
+                        {% trans %}client.label{% endtrans %}
                     </p>
                 </div>
             </div>

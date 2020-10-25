@@ -15,6 +15,7 @@
 /src/.preload.php
 ###< symfony/framework-bundle ###
 
+/public/sw.js
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/

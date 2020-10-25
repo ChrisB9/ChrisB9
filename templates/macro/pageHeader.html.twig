@@ -1,9 +1,9 @@
-{% macro header(title) %}
+{% macro header(title, link) %}
     {% set navigation = {
-        '/about': 'About Me',
-        '/projects': 'Projects',
-        '/freelancing': 'Freelancing',
-        '/contact': 'Contact me'
+        'about': path('about'),
+        'projects': path('projects'),
+        'freelancing': path('freelancing'),
+        'contact': path('contact'),
     } %}
     <header
             x-data="{navigationOpen: false, darkMode: localStorage.getItem('darkmode') === 'true'}"
@@ -17,23 +17,28 @@
              :aria-expanded="navigationOpen" style="display: none" aria-label="Navigation Menu">
             <ul id="navigation-list"
                 class="flex text-white text-lg lg:text-sm flex-wrap items-center max-h-full overflow-auto w-full">
-                {% for url,navTitle in navigation %}
-                    <li class="lg:mx-2 w-full lg:w-auto shadow lg:shadow-none {{ navTitle == title ? 'bg-brand-purple text-white' : '' }}">
-                        <a href="{{ url }}" class="p-4 block hover:underline">{{ navTitle }}</a>
+                {% for navTitle,url in navigation %}
+                    <li class="lg:mx-2 w-full lg:w-auto shadow lg:shadow-none {{ navTitle == link.slug ? 'bg-brand-purple text-white' : '' }}">
+                        <a href="{{ url }}" class="p-4 block hover:underline" hreflang="{{ app.request.locale }}">{{ navTitle|trans({}, 'page') }}</a>
                     </li>
                 {% endfor %}
             </ul>
-            <div class="text-yellow-500 text-4xl h-full"
-                 aria-label="Enable Dark Mode"
-                 :aria-details="darkMode ? 'Dark Mode is currently enabled' : 'Dark Mode is currently disabled'"
-                 @click="darkMode = !darkMode">
-                <i :class="{ 'las la-sun p-1' : !darkMode, 'las la-moon p-1' : darkMode }"></i>
+            <div class="flex">
+                <div class="lg:mx-2 w-full lg:w-auto shadow lg:shadow-none text-white">
+                    <a class="p-4 block hover:underline" href="{{ link.href }}">{{ link.title }}</a>
+                </div>
+                <div class="text-yellow-500 text-4xl h-full"
+                     aria-label="Enable Dark Mode"
+                     :aria-details="darkMode ? 'Dark Mode is currently enabled' : 'Dark Mode is currently disabled'"
+                     @click="darkMode = !darkMode">
+                    <i :class="{ 'las la-sun p-1' : !darkMode, 'las la-moon p-1' : darkMode }"></i>
+                </div>
             </div>
         </nav>
         <div class="header header--small flex flex-col">
             <div class="px-4 py-2 m-2 h-1/3 flex justify-between">
                 <div class="text-2xl text-white rounded py-2 px-4">
-                    <a href="/" title="back to the root">cben.dev</a>
+                    <a href="{{ path('') }}" title="back to the root" hreflang="{{ app.request.locale }}">cben.dev</a>
                 </div>
                 <div class="py-3 px-4">
                     <button class="flex justify-center flex-col w-6 h-8 space-y-1 flex-wrap focus:outline-none"
@@ -46,7 +51,7 @@
                 </div>
             </div>
             <div class="text-center px-4 py-2 m-2 h-1/3 text-center text-white text-3xl md:text-6xl">
-                <h1>{{ title }}</h1>
+                <h1>{{ title|trans({}, 'page') }}</h1>
             </div>
             <div class="h-1/3"></div>
         </div>

@@ -25,6 +25,9 @@ start:
 	make up
 	make login
 
+restart:
+	$(call call_docker, restart, $(ARGS))
+
 up:
 	$(call call_docker, up -d, $(ARGS))
 

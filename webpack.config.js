@@ -2,6 +2,7 @@ const Encore = require('@symfony/webpack-encore');
 const dotenv = require('dotenv');
 const fs = require('fs');
 const os = require('os');
+const {InjectManifest} = require('workbox-webpack-plugin');
 
 if (!Encore.isRuntimeEnvironmentConfigured()) {
   Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
@@ -51,6 +52,11 @@ Encore
     from: './assets/image',
     to: 'images/[path][name].[hash:8].[ext]',
   })
+  .addPlugin(new InjectManifest({
+    mode: Encore.isProduction ? 'production' : 'development',
+    swSrc: './assets/js/sw.js',
+    swDest: '../sw.js'
+  }))
 //.enableTypeScriptLoader()
 //.enableIntegrityHashes(Encore.isProduction())
 ;
