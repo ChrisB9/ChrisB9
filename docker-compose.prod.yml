@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   web:
-    image: chrisb9/php8-nginx:beta2-8.0.0-2
+    image: chrisb9/php8-nginx:latest
     volumes:
       - .:/app
       - ./vhost.prod.conf:/opt/docker/nginx/conf.d/vhost.conf
