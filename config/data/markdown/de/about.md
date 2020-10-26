@@ -9,7 +9,7 @@
 
 Ich bin Christian Rodriguez Benthake, ein {%-test.html.twig%} Jahre alter Software-Entwickler und Freelancer mit Schwerpunkt in der PHP-Backend-Entwicklung.
 Zudem bin ich engagiert in der OpenSource-Community - z.B. durch Übersetzungen schreiben, neue Software entwickeln oder auch an bestehenen Projekten durch kleinere oder größere Änderungen beitragen.
-Zusätzlich gehe (ging - vor Covid19) ich auf Meetups und Konferenzen wie beispielsweise den TYPO3 Dev Days oder der AWS Days.  
+Zusätzlich gehe (ging - vor COVID19) ich auf Meetups und Konferenzen wie beispielsweise den TYPO3 Dev Days oder der AWS Days.  
 Aktuell lebe und arbeite ich in Kiel. In meiner Freizeit gehe ich Wandern, Gleitschirmfliegen und/oder Reisen - oder ich lese einfach nur ein Buch und verbringe Zeit mit meiner Frau.
 <br />
 
