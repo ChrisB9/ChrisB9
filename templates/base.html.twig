@@ -19,6 +19,7 @@
     {% if link is defined %}
         {% if canonical is defined %}
             <link rel="alternate" href="{{ canonical }}" hreflang="x-default" />
+            <link rel="alternate" href="{{ canonical }}" hreflang="en" />
         {% endif %}
         <link rel="alternate" href="{{ link.alternate }}" hreflang="{{ link.lang }}" />
     {% endif %}

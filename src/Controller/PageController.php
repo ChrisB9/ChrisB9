@@ -47,11 +47,10 @@ final class PageController extends AbstractController
         $page->seo['description'] = $description;
         $seo = array_merge(
             [
-//                'robots' => 'follow, index',
                 'twitter:title' => $title,
                 'twitter:image' => $image,
                 'twitter:image:alt' => '',
-                'twitter:card' => 'website',
+                'twitter:card' => 'summary',
                 'twitter:site' => '@Chris_Ben9',
                 'twitter:description' => $description,
             ],

@@ -40,7 +40,9 @@ return [
         'sitemap' => [
             'enabled' => false
         ],
-        'seo' => [],
+        'seo' => [
+            'robots' => 'noindex, nofollow',
+        ],
     ],
     'readinglist' => [
         'id' => 4,
@@ -64,7 +66,6 @@ return [
             'enabled' => false,
         ],
         'seo' => [
-            'robots' => 'noindex, nofollow',
             'description' => 'Play a round of tictactoe',
         ],
     ],
@@ -87,7 +88,6 @@ return [
             'enabled' => false,
         ],
         'seo' => [
-            'robots' => 'noindex, nofollow',
             'description' => 'Experimenting with the math problem collatz conjecture and chart.js',
         ],
     ],
