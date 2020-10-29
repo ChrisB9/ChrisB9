@@ -2,8 +2,8 @@
 
 return [
     'timestamp' => [
-        'enddate' => 'end date:',
-        'startdate' => 'start date:',
+        'enddate' => 'End date:',
+        'startdate' => 'Start date:',
         'generate' => 'Generate!',
         'amount' => 'How many should be generated:',
     ],
