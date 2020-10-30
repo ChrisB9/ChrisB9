@@ -9,9 +9,9 @@
 
 ## Who am I?
 
-My name is Christian Rodriguez Benthake, a {%-test.html.twig%}-year-old full-stack webdeveloper and freelancer with an emphasis on backend development in PHP. 
-Additionally to that, I am engaged in the OSS-Community - e.g translating documentations, building software or contributing to existing minor and major projects, (pre-COVID19) going to meetups, conferences and co-working spaces e.g TYPO3 DevDays.<br />
-I currently live in and work remotely from Kiel, Germany. In my freetime I hike, travel and paraglide - or just read a book and spend time with my wife.
+My name is Christian Rodriguez Benthake, a {%-test.html.twig%}-year-old full-stack webdeveloper and freelancer with an emphasis in PHP backend development. 
+Additionally, I am engaged in the OSS-Community - e.g translating documentations, building software, or contributing to existing projects. Prior to COVID-19, I attended meetups, conferences, and co-working spaces e.g TYPO3 DevDays.<br />
+I currently reside and work remotely in Kiel, Germany. In my spare time I enjoy hiking, travelling, paragliding, or just reading a book and spending time with my wife.
 <br />
 
 {%weather.html.twig%}
@@ -20,15 +20,15 @@ I currently live in and work remotely from Kiel, Germany. In my freetime I hike,
 
 ### My technology stack
 
-I work and have worked with various technologies over the years. Some of them are pretty rusty already and some fairly advanced.  
-This is a quick overview of them:
+Over the years, I have worked with various languages and applications.   
+Here is a brief overview:
 
-- PHP, especially modern PHP (>=7.x). This website e.g. is written with the newest and shiniest PHP 8.0
+- PHP, especially modern PHP (>=7.x). e.g. This website is written with the latest PHP 8.0
   - Frameworks: Symfony, Laravel, ...
   - CMS: PimCore, TYPO3, WordPress
   - Testing: PHPUnit, Codeception, Psalm, phpstan, ...
   - Debugging with XDebug+PHPStorm
-  - and much more ...
+  - and plenty more ...
 - JavaScript (mainly ES6+)
   - TypeScript
   - Frameworks: React, Vue, alpinejs
@@ -48,34 +48,34 @@ This is a quick overview of them:
 
 ~Timeline~
 Title: 2020
-Company: Moving to Kiel, Germany
+Company: Moved to Kiel, Germany
 ---
 Title: since 2017
 Company: anders und sehr GmbH (Pluswerk AG)
-Subtitle: working as a webdeveloper in an agency
+Subtitle: Working as a web developer in an agency
 - implementing larger PIM-systems, API-applications, and more using:
 - e.g Pimcore, TYPO3, Symfony, Laravel, vue.js and docker
-- since August 2020: working fully remotly
+- since August 2020: working remotely
 ---
 Title: 2014 to 2017
 Company: audius AG
-Subtitle: C#-developer apprenticeship (dual study)
+Subtitle: C#-Developer Apprenticeship (Dual Study)
 - C#, .NET, App-Development (iOS and Android), T-SQL
 - Visual Studio, MS-TFS
 ---
 Title: 2014 to 2017
 Company: Duale Hochschule Baden-Württemberg
-Subtitle: Bachelor of applied computer science
-- subjects were app & webdevelopment, C, Scheme, IoT etc.
+Subtitle: Bachelor of Applied Computer Science
+- subjects included app & webdevelopment, C, Scheme, IoT etc.
 ---
 Title: 2014
-Company: Moving to Stuttgart, Germany
+Company: Moved to Stuttgart, Germany
 ---
 Title: 2013
-Company: starting as a freelancing webdeveloper
+Company: Began freelancing as a web developer 
 - developed a simple website based on php for a client
 ---
 Title: 1996
-Company: born
-- born in a small town in east-frisia (germany)
+Company: Birth
+- born in a small town in East-Frisia (Germany)
 ~Timeline~
