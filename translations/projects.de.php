@@ -3,7 +3,7 @@
 return [
     'phpsu/ShellCommandBuilder' => [
         'title' => 'phpsu/ShellCommandBuilder',
-        'description' => 'Erzeugt grundlegende und komplexe Shell Commands in einer unbeständigen Objekt-orientierten Art und Weise. Dies führt dazu, dass ein globaler Bash-Mechanismus eines leserlichen und korrigierbaren Layers unmittelbar abstrahiert wird.',
+        'description' => 'Erzeugt kleinere und komplexere Shell Commands in einer objektorientierten Schreibweise. Dies ermöglicht es, Bash-Mechanismen zu leserlichen und korrigierbaren Layern zu abstrahieren.',
     ],
     'phpsu/phpsu' => [
         'title' => 'phpsu/phpsu',
@@ -11,11 +11,11 @@ return [
     ],
     'chrisb9/php8-nginx-xdebug' => [
         'title' => 'chrisb9/php8-nginx-xdebug',
-        'description' => 'Ein Docker Container mit PHP 8.0 und nginx (mit aktivem brotli) und XDebug, pcov und vorinstalliertem Composer',
+        'description' => 'Ein Docker Container mit PHP 8.0 und nginx (mit aktiviertem brotli) und XDebug, pcov und vorinstalliertem Composer',
     ],
     'chrisb9/pimcore-dev' => [
         'title' => 'chrisb9/pimcore-dev',
-        'description' => 'Ein Docker Container, welcher auf webdevops und pluswerk/PHP-dev basiert und einen Toolchain für Pimcore-Projekte bereitstellt',
+        'description' => 'Ein Docker Container, welcher auf webdevops und pluswerk/php-dev basiert und eine Toolchain für Pimcore-Projekte bereitstellt',
     ],
     'pluswerk/php-dev' => [
         'title' => 'pluswerk/php-dev',
@@ -23,7 +23,7 @@ return [
     ],
     'Gutenberg+Elementor YouTube Block' => [
         'title' => 'Gutenberg+Elementor YouTube Block',
-        'description' => '(Noch nicht veröffentlicht): Ein erweiteter Youtube Block, welcher zusammen mit Gutenberg und dem Elementor Page Builder funktioniert',
+        'description' => '(Noch nicht veröffentlicht): Ein erweiteter Youtube Block, welcher sowohl mit Gutenberg als auch dem Elementor Page Builder funktioniert',
     ],
     'Page Builder for PimCore' => [
         'title' => 'Page Builder für PimCore',
