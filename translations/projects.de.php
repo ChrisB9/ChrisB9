@@ -3,7 +3,7 @@
 return [
     'phpsu/ShellCommandBuilder' => [
         'title' => 'phpsu/ShellCommandBuilder',
-        'description' => 'Creating basic and more complex shell commands in an fluid object-oriented fashion. This makes it very straight forward to abstract the general mechanisms of bash behind a readable and debuggable layer.',
+        'description' => 'Erzeugt grundlegende und komplexe Shell Commands in einer unbeständigen Objekt-orientierten Art und Weise. Dies führt dazu, dass ein globaler Bash-Mechanismus eines leserlichen und korrigierbaren Layers unmittelbar abstrahiert wird.',
     ],
     'phpsu/phpsu' => [
         'title' => 'phpsu/phpsu',
@@ -11,23 +11,23 @@ return [
     ],
     'chrisb9/php8-nginx-xdebug' => [
         'title' => 'chrisb9/php8-nginx-xdebug',
-        'description' => 'A docker container with PHP 8.0 and nginx (with brotli enabled) and xdebug, pcov and composer preinstalled',
+        'description' => 'Ein Docker Container mit PHP 8.0 und nginx (mit aktivem brotli) und XDebug, pcov und vorinstalliertem Composer',
     ],
     'chrisb9/pimcore-dev' => [
         'title' => 'chrisb9/pimcore-dev',
-        'description' => 'A docker container that is based on webdevops and pluswerk/php-dev and provides the toolchain for pimcore projects',
+        'description' => 'Ein Docker Container, welcher auf webdevops und pluswerk/PHP-dev basiert und einen Toolchain für Pimcore-Projekte bereitstellt',
     ],
     'pluswerk/php-dev' => [
         'title' => 'pluswerk/php-dev',
-        'description' => 'A docker container that is based on webdevops and has all necessary development tools for developing, debugging and profiling',
+        'description' => 'Ein Docker Container, welcher auf webdevops basiert und alle notwendigen Entwicklungstools zum Entwickeln, zum Debuggen und zum Profiling besitzt',
     ],
     'Gutenberg+Elementor YouTube Block' => [
         'title' => 'Gutenberg+Elementor YouTube Block',
-        'description' => '(not public yet): An advanced youtube block that works for Gutenberg and the Elementor Page Builder',
+        'description' => '(Noch nicht veröffentlicht): Ein erweiteter Youtube Block, welcher zusammen mit Gutenberg und dem Elementor Page Builder funktioniert',
     ],
     'Page Builder for PimCore' => [
         'title' => 'Page Builder für PimCore',
-        'description' => 'A basic page builder for pimcore based on grapes.js',
+        'description' => 'EIn grundlegender Page Builder für pimcore basierend auf grapes.js',
     ],
     'cben.dev' => [
         'title' => 'cben.dev',
@@ -35,19 +35,19 @@ return [
     ],
     'React.js translation' => [
         'title' => 'React.js DE-Übersetzung',
-        'description' => 'Co-Maintainer of the reactjs documentation effort to translate the entire documentation into german',
+        'description' => 'Co-Maintainer der reactjs Dokumentationsbestreben, die gesamte Dokumentation ins Deutsche zu übersetzen',
     ],
     'Weather-Prediction for the Bosch IoT Controller' => [
         'title' => 'Weather-Prediction für den Bosch IoT Controller',
-        'description' => 'Universitäts-Projekt: experimenting with Bosch IoT, React Native, and RethinkDB',
+        'description' => 'Universitäts-Projekt: Experimentieren mit Bosch IoT, React Native, und RethinkDB',
     ],
     'Labyrinth solving game against an AI' => [
         'title' => 'Labyrinth solving game against an AI',
-        'description' => 'University project: Solving randomly generated labyrinth',
+        'description' => 'Universitäts-Projekt: Ein zufällig generiertes Labyrinth lösen',
     ],
     'Tic Tac Toe' => [
         'title' => 'Tic Tac Toe',
-        'description' => 'Spiele eine Runde tic tac toe',
+        'description' => 'Spiele eine Runde Tic Tac Toe',
     ],
     'Sitzkrieger.com' => [
         'title' => 'Sitzkrieger.com',
