@@ -4,9 +4,6 @@
     "label": "My passion is 20% Frontend-Dev and 80% Backend-Dev"
   },
   "data": {
-    "labels": [
-      "January"
-    ],
     "datasets": [
       {
         "label": "Backend-Development",

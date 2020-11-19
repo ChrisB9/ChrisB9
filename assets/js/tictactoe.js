@@ -1,4 +1,4 @@
-import '../css/tictactoe.css';
+import '../css/tictactoe.scss';
 
 var tictactoe = {};
 window.tictactoe = tictactoe;

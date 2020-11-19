@@ -12,16 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block metatags %}
     {% endblock %}
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="/manifest.webmanifest">
     {% if canonical is defined %}
         <link rel="canonical" href="{{ canonical }}" />
     {% endif %}
     {% if link is defined %}
         {% if canonical is defined %}
             <link rel="alternate" href="{{ canonical }}" hreflang="x-default" />
-            <link rel="alternate" href="{{ canonical }}" hreflang="en" />
         {% endif %}
         <link rel="alternate" href="{{ link.alternate }}" hreflang="{{ link.lang }}" />
+        <link rel="alternate" href="{{ link.reciprocal }}" hreflang="{{ app.request.locale }}" />
     {% endif %}
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -45,7 +45,6 @@
 
     <link rel="icon" sizes="96x96" href="/static/favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="96x96" href="/static/favicon-96x96.png">
-    <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" async defer></script>
     <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine-ie11.min.js" async defer></script>
     <!-- credit for webp/avif feature detection: https://github.com/djpogo/avif-webp-css-support/blob/main/avif-webp.min.js -->
     <script>!function(A){"use strict";function e(A,e,t){var l=function(A){if(window.localStorage){var e=window.localStorage.getItem(A+"Support");if("false"===e||"true"===e)return"true"===e}return null}(A);if(null===l){var o=new Image;return o.onload=o.onerror=function(){t(A,2===o.height)},void(o.src=e)}a(A,l)}function a(e,a){if(a){var t=A.documentElement;t.classList?t.classList.add("webp"===e?"webp":"avif"):t.className+=" "+e=="webp"?"webp":"avif",window.localStorage.setItem(e+"Support",!0)}else window.localStorage.setItem(e+"Support",!1)}e("webp","data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA",a),e("avif","data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAF0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgS0AAAAAABNjb2xybmNseAACAAIAAIAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAGVtZGF0EgAKBzgAPtAgIAkyUBAAAPWc41TP///4gHBX9H8XVK7gGeDllq8TYARA+8Tfsv7L+zPE24eIoIzE0WhHbrqcrTK9VEgEG/hwgB5rdCbvP8g3KYPdV88CvPJnptgQ",a)}(document);</script>

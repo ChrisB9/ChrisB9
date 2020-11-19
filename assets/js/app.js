@@ -1,4 +1,5 @@
 import '../css/app.scss';
+import 'alpinejs';
 
 window.onload = () => {
   if (document.querySelector('.markdown code')) {

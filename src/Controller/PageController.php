@@ -44,12 +44,13 @@ final class PageController extends AbstractController
         $image = $this->packages->getUrl(path: 'build/images/share.jpg');
         $title = $this->translator->trans($page->title, domain: 'page');
         $description = $this->translator->trans($page->title . '.description', domain: 'seo') ?: $page->seo['description'] ?? '';
+        $absoluteUrl = $this->generateUrl($page->slug, ['_locale' => $page->language], UrlGeneratorInterface::ABSOLUTE_URL);
         $page->seo['description'] = $description;
         $seo = array_merge(
             [
                 'twitter:title' => $title,
                 'twitter:image' => $image,
-                'twitter:image:alt' => '',
+                'twitter:image:alt' => $description,
                 'twitter:card' => 'summary',
                 'twitter:site' => '@Chris_Ben9',
                 'twitter:description' => $description,
@@ -64,6 +65,7 @@ final class PageController extends AbstractController
                 'og:image' => $image,
                 'og:type' => 'website',
                 'og:description' => $description,
+                'og:url' => $absoluteUrl,
             ],
         ];
         $oppositeTranslatedPage = $page->language === 'de' ? 'en' : 'de';
@@ -75,6 +77,7 @@ final class PageController extends AbstractController
             'link' => [
                 'href' => $this->generateUrl($page->slug, ['_locale' => $oppositeTranslatedPage]),
                 'alternate' => $this->generateUrl($page->slug, ['_locale' => $oppositeTranslatedPage], UrlGeneratorInterface::ABSOLUTE_URL),
+                'reciprocal' => $absoluteUrl,
                 'title' => strtoupper($oppositeTranslatedPage),
                 'lang' => $oppositeTranslatedPage,
                 'slug' => $page->slug,

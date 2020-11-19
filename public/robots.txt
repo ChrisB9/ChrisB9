@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /de/imprint
+Disallow: /imprint
+
+Sitemap: sitemap.default.xml

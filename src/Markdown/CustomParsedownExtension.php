@@ -1,4 +1,4 @@
-<?php /** @noinspection PhpMultipleClassesDeclarationsInOneFile */
+<?php
 
 declare(strict_types=1);
 
@@ -18,23 +18,23 @@ final class CustomParsedownExtension extends \ParsedownExtraPlugin
     protected string $timelineRegex = '([\w\W\-,\.\d\(\)\_\s\#]+)';
 
     public static array $tagClassMap = [
-        'h1' => 'leading-tight border-b text-4xl font-semibold mb-4 mt-6 pb-2 print:hidden',
-        'h2' => 'leading-tight border-b text-2xl font-semibold mb-4 mt-6 pb-2',
-        'h3' => 'leading-snug text-lg font-semibold mb-4 mt-6',
-        'h4' => 'leading-none text-base font-semibold mb-4 mt-6',
-        'h5' => 'leading-tight text-sm font-semibold mb-4 mt-6',
-        'h6' => 'leading-tight text-sm font-semibold text-gray-600 mb-4 mt-6',
+        'h1' => 'leading-tight border-b text-5xl font-semibold mb-4 mt-6 pb-2 print:hidden',
+        'h2' => 'leading-tight border-b text-4xl font-semibold mb-4 mt-6 pb-2',
+        'h3' => 'leading-8 text-3xl font-semibold mb-4 mt-6',
+        'h4' => 'leading-8 text-2xl font-semibold mb-4 mt-6',
+        'h5' => 'leading-tight text-lg font-semibold mb-4 mt-6',
+        'h6' => 'leading-tight text-lg font-semibold text-gray-600 mb-4 mt-6',
         'li' => 'mt-1',
         'strong' => 'font-semibold',
         'a' => 'text-blue-600 font-semibold',
-        'p' => 'mt-6',
+        'p' => 'leading-8 mt-6',
         'blockquote' => 'text-base border-l-4 border-gray-300 pl-4 pr-4 text-gray-600',
         'code' => 'font-mono text-sm inline rounded px-1 py-05',
         'pre' => 'bg-gray-100 rounded p-4',
-        'ul' => 'text-base pl-8 list-disc',
-        'ol' => 'text-base pl-8 list-decimal',
+        'ul' => 'leading-8 text-base pl-8 list-disc',
+        'ol' => 'leading-8 text-base pl-8 list-decimal',
         'kbd' => 'text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow',
-        'table' => 'text-base border-gray-600',
+        'table' => 'leading-8 text-base border-gray-600',
         'th' => 'border py-1 px-3',
         'td' => 'border py-1 px-3',
     ];
