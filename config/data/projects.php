@@ -31,6 +31,15 @@ return [
         'tags' => ['php 8.0', 'docker image', 'nginx', 'dev-tools'],
     ],
     [
+        'id' => 24,
+        'active' => true,
+        'client' => false,
+        'icon' => ['la', 'terminal'],
+        'url' => 'https://crates.io/crates/terminal_color_builder',
+        'label' => 'terminal_color_builder for rust',
+        'tags' => ['rust', 'terminal', 'cli', 'builder', 'colors'],
+    ],
+    [
         'id' => 4,
         'active' => true,
         'client' => false,
