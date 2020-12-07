@@ -26,9 +26,9 @@ return [
         'active' => true,
         'client' => false,
         'icon' => ['lab', 'docker'],
-        'url' => 'https://hub.docker.com/r/chrisb9/php8-nginx-xdebug',
-        'label' => 'chrisb9/php8-nginx-xdebug',
-        'tags' => ['php 8.0', 'docker image', 'nginx', 'dev-tools'],
+        'url' => 'https://github.com/ChrisB9/php8-xdebug',
+        'label' => 'chrisb9/php8',
+        'tags' => ['php 8.0', 'docker image', 'nginx', 'dev-tools', 'rust'],
     ],
     [
         'id' => 24,
@@ -36,7 +36,7 @@ return [
         'client' => false,
         'icon' => ['la', 'terminal'],
         'url' => 'https://crates.io/crates/terminal_color_builder',
-        'label' => 'terminal_color_builder for rust',
+        'label' => 'terminal_color_builder',
         'tags' => ['rust', 'terminal', 'cli', 'builder', 'colors'],
     ],
     [
@@ -127,7 +127,7 @@ return [
         'icon' => 'lab',
         'url' => 'https://sitzkrieger.com',
         'label' => 'Sitzkrieger.com',
-        'tags' => ['pimcore', 'react', 'chakra-ui', 'elasticsearch', 'symfony'],
+        'tags' => ['pimcore', 'react', 'chakra-ui', 'elasticsearch', 'symfony', 'wordpress'],
     ],
     [
         'id' => 14,
@@ -143,7 +143,7 @@ return [
         'active' => true,
         'client' => true,
         'icon' => 'lab',
-        'url' => 'https://sitzkrieger.com',
+        'url' => 'https://trainingsinsel.com',
         'label' => 'Trainingsinsel.de',
         'tags' => ['wordpress'],
     ],
@@ -172,7 +172,7 @@ return [
         'icon' => 'lab',
         'url' => 'https://stiftung-managerohnegrenzen.de',
         'label' => 'Stiftung managerohnegrenzen',
-        'tags' => ['wordpress', 'multi-language', 'vuejs', 'newsletter-system'],
+        'tags' => ['wordpress', 'multi-language', 'vuejs', 'newsletter-system', 'azure'],
     ],
     [
         'id' => 19,

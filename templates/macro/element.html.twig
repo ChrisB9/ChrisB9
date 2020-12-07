@@ -4,7 +4,7 @@
              x-ref="project-{{ project.id }}"
              x-show="!query || $refs['project-{{ project.id }}'].dataset.json.includes(query)"
              tabindex="0"
-             @click="window.location = $refs['project-{{ project.id }}-link']"
+             @click="window.location = $refs['project-{{ project.id }}-link']; plausible('project', { props: { path: $refs['project-{{ project.id }}-link'], project: '{{ project.title|trans({}, 'projects') }}' } });"
              aria-keyshortcuts="enter"
              @keydown.enter="window.location = $refs['project-{{ project.id }}-link']"
     >

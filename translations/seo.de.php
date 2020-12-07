@@ -1,9 +1,18 @@
 <?php
 
 return [
-    'about' => ['description' => 'Ich bin ein Full-Stack Webentwickler und Freelancer und arbeite primär mit Docker, PHP, WordPress, PimCore, TYPO3, Vue, und ReactJS'],
-    'projects' => ['description' => 'Projekte an denen Ich arbeite bzw. gearbeitet habe für WordPress, TYPO3, Docker, PHP, PimCore'],
-    'freelancing' => ['description' => 'Meine Kundenreferenzen als Freelancer Webdeveloper in Stuttgart - Christian Rodriguez Benthake'],
+    'about' => [
+        'description' => 'Ich bin ein Full-Stack Webentwickler und Freelancer und arbeite primär mit Docker, PHP, WordPress, PimCore, TYPO3, Vue, und ReactJS',
+        'alt' => 'Software-Entwickler und Freelancer; arbeite mit Docker, PHP, JavaScript, rust und mehr',
+    ],
+    'projects' => [
+        'description' => 'Projekte an denen Ich arbeite bzw. gearbeitet habe für WordPress, TYPO3, Docker, PHP, Pimcore und rust',
+        'alt' => 'Meine Projekte entwickelt in PHP, Docker und rust, Pimcore, TYPO3 und WordPress',
+    ],
+    'freelancing' => [
+        'description' => 'Meine Kundenreferenzen als Freelancer Webdeveloper in Stuttgart - Christian Rodriguez Benthake',
+        'alt' => 'Meine Kundenreferenzen als Freelancer - Webdeveloper in und um Stuttgart und Kiel',
+    ],
     'contact' => ['description' => 'Kontaktiere mich via E-Mail oder besuche mein Profil bei GitHub, Twitter, Xing, oder LinkedIn - Christian Rodriguez Benthake'],
     'readinglist' => ['description' => 'Relevante Links und Resourcen für Themen wie Klimawandel und Rassismus / Rechtsextremismus'],
     'imprint' => ['description' => 'Impressum der cben.dev'],

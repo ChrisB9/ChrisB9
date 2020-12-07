@@ -3,12 +3,12 @@
   "description": "Personal Website",
   "type": "project",
   "license": "MIT",
-  "minimum-stability": "dev",
-  "prefer-stable": false,
+  "minimum-stability": "stable",
+  "prefer-stable": true,
   "authors": [
     {
-      "name": "Chris Ben",
-      "email": "chris@cben.co"
+      "name": "Christian Rodriguez Benthake",
+      "email": "git@cben.co"
     }
   ],
   "autoload": {
@@ -26,21 +26,21 @@
   },
   "require": {
     "php": ">=8.0",
-    "symfony/http-foundation": "^5.2-dev",
-    "symfony/asset": "^5.2-dev",
-    "symfony/twig-bridge": "^5.2-dev",
+    "symfony/http-foundation": "^5.2",
+    "symfony/asset": "^5.2",
+    "symfony/twig-bridge": "^5.2",
     "symfony/flex": "^1.9",
     "symplify/flex-loader": "^8.1",
     "symplify/autodiscovery": "^8.1",
-    "symfony/framework-bundle": "^5.2-dev",
-    "symfony/dotenv": "^5.2-dev",
+    "symfony/framework-bundle": "^5.2",
+    "symfony/dotenv": "^5.2",
     "doctrine/cache": "^1.10",
     "erusev/parsedown": "1.8.0-beta-7",
     "erusev/parsedown-extra": "0.8.1",
     "symfony/webpack-encore-bundle": "^1.7",
     "sensio/framework-extra-bundle": "^5.5",
     "tovic/parsedown-extra-plugin": "dev-master",
-    "symfony/web-link": "^5.2-dev",
+    "symfony/web-link": "^5.2",
     "nette/utils": "^3.1",
     "doctrine/annotations": "^1.10",
     "knplabs/knp-time-bundle": "^1.12",
@@ -49,7 +49,7 @@
     "ext-json": "*",
     "cmfcmf/openweathermap-php-api": "dev-master",
     "guzzlehttp/guzzle": "^7.0",
-    "symfony/twig-bundle": "^5.2-dev",
+    "symfony/twig-bundle": "^5.2",
     "http-interop/http-factory-guzzle": "^1.0"
   },
   "scripts": {
@@ -59,7 +59,7 @@
     }
   },
   "require-dev": {
-    "symfony/stopwatch": "^5.2-dev",
-    "symfony/web-profiler-bundle": "^5.2-dev"
+    "symfony/stopwatch": "^5.2",
+    "symfony/web-profiler-bundle": "^5.2"
   }
 }

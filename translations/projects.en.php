@@ -9,9 +9,9 @@ return [
         'title' => 'phpsu/phpsu',
         'description' => 'Synchronize your local and/or remote database and filesystem between your projects',
     ],
-    'chrisb9/php8-nginx-xdebug' => [
-        'title' => 'chrisb9/php8-nginx-xdebug',
-        'description' => 'A docker container with PHP 8.0 and nginx (with brotli enabled) and xdebug, pcov and composer preinstalled',
+    'chrisb9/php8' => [
+        'title' => 'chrisb9/php8',
+        'description' => 'An extensive set of docker container for PHP 8.0 with nginx (with brotli enabled) aswell as xdebug, pcov, ffi, and more preinstalled<br />The images are build by a template generator built in rust and complex github-action pipeline',
     ],
     'chrisb9/pimcore-dev' => [
         'title' => 'chrisb9/pimcore-dev',
@@ -84,5 +84,9 @@ return [
     'Collatz Conjecture' => [
         'title' => 'Collatz Conjecture',
         'description' => 'Experimenting with collatz conjecture',
+    ],
+    'terminal_color_builder' => [
+        'title' => 'terminal_color_builder for rust',
+        'description' => 'Printing colorful terminal outputs using a builder pattern.',
     ],
 ];

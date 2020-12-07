@@ -85,4 +85,8 @@ return [
         'title' => 'Collatz Conjecture',
         'description' => 'Experimente mit dem Collatz-Conjecture',
     ],
+    'terminal_color_builder' => [
+        'title' => 'terminal_color_builder für rust',
+        'description' => 'Farbenfrohe Ausgaben mithilfe des Builder Pattern im Terminal erstellen.',
+    ],
 ];

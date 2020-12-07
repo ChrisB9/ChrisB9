@@ -34,8 +34,13 @@ Hier ein Überblick über die Technologien, die ich derzeit viel einsetze:
 - DevOps
   - docker
   - webservers: nginx und apache
-  - CI/CD: gitlab, bitbucket, github, ... 
-  
+  - CI/CD: gitlab, bitbucket, github, ...
+
+Aktuell lerne ich die Programmiersprache `rust`. Das Docker Image PHP 8.0, welches Ich erstellt habe verwendet die rust-lang um Dockerfiles anhand von templates zu generieren.  
+[Erfahre mehr über chrisb9/php8 auf GitHub](https://github.com/ChrisB9/php8-xdebug)  
+Das Docker Image kann für PHP 8.0 in einer Produktiv- oder Entwicklungsumgebung verwendet werden, für nginx sowie cli geeignet, läuft entweder auf debian oder alpine.
+
+
 #### Tools, mit denen ich arbeite:
 
 - Entwicklung: Prinzipiell die ganze Suite von JetBrains, hauptsächlich aber PHPStorm und DataGrip
@@ -44,6 +49,9 @@ Hier ein Überblick über die Technologien, die ich derzeit viel einsetze:
 - Project-Management: Freelancing: Teamwork.com; Beruflich: Jira
 
 ### Timeline
+
+Zurzeit arbeite ich hauptberuflich bei [anders und sehr GmbH](https://andersundsehr.de) und bin in meiner Freizeit als Freelancer aktiv.  
+Ich übe das Freelancing nicht Vollzeit aus und werde dies auch in naher Zukunft nicht ändern.
 
 ~Timeline~
 Title: 2020

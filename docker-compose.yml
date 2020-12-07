@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   web:
-    image: chrisb9/php8-nginx-xdebug:latest
+    image: chrisb9/php8:alpine-nginx-dev
     volumes:
       - .:/app
       - ~/.ssh:/home/application/.ssh

@@ -24,10 +24,9 @@ Over the years, I have worked with various languages and applications.
 Here is a brief overview:
 
 - PHP, especially modern PHP (>=7.x). e.g. This website is written with the latest PHP 8.0
-  - Frameworks: Symfony, Laravel, ...
+  - Frameworks: Symfony, ...
   - CMS: PimCore, TYPO3, WordPress
   - Testing: PHPUnit, Codeception, Psalm, phpstan, ...
-  - Debugging with XDebug+PHPStorm
   - and plenty more ...
 - JavaScript (mainly ES6+)
   - TypeScript
@@ -35,8 +34,12 @@ Here is a brief overview:
 - DevOps
   - docker
   - webservers: nginx and apache
-  - CI/CD: gitlab, bitbucket, github, ... 
+  - CI/CD: gitlab, bitbucket, github, ...
   
+I currently am learning `rust`. The PHP 8.0 docker image I created uses rust-lang to build the Dockerfiles based on templates.  
+[Learn more about that docker image](https://github.com/ChrisB9/php8-xdebug)  
+That docker image can be used for PHP 8.0 in production and development, for nginx and cli usage, and runs on either debian or alpine.
+
 #### What I work with:
 
 - Developing: The entire suite provided by JetBrains, mainly PHPStorm and DataGrip
@@ -45,6 +48,9 @@ Here is a brief overview:
 - Project-Management: Freelancing: Phabricator and Teamwork; Work: Jira
 
 ### Timeline
+
+I currently work at [anders und sehr GmbH](https://andersundsehr.de) as my main job, and am a freelancer in my spare time.  
+I do not work fulltime as a freelancer, and I do not plan to change that in the foreseeable future.
 
 ~Timeline~
 Title: 2020

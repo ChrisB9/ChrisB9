@@ -41,7 +41,7 @@ return [
             'enabled' => false
         ],
         'seo' => [
-            'robots' => 'noindex, nofollow',
+            'robots' => 'noindex',
         ],
     ],
     'readinglist' => [

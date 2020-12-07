@@ -24,7 +24,7 @@
         <main class="flex flex-col md:flex-row text-center px-4 py-2 m-2 self-center items-center justify-center">
             <div class="max-w-sm rounded w-full h-full overflow-hidden shadow-lg bg-white m-1">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2"><a href="{{ path('projects') }}">{% trans from 'page' %}projects{% endtrans %}</a></div>
+                    <div class="font-bold text-xl mb-2"><a href="{{ path('projects') }}" alt="{{ 'projects.alt' |trans({}, 'seo') }}">{% trans from 'page' %}projects{% endtrans %}</a></div>
                     <p class="text-gray-700 text-base">
                         {% trans %}projects.label{% endtrans %}
                     </p>
@@ -32,7 +32,7 @@
             </div>
             <div class="max-w-sm rounded w-full h-full overflow-hidden shadow-lg bg-white m-1">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2"><a href="{{ path('about') }}">{% trans from 'page' %}about{% endtrans %}</a></div>
+                    <div class="font-bold text-xl mb-2"><a href="{{ path('about') }}" alt="{{ 'about.alt' |trans({}, 'seo') }}">{% trans from 'page' %}about{% endtrans %}</a></div>
                     <p class="text-gray-700 text-base">
                         {% trans %}basic.whoami{% endtrans %}
                     </p>
@@ -40,7 +40,7 @@
             </div>
             <div class="max-w-sm rounded w-full h-full overflow-hidden shadow-lg bg-white m-1">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2"><a href="{{ path('freelancing') }}">{% trans from 'page' %}freelancing{% endtrans %}</a></div>
+                    <div class="font-bold text-xl mb-2"><a href="{{ path('freelancing') }}" alt="{{ 'freelancing.alt' |trans({}, 'seo') }}">{% trans from 'page' %}freelancing{% endtrans %}</a></div>
                     <p class="text-gray-700 text-base">
                         {% trans %}client.label{% endtrans %}
                     </p>
