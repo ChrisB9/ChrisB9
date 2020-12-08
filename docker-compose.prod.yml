@@ -6,7 +6,7 @@ services:
     volumes:
       - .:/app
       - ./vhost.prod.conf:/opt/docker/nginx/conf.d/vhost.conf
-      - ./prod.ini:/usr/local/etc/php/conf.d/01-prod.ini
+#      - ./prod.ini:/usr/local/etc/php/conf.d/01-prod.ini
     environment:
       - VIRTUAL_HOST=cben.dev,cben.co,projects.cben.co
       - LETSENCRYPT_HOST=cben.co,cben.dev,projects.cben.co

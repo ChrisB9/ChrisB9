@@ -37,12 +37,8 @@ return [
         'title' => 'imprint',
         'file' => 'imprint',
         'contentType' => PageRepository::CONTENT_TYPE_MARKDOWN,
-        'sitemap' => [
-            'enabled' => false
-        ],
-        'seo' => [
-            'robots' => 'noindex',
-        ],
+        'sitemap' => [],
+        'seo' => [],
     ],
     'readinglist' => [
         'id' => 4,
