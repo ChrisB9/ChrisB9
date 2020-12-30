@@ -13,9 +13,6 @@
     {% block metatags %}
     {% endblock %}
     <link rel="manifest" href="/manifest.webmanifest">
-    {% if canonical is defined %}
-        <link rel="canonical" href="{{ canonical }}" />
-    {% endif %}
     {% if link is defined %}
         {% if canonical is defined %}
             <link rel="alternate" href="{{ canonical }}" hreflang="x-default" />

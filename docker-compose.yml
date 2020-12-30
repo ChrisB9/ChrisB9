@@ -11,7 +11,6 @@ services:
       - ./vhost.conf:/opt/docker/nginx/conf.d/vhost.conf
     environment:
       - VIRTUAL_HOST=website.local.cben.dev
-      - php.opcache.preload=/app/src/.preload
 
   node:
     image: node:latest

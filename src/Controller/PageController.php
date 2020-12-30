@@ -44,7 +44,7 @@ final class PageController extends AbstractController
         $image = $this->packages->getUrl(path: 'build/images/share.jpg');
         $title = $this->translator->trans($page->title, domain: 'page');
         $description = $this->translator->trans($page->title . '.description', domain: 'seo') ?: $page->seo['description'] ?? '';
-        $absoluteUrl = $this->generateUrl($page->slug, ['_locale' => $page->language], UrlGeneratorInterface::ABSOLUTE_URL);
+        $absoluteUrl = $this->generateUrlWithScheme($page->slug, ['_locale' => $page->language], UrlGeneratorInterface::ABSOLUTE_URL);
         $page->seo['description'] = $description;
         $seo = array_merge(
             [
@@ -73,15 +73,20 @@ final class PageController extends AbstractController
             'title' => $page->title,
             'content' => $page,
             'seo' => $metaTags,
-            'canonical' => $this->generateUrl($page->slug, ['_locale' => 'en'], UrlGeneratorInterface::ABSOLUTE_URL),
+            'canonical' => $this->generateUrlWithScheme($page->slug, ['_locale' => 'en'], UrlGeneratorInterface::ABSOLUTE_URL),
             'link' => [
-                'href' => $this->generateUrl($page->slug, ['_locale' => $oppositeTranslatedPage]),
-                'alternate' => $this->generateUrl($page->slug, ['_locale' => $oppositeTranslatedPage], UrlGeneratorInterface::ABSOLUTE_URL),
+                'href' => $this->generateUrlWithScheme($page->slug, ['_locale' => $oppositeTranslatedPage]),
+                'alternate' => $this->generateUrlWithScheme($page->slug, ['_locale' => $oppositeTranslatedPage], UrlGeneratorInterface::ABSOLUTE_URL),
                 'reciprocal' => $absoluteUrl,
                 'title' => strtoupper($oppositeTranslatedPage),
                 'lang' => $oppositeTranslatedPage,
                 'slug' => $page->slug,
             ]
         ], $page->metadata));
+    }
+
+    public function generateUrlWithScheme(string $route, array $paramters = [], int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH, string $scheme = 'https'): string
+    {
+        return str_replace('http://', $scheme . '://', $this->generateUrl($route, $paramters, $referenceType));
     }
 }
