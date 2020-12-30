@@ -6,14 +6,16 @@
         'contact': path('contact'),
     } %}
     <header
-            x-data="{navigationOpen: false, darkMode: localStorage.getItem('darkmode') === 'true'}"
+            x-data="{navigationOpen: window.matchMedia('(min-width: 1200px)').matches, darkMode: localStorage.getItem('darkmode') === 'true'}"
             x-init="$watch('darkMode', (currentDarkModeValue) => {
                 $dispatch('toggle-darkmode', {darkMode: currentDarkModeValue});
                 localStorage.setItem('darkmode', currentDarkModeValue)
             });
-            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => darkMode = e.matches);"
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => darkMode = e.matches);
+            window.matchMedia('(min-width: 1200px)').addListener(e => navigationOpen = e.matches);
+            "
     >
-        <nav @click.away="navigationOpen = false" x-show="navigationOpen" class="flex lg:justify-between bg-gray-900"
+        <nav @click.away="window.matchMedia('(max-width: 1200px)').matches ? navigationOpen = false : ''" x-show="navigationOpen" class="flex lg:justify-between bg-gray-900"
              :aria-expanded="navigationOpen" style="display: none" aria-label="Navigation Menu">
             <ul id="navigation-list"
                 class="flex text-white text-lg lg:text-sm flex-wrap items-center max-h-full overflow-auto w-full">
@@ -40,8 +42,8 @@
                 <div class="text-2xl text-white rounded py-2 px-4">
                     <a href="{{ path('') }}" title="back to the root" hreflang="{{ app.request.locale }}">cben.dev</a>
                 </div>
-                <div class="py-3 px-4">
-                    <button class="flex justify-center flex-col w-6 h-8 space-y-1 flex-wrap focus:outline-none"
+                <div class="py-3 px-4"  >
+                    <button x-show="window.matchMedia('(max-width: 1200px)').matches" class="flex justify-center flex-col w-6 h-8 space-y-1 flex-wrap focus:outline-none"
                             @click="navigationOpen = !navigationOpen" :aria-expanded="navigationOpen"
                             aria-controls="navigation-list" aria-label="Open navigation menu">
                         <span class="h-1 w-6 bg-white rounded" x-show.transition="!navigationOpen"></span>
