@@ -9,7 +9,7 @@ Reventlouallee 9
 
 ### Kontakt
 
-Telefon: (de) 151 75004509  
+Telefon: (D) 151 75004509  
 E-Mail: contact (at) cben (punkt) co
 
 ### Haftung für Inhalte
@@ -61,10 +61,8 @@ Verantwortlich für die Datenverarbeitung ist:
 cben.co  
 Christian Rodriguez Benthake  
 Reventlouallee 9  
-24105 Kie  
-015175004509  
+24105 Kiel  
 contact@cben.co  
-cben.dev
 
 ### Ihre Rechte nach der DSGVO
 
