@@ -20,4 +20,4 @@ Vorschläge gerne an [hier](mailto://)
 
 - [Tupoka Ogette: exit RACISM](https://www.exitracism.de/)
 - [Alice Hasters: Was weiße Menschen nicht über Rassismus hören wollen aber wissen sollten](https://www.hanser-literaturverlage.de/buch/was-weisse-menschen-nicht-ueber-rassismus-hoeren-wollen/978-3-446-26425-0/)
-
+- [Alice Hasters: Für weiße fühlt sich Gleichberechtigung nach Unterdrückung an](https://www.zeit.de/amp/campus/2019-10/alice-hasters-buch-rassismus-gleichberechtigung-unterdrueckung)
