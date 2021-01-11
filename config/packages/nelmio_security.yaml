@@ -37,6 +37,7 @@ nelmio_security:
             img-src:
                 - 'self'
                 - 'openweathermap.org'
+                - 'data:'
             block-all-mixed-content: true
 
     referrer_policy:
