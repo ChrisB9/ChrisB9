@@ -13,12 +13,12 @@
     {% block metatags %}
     {% endblock %}
     <link rel="manifest" href="/manifest.webmanifest">
-    <link rel="preload" href="{{ asset('build/fonts/la-solid-900.ttf') }}" />
-    <link rel="preload" href="{{ asset('build/fonts/la-solid-900.eot') }}" />
-    <link rel="preload" href="{{ asset('build/fonts/la-solid-900.svg') }}" />
-    <link rel="preload" href="{{ asset('build/fonts/la-solid-400.ttf') }}" />
-    <link rel="preload" href="{{ asset('build/fonts/la-solid-400.eot') }}" />
-    <link rel="preload" href="{{ asset('build/fonts/la-solid-400.svg') }}" />
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-900.ttf') }}" as="font"/>
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-900.eot') }}" as="font"/>
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-900.svg') }}" as="font"/>
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-400.ttf') }}" as="font"/>
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-400.eot') }}" as="font"/>
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-400.svg') }}" as="font"/>
     {% if link is defined %}
         {% if canonical is defined %}
             <link rel="alternate" href="{{ canonical }}" hreflang="x-default" />
