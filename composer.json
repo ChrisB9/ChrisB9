@@ -21,7 +21,7 @@
   },
   "config": {
     "platform": {
-      "php": "7.4"
+      "php": "8.0"
     }
   },
   "require": {
@@ -36,7 +36,7 @@
     "symfony/dotenv": "^5.2",
     "doctrine/cache": "^1.10",
     "erusev/parsedown": "1.8.0-beta-7",
-    "erusev/parsedown-extra": "0.8.1",
+    "erusev/parsedown-extra": "0.8.0",
     "symfony/webpack-encore-bundle": "^1.7",
     "sensio/framework-extra-bundle": "^5.5",
     "tovic/parsedown-extra-plugin": "dev-master",
@@ -50,7 +50,8 @@
     "cmfcmf/openweathermap-php-api": "dev-master",
     "guzzlehttp/guzzle": "^7.0",
     "symfony/twig-bundle": "^5.2",
-    "http-interop/http-factory-guzzle": "^1.0"
+    "http-interop/http-factory-guzzle": "^1.0",
+    "nelmio/security-bundle": "^2.10"
   },
   "scripts": {
     "auto-scripts": {

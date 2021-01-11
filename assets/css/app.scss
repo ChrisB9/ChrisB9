@@ -13,12 +13,14 @@
 
   @import "~line-awesome/dist/line-awesome/scss/line-awesome";
 
+  @import "fonts";
+
   .header {
     margin: 0;
     padding: 0;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(15deg, #0c35decc 0%, #050f458a 100%), url(../image/background.jpg);
+    background: linear-gradient(15deg, #0c35decc 0%, #050f458a 100%), url(../image/rsz_1background.jpg);
     background-size:cover;
     background-position: center;
   }
@@ -31,7 +33,7 @@
   }
 
   .webp .header {
-    background-image: linear-gradient(15deg, #0c35decc 0%, #050f458a 100%), url(../image/background.webp);
+    background-image: linear-gradient(15deg, #0c35decc 0%, #050f458a 100%), url(../image/rsz_1background.webp);
   }
 
   //.avif .header {

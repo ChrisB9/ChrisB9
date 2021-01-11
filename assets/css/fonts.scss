@@ -1,0 +1,29 @@
+@font-face {
+  font-family: #{$la-font-name-lab}2;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('#{$la-font-path}/la-brands-400.eot');
+  src: url("#{$la-font-path}/la-brands-400.eot?#iefix") format("embedded-opentype"),
+  url("#{$la-font-path}/la-brands-400.ttf") format("truetype"),
+  url("#{$la-font-path}/la-brands-400.svg#lineawesome") format("svg");
+}
+
+@font-face {
+  font-family: #{$la-font-name-las}2;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('#{$la-font-path}/la-solid-900.eot');
+  src: url("#{$la-font-path}/la-solid-900.eot?#iefix") format("embedded-opentype"),
+  url("#{$la-font-path}/la-solid-900.ttf") format("truetype"),
+  url("#{$la-font-path}/la-solid-900.svg#lineawesome") format("svg");
+}
+
+.las {
+  font-family: #{$la-font-name-las}2 !important;
+}
+
+.lab {
+  font-family: #{$la-font-name-lab}2 !important;
+}

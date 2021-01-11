@@ -1,0 +1,46 @@
+nelmio_security:
+    signed_cookie:
+        names: [ '*' ]
+    # prevents framing of the entire site
+    clickjacking:
+        paths:
+            '^/.*': DENY
+
+    # disables content type sniffing for script resources
+    content_type:
+        nosniff: true
+
+    # forces Microsoft's XSS-Protection with
+    # its block mode
+    xss_protection:
+        enabled: true
+        mode_block: true
+
+    csp:
+        hash:
+            algorithm: sha512
+        enforce:
+            level1_fallback: false
+            browser_adaptive:
+                enabled: false
+            default-src:
+                - 'self'
+                - 'plausible.cben.co'
+            script-src:
+                - 'self'
+                - 'plausible.cben.co'
+                - 'unsafe-eval'
+                - 'unsafe-inline'
+            style-src:
+                - 'self'
+                - 'unsafe-inline'
+            img-src:
+                - 'self'
+                - 'openweathermap.org'
+            block-all-mixed-content: true
+
+    referrer_policy:
+        enabled: true
+        policies:
+            - 'no-referrer'
+            - 'strict-origin-when-cross-origin'

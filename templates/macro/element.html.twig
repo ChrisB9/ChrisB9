@@ -21,7 +21,7 @@
                            target="_blank" @click.prevent hreflang="{{ app.request.locale }}">{{ project.title|trans({}, 'projects') }}</a>
                     {% else %}
                         <a x-ref="project-{{ project.id }}-link" href="{{ project.url }}"
-                           target="_blank" @click.prevent>{{ project.title|trans({}, 'projects') }}</a>
+                           target="_blank" rel="noopener" @click.prevent>{{ project.title|trans({}, 'projects') }}</a>
                     {% endif %}
                 </h1>
             </div>

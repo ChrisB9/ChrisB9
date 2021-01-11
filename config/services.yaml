@@ -25,6 +25,10 @@ services:
         class: \ParsedownExtended
 
     templateFromString:
-        class: \Twig\Extension\StringLoaderExtension
+        class: Twig\Extension\StringLoaderExtension
         tags:
             - { name: twig.extension }
+
+    App\Listener\PolicyHeaderListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.response }

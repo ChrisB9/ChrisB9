@@ -13,6 +13,12 @@
     {% block metatags %}
     {% endblock %}
     <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-900.ttf') }}" />
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-900.eot') }}" />
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-900.svg') }}" />
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-400.ttf') }}" />
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-400.eot') }}" />
+    <link rel="preload" href="{{ asset('build/fonts/la-solid-400.svg') }}" />
     {% if link is defined %}
         {% if canonical is defined %}
             <link rel="alternate" href="{{ canonical }}" hreflang="x-default" />
@@ -41,14 +47,15 @@
     </script>
 
     <script async defer data-domain="{{ app.request.host }}" src="https://plausible.cben.co/js/plausible.js"></script>
+
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    <!-- credit for webp/avif feature detection: https://github.com/djpogo/avif-webp-css-support/blob/main/avif-webp.min.js -->
+    <script>!function(A){"use strict";function e(A,e,t){var l=function(A){if(window.localStorage){var e=window.localStorage.getItem(A+"Support");if("false"===e||"true"===e)return"true"===e}return null}(A);if(null===l){var o=new Image;return o.onload=o.onerror=function(){t(A,2===o.height)},void(o.src=e)}a(A,l)}function a(e,a){if(a){var t=A.documentElement;t.classList?t.classList.add("webp"===e?"webp":"avif"):t.className+=" "+e=="webp"?"webp":"avif",window.localStorage.setItem(e+"Support",!0)}else window.localStorage.setItem(e+"Support",!1)}e("webp","data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA",a),e("avif","data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAF0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgS0AAAAAABNjb2xybmNseAACAAIAAIAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAGVtZGF0EgAKBzgAPtAgIAkyUBAAAPWc41TP///4gHBX9H8XVK7gGeDllq8TYARA+8Tfsv7L+zPE24eIoIzE0WhHbrqcrTK9VEgEG/hwgB5rdCbvP8g3KYPdV88CvPJnptgQ",a)}(document);</script>
+    <script>"serviceWorker" in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js",{registrationStrategy:"registerImmediately"})});</script>
 
     <link rel="icon" sizes="96x96" href="/static/favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="96x96" href="/static/favicon-96x96.png">
     <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine-ie11.min.js" async defer></script>
-    <!-- credit for webp/avif feature detection: https://github.com/djpogo/avif-webp-css-support/blob/main/avif-webp.min.js -->
-    <script>!function(A){"use strict";function e(A,e,t){var l=function(A){if(window.localStorage){var e=window.localStorage.getItem(A+"Support");if("false"===e||"true"===e)return"true"===e}return null}(A);if(null===l){var o=new Image;return o.onload=o.onerror=function(){t(A,2===o.height)},void(o.src=e)}a(A,l)}function a(e,a){if(a){var t=A.documentElement;t.classList?t.classList.add("webp"===e?"webp":"avif"):t.className+=" "+e=="webp"?"webp":"avif",window.localStorage.setItem(e+"Support",!0)}else window.localStorage.setItem(e+"Support",!1)}e("webp","data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA",a),e("avif","data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAF0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgS0AAAAAABNjb2xybmNseAACAAIAAIAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAGVtZGF0EgAKBzgAPtAgIAkyUBAAAPWc41TP///4gHBX9H8XVK7gGeDllq8TYARA+8Tfsv7L+zPE24eIoIzE0WhHbrqcrTK9VEgEG/hwgB5rdCbvP8g3KYPdV88CvPJnptgQ",a)}(document);</script>
-    <script>"serviceWorker" in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js",{registrationStrategy:"registerImmediately"})});</script>
     {% block additionalStyles %}
         {% if enableTicTacToe is defined %}
             {{ encore_entry_link_tags('tictactoe') }}
