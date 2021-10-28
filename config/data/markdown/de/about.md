@@ -10,7 +10,7 @@
 Ich bin Christian Rodriguez Benthake, ein {%-test.html.twig%} Jahre alter Software-Entwickler und Freelancer mit Schwerpunkt in der PHP-Backend-Entwicklung.
 Zudem bin ich engagiert in der OpenSource-Community - z.B. durch Übersetzungen schreiben, neue Software entwickeln oder auch an bestehenen Projekten durch kleinere oder größere Änderungen beitragen.
 Zusätzlich gehe (ging - vor COVID19) ich auf Meetups und Konferenzen wie beispielsweise den TYPO3 Dev Days oder der AWS Days.  
-Aktuell lebe und arbeite ich in Kiel. In meiner Freizeit gehe ich Wandern, Gleitschirmfliegen und/oder Reisen - oder ich lese einfach nur ein Buch und verbringe Zeit mit meiner Frau.
+Aktuell lebe und arbeite ich in Stuttgart. In meiner Freizeit gehe ich Wandern, Gleitschirmfliegen und/oder Reisen - oder ich lese einfach nur ein Buch und verbringe Zeit mit meiner Frau.
 <br />
 
 {%weather.html.twig%}
@@ -50,14 +50,23 @@ Das Docker Image kann für PHP 8.0 in einer Produktiv- oder Entwicklungsumgebung
 
 ### Timeline
 
-Zurzeit arbeite ich hauptberuflich bei [anders und sehr GmbH](https://andersundsehr.de) und bin in meiner Freizeit als Freelancer aktiv.  
+Zurzeit arbeite ich hauptberuflich bei [eCentral GmbH](https://ecentral.de) und bin in meiner Freizeit als Freelancer aktiv.  
 Ich übe das Freelancing nicht Vollzeit aus und werde dies auch in naher Zukunft nicht ändern.
 
 ~Timeline~
+---
+Title: 2020
+Company: Umzug nach Stuttgart
+---
+Title: since 2021
+Company: eCentral GmbH (fgtclb)
+Subtitle: Software Engineer
+- e.g TYPO3, Pimcore, Magento Symfony, Laravel, vue.js, react, docker und rust
+---
 Title: 2020
 Company: Umzug nach Kiel
 ---
-Title: since 2017
+Title: 2017 to 2021
 Company: anders und sehr GmbH (Pluswerk AG)
 Subtitle: Webentwickler (Backend)
 - Entwickeln größerer PIM-Systeme, API-Anwendungen, und mehr, mit:
