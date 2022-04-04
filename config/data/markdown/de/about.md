@@ -55,7 +55,7 @@ Ich übe das Freelancing nicht Vollzeit aus und werde dies auch in naher Zukunft
 
 ~Timeline~
 ---
-Title: 2020
+Title: 2021
 Company: Umzug nach Stuttgart
 ---
 Title: since 2021
