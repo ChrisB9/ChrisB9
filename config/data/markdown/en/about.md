@@ -60,7 +60,8 @@ Company: Moved to Stuttgart, Germany
 Title: since 2021
 Company: eCentral GmbH (fgtclb)
 Subtitle: Software Engineer
-- e.g TYPO3, Pimcore, Magento Symfony, Laravel, vue.js, react, docker und rust
+- e.g TYPO3, Pimcore, Magento Symfony, Laravel, vue.js, react, docker and rust
+---
 Title: 2020
 Company: Moved to Kiel, Germany
 ---
