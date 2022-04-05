@@ -53,7 +53,6 @@ I currently work at [anders und sehr GmbH](https://andersundsehr.de) as my main 
 I do not work fulltime as a freelancer, and I do not plan to change that in the foreseeable future.
 
 ~Timeline~
----
 Title: 2021
 Company: Moved to Stuttgart, Germany
 ---
