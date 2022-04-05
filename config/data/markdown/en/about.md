@@ -53,6 +53,14 @@ I currently work at [anders und sehr GmbH](https://andersundsehr.de) as my main 
 I do not work fulltime as a freelancer, and I do not plan to change that in the foreseeable future.
 
 ~Timeline~
+---
+Title: 2021
+Company: Moved to Stuttgart, Germany
+---
+Title: since 2021
+Company: eCentral GmbH (fgtclb)
+Subtitle: Software Engineer
+- e.g TYPO3, Pimcore, Magento Symfony, Laravel, vue.js, react, docker und rust
 Title: 2020
 Company: Moved to Kiel, Germany
 ---
