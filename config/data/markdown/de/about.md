@@ -54,7 +54,6 @@ Zurzeit arbeite ich hauptberuflich bei [eCentral GmbH](https://ecentral.de) und 
 Ich übe das Freelancing nicht Vollzeit aus und werde dies auch in naher Zukunft nicht ändern.
 
 ~Timeline~
----
 Title: 2021
 Company: Umzug nach Stuttgart
 ---
