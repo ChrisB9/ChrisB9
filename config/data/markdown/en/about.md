@@ -7,7 +7,7 @@
 My name is Christian Rodriguez Benthake, a {%-test.html.twig%}-year-old software engineer and freelancer with an emphasis in (PHP) backend development. 
 Additionally, I am engaged in the OSS-Community - e.g translating documentations, building software, or contributing to existing projects. Prior to COVID-19, I attended meetups, conferences, and co-working spaces e.g TYPO3 DevDays.<br />
 I currently reside and work remotely in Stuttgart, Germany. In my spare time I enjoy hiking, travelling, paragliding, or just reading a book and spending time with my wife and watching K-Drama with her.
-<br />[about.md](about.md)
+<br />
 
 --------------------------------
 
