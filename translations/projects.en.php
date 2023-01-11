@@ -55,7 +55,7 @@ return [
     ],
     'Sanogym.com' => [
         'title' => 'Sanogym.com',
-        'description' => '<i>Expert for healthoriented personal training, pilates and grouptraining</i><p>This is a website, developed from scratch, with WordPress and many custom made GutenBerg-Plugins</p>',
+        'description' => '<i>Expert for healthoriented personal training, pilates and grouptraining</i><p>Maintenance of several elementor and gutenberg blocks</p>',
     ],
     'Trainingsinsel.de' => [
         'title' => 'Trainingsinsel.de',

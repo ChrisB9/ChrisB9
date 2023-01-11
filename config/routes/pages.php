@@ -7,9 +7,12 @@ use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
 return function (RoutingConfigurator $routes) {
     $pages = require_once PROJECT_ROOT . '/config/data/pages.php';
-    foreach ($pages as $route => $data) {
+    if (!is_array($pages)) {
+        return;
+    }
+    foreach ($pages ?: [] as $route => $data) {
         $options = [
-            'sitemap' => $sitemap = array_merge([
+            'sitemap' => array_merge([
                 'priority' => 0.7
             ], $data['sitemap'] ?? []),
         ];

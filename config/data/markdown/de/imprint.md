@@ -3,9 +3,7 @@
 ### Angaben gemäß § 5 TMG
 
 Christian Rodriguez Benthake  
-cben.co Projektentwicklung  
-Reventlouallee 9  
-24105 Kiel  
+cben.co Projektentwicklung
 
 ### Kontakt
 

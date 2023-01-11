@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   web:
-    image: chrisb9/php8:alpine-nginx
+    image: webdevops/php-nginx:8.2-alpine
     volumes:
       - .:/app
       - ./vhost.prod.conf:/opt/docker/nginx/conf.d/vhost.conf

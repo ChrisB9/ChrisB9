@@ -14,7 +14,6 @@ return [
         'alt' => 'Meine Kundenreferenzen als Freelancer - Webdeveloper in und um Stuttgart und Kiel',
     ],
     'contact' => ['description' => 'Kontaktiere mich via E-Mail oder besuche mein Profil bei GitHub, Twitter, Xing, oder LinkedIn - Christian Rodriguez Benthake'],
-    'readinglist' => ['description' => 'Relevante Links und Resourcen für Themen wie Klimawandel und Rassismus / Rechtsextremismus'],
     'imprint' => ['description' => 'Impressum der cben.dev'],
     'index' => ['description' => 'Software-Entwickler und Webdeveloper: Für modernes PHP, und JavaScript + Freelancer in Kiel und Stuttgart'],
     'Timestamp Generator' => ['description' => 'Generiere mehrere zufällige Zeitstempel zwischen zwei Daten'],

@@ -2,18 +2,10 @@
 
 <br />
 
-~!~
-:height:80px
-:json:frontend-backend
-~!~
-
 Ich bin Christian Rodriguez Benthake, ein {%-test.html.twig%} Jahre alter Software-Entwickler und Freelancer mit Schwerpunkt in der PHP-Backend-Entwicklung.
 Zudem bin ich engagiert in der OpenSource-Community - z.B. durch Übersetzungen schreiben, neue Software entwickeln oder auch an bestehenen Projekten durch kleinere oder größere Änderungen beitragen.
-Zusätzlich gehe (ging - vor COVID19) ich auf Meetups und Konferenzen wie beispielsweise den TYPO3 Dev Days oder der AWS Days.  
-Aktuell lebe und arbeite ich in Stuttgart. In meiner Freizeit gehe ich Wandern, Gleitschirmfliegen und/oder Reisen - oder ich lese einfach nur ein Buch und verbringe Zeit mit meiner Frau.
+Aktuell lebe ich in Stuttgart. In meiner Freizeit verbringe ich Zeit mit meiner Frau, gehe Gleitschirmfliegen und/oder Reisen - oder ich lese einfach nur ein Buch, programmiere oder schaue ein K-Thriller.
 <br />
-
-{%weather.html.twig%}
 
 --------------------------------
 
@@ -22,17 +14,17 @@ Aktuell lebe und arbeite ich in Stuttgart. In meiner Freizeit gehe ich Wandern, 
 Ich arbeite mit einer Vielzahl von Technologien, von denen einige über die Jahre (leider) wieder ein wenig eingerostet sind.
 Hier ein Überblick über die Technologien, die ich derzeit viel einsetze:
 
-- PHP, besonders modernes PHP (>=7.x). Diese Website hier ist z.B in der neusten Version PHP 8.0 geschrieben.
+- PHP, besonders modernes PHP (>=7.x). Diese Website hier ist z.B in der neusten Version PHP 8.2 geschrieben.
   - Frameworks: Symfony, Laravel, ...
   - CMS: PimCore, TYPO3, WordPress
-  - Testing: PHPUnit, Codeception, Psalm, phpstan, ...
+  - Testing: PHPUnit, Codeception, Psalm, phpstan, Rector, ...
   - Debugging mit XDebug+PHPStorm
   - und einiges mehr ...
 - JavaScript (hauptsächlich ES6+)
   - TypeScript
   - Frameworks: React, Vue, alpinejs
 - DevOps
-  - docker
+  - docker, hetzner cloud
   - webservers: nginx und apache
   - CI/CD: gitlab, bitbucket, github, ...
 

@@ -21,9 +21,6 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
-    ParsedownExtended:
-        class: \ParsedownExtended
-
     templateFromString:
         class: Twig\Extension\StringLoaderExtension
         tags:
