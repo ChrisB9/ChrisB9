@@ -67,22 +67,13 @@ return [
         'tags' => ['wordpress', 'elementor', 'gutenberg', 'typescript'],
     ],
     [
-        'id' => 7,
-        'active' => true,
-        'client' => false,
-        'icon' => 'wrench',
-        'url' => 'https://github.com/ChrisB9/PimcorePageBuilderBundle',
-        'label' => 'Page Builder for PimCore',
-        'tags' => ['pimcore', 'pagebuilder', 'grapesjs'],
-    ],
-    [
         'id' => 8,
         'active' => true,
         'client' => false,
         'icon' => 'laptop-code',
         'url' => 'https://github.com/ChrisB9/ChrisB9',
         'label' => 'cben.dev',
-        'tags' => ['personal website', 'symfony 5', 'php 8.0', 'tailwindcss', 'alpinejs', 'markdown'],
+        'tags' => ['personal website', 'symfony 6', 'php 8.2', 'tailwindcss', 'alpinejs', 'markdown'],
     ],
     [
         'id' => 9,
@@ -127,7 +118,7 @@ return [
         'icon' => 'lab',
         'url' => 'https://sitzkrieger.com',
         'label' => 'Sitzkrieger.com',
-        'tags' => ['pimcore', 'react', 'chakra-ui', 'elasticsearch', 'symfony', 'wordpress'],
+        'tags' => ['pimcore', 'react', 'symfony-6', 'php8.2', 'livestream', 'video-plattform', 'elasticsearch'],
     ],
     [
         'id' => 14,
@@ -149,7 +140,7 @@ return [
     ],
     [
         'id' => 16,
-        'active' => true,
+        'active' => false,
         'client' => true,
         'icon' => 'lab',
         'url' => 'https://geniocon.com',
@@ -158,7 +149,7 @@ return [
     ],
     [
         'id' => 17,
-        'active' => true,
+        'active' => false,
         'client' => true,
         'icon' => 'lab',
         'url' => 'https://scheckhefte.com',
@@ -191,14 +182,5 @@ return [
         'url' => 'route:/projects/timestamp-generator',
         'label' => 'Timestamp Generator',
         'tags' => ['alpinejs', 'php', 'timestamp']
-    ],
-    [
-        'id' => 23,
-        'active' => true,
-        'client' => false,
-        'icon' => 'laptop-code',
-        'url' => 'route:/projects/collatz-conjecture',
-        'label' => 'Collatz Conjecture',
-        'tags' => ['php', 'math']
     ],
 ];

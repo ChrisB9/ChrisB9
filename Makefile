@@ -9,7 +9,7 @@ PROD_FILE=docker-compose.prod.yml
 CINSTALL=bash -c 'composer install --no-dev --ignore-platform-req=php && bin/console cache:clear'
 
 define call_docker
-	APPLICATION_UID=$(id -u) APPLICATION_GID=$(id -g) docker-compose $(1) $(2)
+	APPLICATION_UID=$(id -u) APPLICATION_GID=$(id -g) docker compose $(1) $(2)
 endef
 
 define call_docker_prod
@@ -35,7 +35,10 @@ down:
 	$(call call_docker, down, $(ARGS))
 
 login:
-	docker-compose exec -u $(DOCKER_UID):$(DOCKER_GID) $(DOCKER_CONTAINER) bash
+	docker compose exec -u $(DOCKER_UID):$(DOCKER_GID) $(DOCKER_CONTAINER) bash
+
+login_node:
+	docker compose exec -u $(DOCKER_UID):$(DOCKER_GID) node sh
 
 deploy:
 	$(call call_docker_prod, pull)

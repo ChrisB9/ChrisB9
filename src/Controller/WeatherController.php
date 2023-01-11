@@ -14,7 +14,6 @@ use Symfony\Contracts\Cache\ItemInterface;
 final class WeatherController extends AbstractController
 {
     private const CITIES = [
-        'kiel' => 'Kiel,DE',
         'stuttgart' => 'Stuttgart,DE',
     ];
 

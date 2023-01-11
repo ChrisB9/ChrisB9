@@ -2,19 +2,12 @@
 
 <br />
 
-~!~
-:height:80px
-:json:frontend-backend
-~!~
-
 ## Who am I?
 
-My name is Christian Rodriguez Benthake, a {%-test.html.twig%}-year-old full-stack webdeveloper and freelancer with an emphasis in PHP backend development. 
+My name is Christian Rodriguez Benthake, a {%-test.html.twig%}-year-old software engineer and freelancer with an emphasis in (PHP) backend development. 
 Additionally, I am engaged in the OSS-Community - e.g translating documentations, building software, or contributing to existing projects. Prior to COVID-19, I attended meetups, conferences, and co-working spaces e.g TYPO3 DevDays.<br />
-I currently reside and work remotely in Kiel, Germany. In my spare time I enjoy hiking, travelling, paragliding, or just reading a book and spending time with my wife.
-<br />
-
-{%weather.html.twig%}
+I currently reside and work remotely in Stuttgart, Germany. In my spare time I enjoy hiking, travelling, paragliding, or just reading a book and spending time with my wife and watching K-Drama with her.
+<br />[about.md](about.md)
 
 --------------------------------
 
@@ -23,18 +16,18 @@ I currently reside and work remotely in Kiel, Germany. In my spare time I enjoy 
 Over the years, I have worked with various languages and applications.   
 Here is a brief overview:
 
-- PHP, especially modern PHP (>=7.x). e.g. This website is written with the latest PHP 8.0
+- PHP, especially modern PHP (>=7.x). e.g. This website is written with the latest PHP 8.2
   - Frameworks: Symfony, ...
   - CMS: PimCore, TYPO3, WordPress
-  - Testing: PHPUnit, Codeception, Psalm, phpstan, ...
+  - Testing: PHPUnit, Codeception, Psalm, phpstan, Rector, ...
   - and plenty more ...
 - JavaScript (mainly ES6+)
   - TypeScript
   - Frameworks: React, Vue, alpinejs
 - DevOps
-  - docker
+  - docker, hetzner cloud
   - webservers: nginx and apache
-  - CI/CD: gitlab, bitbucket, github, ...
+  - CI/CD: gitlab, bitbucket, github, JetBrains Space
   
 I currently am learning `rust`. The PHP 8.0 docker image I created uses rust-lang to build the Dockerfiles based on templates.  
 [Learn more about that docker image](https://github.com/ChrisB9/php8-xdebug)  
@@ -43,13 +36,13 @@ That docker image can be used for PHP 8.0 in production and development, for ngi
 #### What I work with:
 
 - Developing: The entire suite provided by JetBrains, mainly PHPStorm and DataGrip
-- VCS: privately: gitlab and github; work: bitbucket
+- VCS: JetBrains Space, gitlab and github
 - OS: Since many years on Ubuntu-Linux
-- Project-Management: Freelancing: Phabricator and Teamwork; Work: Jira
+- Project-Management: Freelancing: JetBrains Space; Work: Jira
 
 ### Timeline
 
-I currently work at [anders und sehr GmbH](https://andersundsehr.de) as my main job, and am a freelancer in my spare time.  
+I currently work at [eCentral GmbH](https://ecentral.de) as my main job, and am a freelancer in my spare time.  
 I do not work fulltime as a freelancer, and I do not plan to change that in the foreseeable future.
 
 ~Timeline~

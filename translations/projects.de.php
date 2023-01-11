@@ -55,7 +55,7 @@ return [
     ],
     'Sanogym.com' => [
         'title' => 'Sanogym.com',
-        'description' => '<i>Experte für gesundheitsorientieres Personal-Training, Pilates und Gruppentraining</i><p>Ein WordPress-System mit Custom-Theme basierend auf Sage sowie vielen Gutenberg-Plugins</p>',
+        'description' => '<i>Experte für gesundheitsorientieres Personal-Training, Pilates und Gruppentraining</i><p>Verwaltung mehrerer Elementor & Gutenberg-Plugins</p>',
     ],
     'Trainingsinsel.de' => [
         'title' => 'Trainingsinsel.de',

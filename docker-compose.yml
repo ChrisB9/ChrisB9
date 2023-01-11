@@ -2,29 +2,29 @@ version: '3.5'
 
 services:
   web:
-    image: chrisb9/php8:alpine-nginx-dev
+    image: webdevops/php-nginx-dev:8.2-alpine
+    working_dir: /app
     volumes:
       - .:/app
       - ~/.ssh:/home/application/.ssh
-      - ~/.gitconfig_gitlab:/home/application/.gitconfig
-      - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./vhost.conf:/opt/docker/nginx/conf.d/vhost.conf
     environment:
-      - VIRTUAL_HOST=website.local.cben.dev
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - WEB_DOCUMENT_ROOT=/app/public
 
   node:
-    image: node:latest
+    image: node:14
     expose:
       - 8080
     volumes:
       - ./:/app
     working_dir: /app
     environment:
-      - VIRTUAL_HOST=node.website.local.cben.dev
+      - VIRTUAL_HOST=node.${VIRTUAL_HOST}
       - VIRTUAL_PORT=8080
     command: tail -f /dev/null
 
 networks:
   default:
     external:
-      name: global
+      name: proxy

@@ -75,18 +75,6 @@ return [
         ],
         'seo' => [],
     ],
-    'projects/collatz-conjecture' => [
-        'id' => 16,
-        'title' => 'Collatz Conjecture',
-        'file' => 'collatzconjecture',
-        'contentType' => PageRepository::CONTENT_TYPE_MARKDOWN,
-        'sitemap' => [
-            'enabled' => false,
-        ],
-        'seo' => [
-            'description' => 'Experimenting with the math problem collatz conjecture and chart.js',
-        ],
-    ],
     'cv' => [
         'id' => 17,
         'title' => 'Lebenslauf',
@@ -98,7 +86,7 @@ return [
         'curriculum' => [
             'Freelancing' => [
                 [
-                    'year' => 'seit 2020',
+                    'year' => '2020-2021',
                     'title' => 'Geniocon Online Marketing',
                     'notes' => [
                         'Consulting, Support, Upgrades und Weiterentwicklung für die Website-Instanzen basierend auf WordPress',
@@ -106,21 +94,23 @@ return [
                 ],
                 [
                     'year' => 'seit 2019',
-                    'title' => 'Trainingsinsel GmbH',
+                    'title' => 'Trainingsinsel GmbH / Sitzkrieger',
                     'notes' => [
-                        'Support und Weiterentwicklung der Trainingsinsel.de-WordPress-Instanz',
-                        'Konzeption, Umsetzung und Hosting der Sitzkrieger.com Website basierend auf PimCore, Symfony und ReactJS',
+                        'Seit 2022: Entwicklung einer Trainer-Software zum Testen und Auswerten der Fitness von Mitarbeitenden in Unternehmen',
+                        '<a href="https://sitzkrieger.com">Sitzkrieger</a>: Konzeption, Umsetzung und Hosting der Sitzkrieger.com Website basierend auf PimCore, Symfony und ReactJS',
+                        'Support und Weiterentwicklung der Trainingsinsel-WordPress-Instanzen',
                     ],
                 ],
                 [
                     'year' => 'seit 2018',
                     'title' => 'SanoGym GbR',
                     'notes' => [
-                        'Relaunch der Sanogym.com-Website (WordPress mit Gutenberg und Custom Sage-Theme, ReactJS, Elementor)',
+                        'Bis 2021: Relaunch der Sanogym.com-Website (WordPress mit Gutenberg und Custom Sage-Theme, ReactJS, Elementor)',
+                        'Seit 2022: Weiterentwicklung einzelner Blöcke für Gutenberg und Elementor auf der Website - Integration mit MindBody'
                     ],
                 ],
                 [
-                    'year' => 'seit 2016',
+                    'year' => '2016-2022',
                     'title' => 'Stiftung managerohnegrenzen gGmbH',
                     'notes' => [
                         '2016-2017 Relaunch der Website mit WordPress',
@@ -139,7 +129,21 @@ return [
             ],
             'Berufliche Laufbahn' => [
                 [
-                    'year' => 'seit 2017',
+                    'year' => 'seit 2021',
+                    'title' => <<<HTML
+eCentral GmbH <br />
+Senior Software-Entwickler
+HTML,
+                    'notes' => [
+                        'Entwerfen der Architektur sowie Implementierung der Integration von DAM-Anbindungen an u.a. TYPO3 als FAL-Driver (siehe: <a href="https://packagist.org/packages/fairway/">Fairway auf packagist</a>)',
+                        'Bereitstellen von Entwicklungsumgebungen mit automatisiertem SSL-Zertifikat und Server Infrastruktur',
+                        '(Neu-/Weiter-)Entwicklungen von/an Webseiten sowie Schnittstellen mit TYPO3, PimCore, Symfony und WordPress',
+                        'Frontend-Entwicklung mit u.a. React bzw. Vue/Typescript und Cypress',
+                        'Anleitung von Kollegen besonders im Bereich PHP und TYPO3'
+                    ]
+                ],
+                [
+                    'year' => '2017-2021',
                     'title' => <<<HTML
 anders und sehr GmbH <br />
 (Backend-) Web-Entwickler
@@ -147,8 +151,8 @@ HTML,
                     'notes' => [
                         'Konzipieren und Entwickeln von Schnittstellen sowie Im- und Exporten',
                         'Erstellen von Entwicklungsumgebungen mit Docker',
-                        'Aufbau/Anbinden von Suchindexen an diverse CMS',
-                        '(Neu-)Entwicklungen von Websiten mit TYPO3 und PimCore',
+                        'Aufbau/Anbinden von Suchindizes an diverse CMS',
+                        '(Neu-)Entwicklungen von Webseiten mit TYPO3 und PimCore',
                         'Performance-Steigerung und QA von Webanwendungen',
                         'Umsetzen von Frontend-Anwendungen mit u.a. Vue/Typescript'
                     ]
@@ -209,11 +213,28 @@ Bibliothek um (komplexere) Shell-Befehle in PHP im OOP-Stil zu generieren<br />
 HTML,
                 ],
                 [
+                    'year' => 'rust_dockerfile_generator',
+                    'title' => <<<HTML
+Dockerfile Generator mit handlebar templates<br />
+<a class="text-blue-600" href="https://github.com/ChrisB9/rust_dockerfile_generator">https://github.com/ChrisB9/rust_dockerfile_generator</a>
+HTML,
+                ],
+                [
                     'year' => 'docker images',
                     'title' => 'Erstellen verschiedener Docker-Images',
                     'notes' => [
                         'pimcore-dev: <a class="text-blue-600" href="https://github.com/ChrisB9/pimcore-docker">https://github.com/ChrisB9/pimcore-docker</a>',
                         'php8: <a class="text-blue-600" href="https://github.com/ChrisB9/php8-xdebug">https://github.com/ChrisB9/php8-xdebug</a>',
+                    ],
+                ],
+            ],
+            'Closed-Source Projekte' => [
+                [
+                    'year' => 'delta mental math',
+                    'title' => 'Flutter App zum Kopfrechnen: Bestimmung von Formelzeichen (z.B 10 ? 3 ? 1 = 13)',
+                    'notes' => [
+                        'Die Flutter-App basiert auf dieser Idee: <a href="https://github.com/ChrisB9/delta-test-mental-math">JS: delta-test-mental</a>',
+                        'Programmiert in Flutter / Dart mit vollkommen randomisierten Formeln und verschiedenem Schwierigkeitsgrad'
                     ],
                 ],
             ],
@@ -225,6 +246,7 @@ HTML,
                         'Deutsch - Muttersprache',
                         'Englisch - Fließend',
                         'Französisch - Grundkenntnisse',
+                        'Japanisch - Anfänger A1 VHS Kurs',
                     ],
                 ],
                 [
@@ -235,12 +257,12 @@ HTML,
                     ],
                 ],
                 [
-                    'year' => 'Code / Tools',
-                    'title' => 'Programmiersprachen und Werkzeuge<br/>Aktuell meistbenutze Sprachen/Tools',
+                    'year' => 'Tech-Stack',
+                    'title' => 'Programmiersprachen und Werkzeuge<br/>',
                     'notes' => [
-                        'Sprachen: PHP, JavaScript, mysql/mssql, Shell, HTML/CSS, Dockerfile',
-                        'Tools: docker, linux (pc+hosting), GitHub/GitLab/Bitbucket, JetBrains IDEs',
-                        'Fürs Freelancing: clockify, teamwork.com, GitLab, phabricator, invoiz',
+                        'Sprachen+: PHP, JavaScript, Rust, Dart, mysql/mssql, Shell, HTML/CSS, Flutter, Dockerfile, C',
+                        'Tools: docker, linux (pc+hosting), GitHub/GitLab/Space, JetBrains IDEs',
+                        'Fürs Freelancing: JetBrains Space, GitLab, Hetzner, invoiz',
                     ],
                 ],
             ],
