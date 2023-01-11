@@ -3,6 +3,7 @@ version: '3.5'
 services:
   web:
     image: webdevops/php-nginx:8.2-alpine
+    working_dir: /app
     volumes:
       - .:/app
       - ./vhost.prod.conf:/opt/docker/nginx/conf.d/vhost.conf
@@ -11,6 +12,7 @@ services:
       - VIRTUAL_HOST=cben.dev,cben.co,projects.cben.co
       - LETSENCRYPT_HOST=cben.co,cben.dev,projects.cben.co
       - LETSENCRYPT_EMAIL=chris@cben.co
+      - WEB_DOCUMENT_ROOT=/app/public
 
 networks:
   default:
