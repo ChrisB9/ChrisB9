@@ -6,7 +6,7 @@
 
 My name is Christian Rodriguez Benthake, a {%-test.html.twig%}-year-old software engineer and freelancer with an emphasis in (PHP) backend development. 
 Additionally, I am engaged in the OSS-Community - e.g translating documentations, building software, or contributing to existing projects. Prior to COVID-19, I attended meetups, conferences, and co-working spaces e.g TYPO3 DevDays.<br />
-I currently reside and work remotely in Stuttgart, Germany. In my spare time I enjoy hiking, travelling, paragliding, or just reading a book and spending time with my wife and watching K-Drama with her.
+I currently reside and work remotely in Stuttgart, Germany. In my spare time I enjoy hiking, travelling, paragliding, or just reading a book and watching a movie.
 <br />
 
 --------------------------------
@@ -16,7 +16,7 @@ I currently reside and work remotely in Stuttgart, Germany. In my spare time I e
 Over the years, I have worked with various languages and applications.   
 Here is a brief overview:
 
-- PHP, especially modern PHP (>=7.x). e.g. This website is written with the latest PHP 8.2
+- PHP, especially modern PHP (>=8.x).
   - Frameworks: Symfony, ...
   - CMS: PimCore, TYPO3, WordPress
   - Testing: PHPUnit, Codeception, Psalm, phpstan, Rector, ...
@@ -42,10 +42,13 @@ That docker image can be used for PHP 8.0 in production and development, for ngi
 
 ### Timeline
 
-I currently work at [eCentral GmbH](https://ecentral.de) as my main job, and am a freelancer in my spare time.  
+I currently work at [easybill GmbH](https://easybill.de) as my main job, and am a freelancer in my spare time.  
 I do not work fulltime as a freelancer, and I do not plan to change that in the foreseeable future.
 
 ~Timeline~
+Title: 2023
+Company: easybill GmbH
+---
 Title: 2021
 Company: Moved to Stuttgart, Germany
 ---

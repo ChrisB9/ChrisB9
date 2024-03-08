@@ -4,7 +4,7 @@
 
 Ich bin Christian Rodriguez Benthake, ein {%-test.html.twig%} Jahre alter Software-Entwickler und Freelancer mit Schwerpunkt in der PHP-Backend-Entwicklung.
 Zudem bin ich engagiert in der OpenSource-Community - z.B. durch Übersetzungen schreiben, neue Software entwickeln oder auch an bestehenen Projekten durch kleinere oder größere Änderungen beitragen.
-Aktuell lebe ich in Stuttgart. In meiner Freizeit verbringe ich Zeit mit meiner Frau, gehe Gleitschirmfliegen und/oder Reisen - oder ich lese einfach nur ein Buch, programmiere oder schaue ein K-Thriller.
+Aktuell lebe ich in Stuttgart. In meiner Freizeit gehe ich gerne Gleitschirmfliegen und/oder Reisen - oder ich lese einfach nur ein Buch, programmiere oder schaue einen Film.
 <br />
 
 --------------------------------
@@ -14,7 +14,7 @@ Aktuell lebe ich in Stuttgart. In meiner Freizeit verbringe ich Zeit mit meiner 
 Ich arbeite mit einer Vielzahl von Technologien, von denen einige über die Jahre (leider) wieder ein wenig eingerostet sind.
 Hier ein Überblick über die Technologien, die ich derzeit viel einsetze:
 
-- PHP, besonders modernes PHP (>=7.x). Diese Website hier ist z.B in der neusten Version PHP 8.2 geschrieben.
+- PHP, besonders modernes PHP (>=8.x).
   - Frameworks: Symfony, Laravel, ...
   - CMS: PimCore, TYPO3, WordPress
   - Testing: PHPUnit, Codeception, Psalm, phpstan, Rector, ...
@@ -42,10 +42,13 @@ Das Docker Image kann für PHP 8.0 in einer Produktiv- oder Entwicklungsumgebung
 
 ### Timeline
 
-Zurzeit arbeite ich hauptberuflich bei [eCentral GmbH](https://ecentral.de) und bin in meiner Freizeit als Freelancer aktiv.  
+Zurzeit arbeite ich hauptberuflich bei [easybill GmbH](https://easybill.de) und bin in meiner Freizeit als Freelancer aktiv.  
 Ich übe das Freelancing nicht Vollzeit aus und werde dies auch in naher Zukunft nicht ändern.
 
 ~Timeline~
+Title: 2023
+Company: easybill GmbH
+---
 Title: 2021
 Company: Umzug nach Stuttgart
 ---
