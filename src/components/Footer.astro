@@ -1,0 +1,22 @@
+---
+import type { Locale } from '../i18n/ui';
+import { localePath, useTranslations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const year = new Date().getFullYear();
+---
+
+<footer class="no-print mt-20 border-t border-line">
+  <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-8 gap-y-2 px-6 py-6 font-mono text-xs text-ink-mute">
+    <span>
+      {t('footer.madeWith')} cben.co © {year}
+    </span>
+    <a href={localePath(locale, 'imprint')} class="transition-colors hover:text-primary">
+      {t('footer.imprint')}
+    </a>
+  </div>
+</footer>

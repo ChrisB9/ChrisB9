@@ -1,0 +1,26 @@
+---
+import { LOCALES, DEFAULT_LOCALE } from '../i18n/ui';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=/${DEFAULT_LOCALE}`} />
+    <link rel="canonical" href={`https://cben.dev/${DEFAULT_LOCALE}`} />
+    <meta name="robots" content="noindex" />
+    <title>cben.dev</title>
+    <script is:inline define:vars={{ locales: LOCALES, fallback: DEFAULT_LOCALE }}>
+      const wanted = (navigator.languages ?? [navigator.language ?? '']).map((l) =>
+        String(l).slice(0, 2).toLowerCase(),
+      );
+      const match = wanted.find((l) => locales.includes(l)) ?? fallback;
+      location.replace('/' + match);
+    </script>
+  </head>
+  <body>
+    <p>
+      <a href={`/${DEFAULT_LOCALE}`}>Continue to cben.dev</a>
+    </p>
+  </body>
+</html>

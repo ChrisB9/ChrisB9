@@ -1,0 +1,34 @@
+---
+import { localeNames, LOCALES, type Locale } from '../i18n/ui';
+import { localePath, useTranslations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+  slug: string;
+}
+const { locale, slug } = Astro.props;
+const t = useTranslations(locale);
+---
+
+<nav
+  aria-label={t('lang.switch')}
+  class="flex items-center gap-0.5 rounded-full border border-line bg-canvas/70 p-0.5 backdrop-blur"
+>
+  {LOCALES.map((alt) => (
+    <a
+      href={localePath(alt, slug)}
+      hreflang={alt}
+      lang={alt}
+      aria-current={alt === locale ? 'true' : undefined}
+      title={localeNames[alt]}
+      class:list={[
+        'rounded-full px-2.5 py-1 font-mono text-[0.68rem] uppercase transition-all duration-200',
+        alt === locale
+          ? 'bg-primary font-semibold text-on-primary'
+          : 'text-ink-mute hover:text-ink',
+      ]}
+    >
+      {alt}
+    </a>
+  ))}
+</nav>

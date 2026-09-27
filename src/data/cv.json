@@ -1,0 +1,1098 @@
+{
+  "labels": {
+    "title": {
+      "en": "Curriculum Vitae",
+      "de": "Lebenslauf",
+      "ja": "履歴書"
+    },
+    "subtitle": {
+      "en": "Christian Rodriguez Benthake",
+      "de": "Christian Rodriguez Benthake",
+      "ja": "クリスティアン・ロドリゲス・ベンターケ"
+    },
+    "download": {
+      "en": "Download as PDF",
+      "de": "Als PDF herunterladen",
+      "ja": "PDF をダウンロード"
+    },
+    "downloadRirekisho": {
+      "en": "履歴書 (Japanese format)",
+      "de": "履歴書 (japanisches Format)",
+      "ja": "履歴書をダウンロード"
+    },
+    "rangeSince": {
+      "en": "since {from}",
+      "de": "seit {from}",
+      "ja": "{from}年より"
+    },
+    "rangeBetween": {
+      "en": "{from}–{to}",
+      "de": "{from}–{to}",
+      "ja": "{from}年〜{to}年"
+    },
+    "rangeAt": {
+      "en": "{from}",
+      "de": "{from}",
+      "ja": "{from}年"
+    },
+    "sections": {
+      "employment": {
+        "en": "Professional experience",
+        "de": "Berufliche Laufbahn",
+        "ja": "職歴"
+      },
+      "education": {
+        "en": "Education",
+        "de": "Schullaufbahn",
+        "ja": "学歴"
+      },
+      "freelance": {
+        "en": "Freelance work",
+        "de": "Freelancing",
+        "ja": "フリーランス業務"
+      },
+      "opensource": {
+        "en": "Open source",
+        "de": "Open-Source-Projekte",
+        "ja": "オープンソース"
+      },
+      "project": {
+        "en": "Other projects",
+        "de": "Weitere Projekte",
+        "ja": "その他のプロジェクト"
+      },
+      "milestone": {
+        "en": "Milestones",
+        "de": "Meilensteine",
+        "ja": "主な出来事"
+      },
+      "skills": {
+        "en": "Skills and interests",
+        "de": "Kenntnisse und Interessen",
+        "ja": "スキル・興味"
+      }
+    },
+    "more": {
+      "en": "More projects at github.com/ChrisB9",
+      "de": "Weitere Projekte auf github.com/ChrisB9",
+      "ja": "その他のプロジェクトは github.com/ChrisB9"
+    }
+  },
+  "contact": {
+    "email": "contact@cben.co",
+    "site": "cben.dev",
+    "location": {
+      "en": "Hadano, Japan",
+      "de": "Hadano, Japan",
+      "ja": "日本、秦野市"
+    }
+  },
+  "rirekisho": {
+    "furigana": "くりすてぃあん・ろどりげす・べんたーけ"
+  },
+  "intro": {
+    "en": "Senior software engineer and freelancer with an emphasis on PHP backend development.",
+    "de": "Senior Software-Engineer und Freelancer mit Schwerpunkt in der PHP-Backend-Entwicklung.",
+    "ja": "シニアソフトウェアエンジニア兼フリーランス。PHP のバックエンド開発を中心に活動しています。"
+  },
+  "skills": [
+    {
+      "key": "languages",
+      "label": {
+        "en": "Languages",
+        "de": "Sprachkenntnisse",
+        "ja": "語学"
+      },
+      "items": {
+        "en": [
+          "German: native",
+          "English: fluent",
+          "French: good, recently refreshed",
+          "Japanese: comfortable in everyday conversation"
+        ],
+        "de": [
+          "Deutsch: Muttersprache",
+          "Englisch: Fließend",
+          "Französisch: Gute Kenntnisse (nach Auffrischung)",
+          "Japanisch: Gute Alltagskonversation"
+        ],
+        "ja": [
+          "ドイツ語: 母語",
+          "英語: 流暢",
+          "フランス語: 良好（学び直し後）",
+          "日本語: 日常会話は問題なく"
+        ]
+      }
+    },
+    {
+      "key": "tech",
+      "label": {
+        "en": "Languages and tools",
+        "de": "Programmiersprachen und Werkzeuge",
+        "ja": "プログラミング言語とツール"
+      },
+      "items": {
+        "en": [
+          "Languages: PHP, JavaScript/TypeScript, Rust, Dart/Flutter, SQL (MySQL/MSSQL), Shell, HTML/CSS (Tailwind, ShadCN), C, C#",
+          "Tools: Docker, Linux, GitHub/GitLab, JetBrains IDEs, Zed, Claude Code"
+        ],
+        "de": [
+          "Sprachen: PHP, JavaScript/TypeScript, Rust, Dart/Flutter, SQL (MySQL/MSSQL), Shell, HTML/CSS (Tailwind, ShadCN), C, C#",
+          "Tools: Docker, Linux, GitHub/GitLab, JetBrains IDEs, Zed, Claude Code"
+        ],
+        "ja": [
+          "言語: PHP、JavaScript/TypeScript、Rust、Dart/Flutter、SQL（MySQL/MSSQL）、Shell、HTML/CSS（Tailwind、ShadCN）、C、C#",
+          "ツール: Docker、Linux、GitHub/GitLab、JetBrains IDE、Zed、Claude Code"
+        ]
+      }
+    },
+    {
+      "key": "interests",
+      "label": {
+        "en": "Interests",
+        "de": "Interessen",
+        "ja": "興味・関心"
+      },
+      "items": {
+        "en": ["Paragliding: licensed, IPPI4"],
+        "de": ["Gleitschirmfliegen: lizensiert, IPPI4"],
+        "ja": ["パラグライダー: ライセンス取得（IPPI4）"]
+      }
+    }
+  ],
+  "entries": [
+    {
+      "id": "easybill",
+      "section": "employment",
+      "from": "2023",
+      "to": null,
+      "org": {
+        "en": "easybill GmbH",
+        "de": "easybill GmbH",
+        "ja": "easybill GmbH"
+      },
+      "url": "https://easybill.de",
+      "onTimeline": true,
+      "summary": {
+        "en": "",
+        "de": "",
+        "ja": ""
+      },
+      "bullets": {
+        "en": [
+          "Rebuilding the UI piece by piece into an entirely new design with modern technologies (React, ShadCN, Tailwind, TanStack)",
+          "New features: onboarding, incoming invoices, interfaces to external providers",
+          "Mainly backend PHP development: features and maintenance in a Symfony environment"
+        ],
+        "de": [
+          "Stückweise Umbau der UI auf ein komplett neues Design mit modernen Technologien (React, ShadCN, tailwind, tanstack)",
+          "Hinzufügen neuer Features, wie uA. Onboarding, Eingangsrechnungen, Schnittstellen zu externen Anbietern etc.",
+          "Hauptsächlich Backend-PHP-Entwicklung, Features sowie Maintenance im Symfony Umfeld"
+        ],
+        "ja": [
+          "モダンな技術（React、ShadCN、Tailwind、TanStack）を用いて、UI を段階的に刷新",
+          "オンボーディング、受領請求書、外部プロバイダとの連携など、新機能の追加",
+          "主に Symfony 環境でのバックエンド PHP 開発（新機能および保守）"
+        ]
+      }
+    },
+    {
+      "id": "easybill-employed",
+      "section": "employment",
+      "parent": "easybill",
+      "from": "2023",
+      "to": "2025",
+      "org": null,
+      "url": null,
+      "onTimeline": false,
+      "summary": {
+        "en": "Senior Software Engineer",
+        "de": "Senior Software-Entwickler",
+        "ja": "シニアソフトウェアエンジニア"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "easybill-freelance",
+      "section": "employment",
+      "parent": "easybill",
+      "from": "2025",
+      "to": null,
+      "org": null,
+      "url": null,
+      "onTimeline": false,
+      "summary": {
+        "en": "Freelance",
+        "de": "Freelance",
+        "ja": "フリーランス"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "ecentral",
+      "section": "employment",
+      "from": "2021",
+      "to": "2023",
+      "org": {
+        "en": "eCentral GmbH (fgtclb)",
+        "de": "eCentral GmbH (fgtclb)",
+        "ja": "eCentral GmbH (fgtclb)"
+      },
+      "url": null,
+      "onTimeline": true,
+      "summary": {
+        "en": "Senior Software Engineer",
+        "de": "Senior Software-Entwickler",
+        "ja": "シニアソフトウェアエンジニア"
+      },
+      "bullets": {
+        "en": [
+          "Designed the architecture for and implemented DAM integrations, including a FAL driver for TYPO3",
+          "Provisioned development environments with automated SSL certificates and server infrastructure",
+          "Built and extended websites and interfaces with TYPO3, PimCore, Symfony and WordPress",
+          "Frontend development with React and Vue/TypeScript, tested with Cypress",
+          "Mentored colleagues, particularly in PHP and TYPO3"
+        ],
+        "de": [
+          "Entwerfen der Architektur sowie Implementierung der Integration von DAM-Anbindungen an u.a. TYPO3 als FAL-Driver",
+          "Bereitstellen von Entwicklungsumgebungen mit automatisiertem SSL-Zertifikat und Server-Infrastruktur",
+          "(Neu-/Weiter-)Entwicklungen von/an Webseiten sowie Schnittstellen mit TYPO3, PimCore, Symfony und WordPress",
+          "Frontend-Entwicklung mit u.a. React bzw. Vue/TypeScript und Cypress",
+          "Anleitung von Kollegen besonders im Bereich PHP und TYPO3"
+        ],
+        "ja": [
+          "DAM 連携のアーキテクチャ設計と実装（TYPO3 向け FAL ドライバを含む）",
+          "SSL 証明書の自動化を含む開発環境とサーバーインフラの構築",
+          "TYPO3、PimCore、Symfony、WordPress によるウェブサイトおよび連携機能の新規開発・改修",
+          "React および Vue/TypeScript によるフロントエンド開発、Cypress でのテスト",
+          "特に PHP と TYPO3 の分野での同僚の指導・育成"
+        ]
+      }
+    },
+    {
+      "id": "anders-und-sehr",
+      "section": "employment",
+      "from": "2017",
+      "to": "2021",
+      "org": {
+        "en": "anders und sehr GmbH (Pluswerk AG)",
+        "de": "anders und sehr GmbH (Pluswerk AG)",
+        "ja": "anders und sehr GmbH (Pluswerk AG)"
+      },
+      "url": null,
+      "onTimeline": true,
+      "summary": {
+        "en": "(Backend) Web Developer",
+        "de": "(Backend-) Web-Entwickler",
+        "ja": "（バックエンド）ウェブ開発者"
+      },
+      "bullets": {
+        "en": [
+          "Designed and built interfaces along with import and export pipelines",
+          "Created development environments with Docker",
+          "Built and connected search indices to various CMS platforms",
+          "Developed new websites with TYPO3 and PimCore",
+          "Performance tuning and QA of web applications",
+          "Implemented frontend applications with Vue/TypeScript among others"
+        ],
+        "de": [
+          "Konzipieren und Entwickeln von Schnittstellen sowie Im- und Exporten",
+          "Erstellen von Entwicklungsumgebungen mit Docker",
+          "Aufbau/Anbinden von Suchindizes an diverse CMS",
+          "(Neu-)Entwicklungen von Webseiten mit TYPO3 und PimCore",
+          "Performance-Steigerung und QA von Webanwendungen",
+          "Umsetzen von Frontend-Anwendungen mit u.a. Vue/TypeScript"
+        ],
+        "ja": [
+          "インターフェースおよびインポート・エクスポート処理の設計と開発",
+          "Docker による開発環境の構築",
+          "各種 CMS への検索インデックスの構築と連携",
+          "TYPO3 と PimCore によるウェブサイトの新規開発",
+          "ウェブアプリケーションのパフォーマンス改善と品質保証",
+          "Vue/TypeScript などによるフロントエンドアプリケーションの実装"
+        ]
+      }
+    },
+    {
+      "id": "audius",
+      "section": "employment",
+      "from": "2014",
+      "to": "2017",
+      "org": {
+        "en": "audius AG",
+        "de": "audius AG",
+        "ja": "audius AG"
+      },
+      "url": null,
+      "onTimeline": true,
+      "summary": {
+        "en": "Dual study programme, software development",
+        "de": "Duales Studium, Software-Entwicklung",
+        "ja": "デュアル制大学プログラム（ソフトウェア開発）"
+      },
+      "bullets": {
+        "en": [
+          "Learned C# and MSSQL",
+          "Extended the Dashface product",
+          "Cost-benefit analysis of several mapping systems for Dashface"
+        ],
+        "de": [
+          "Erlernen von C# und MSSQL",
+          "Weiterentwicklung des Produktes Dashface",
+          "Kosten-Nutzen-Analyse von div. Mapping-Systemen für Dashface"
+        ],
+        "ja": [
+          "C# と MSSQL の習得",
+          "自社製品 Dashface の機能拡張",
+          "Dashface 向け各種マッピングシステムの費用対効果分析"
+        ]
+      }
+    },
+    {
+      "id": "praktika",
+      "section": "employment",
+      "from": "2012",
+      "to": "2013",
+      "org": {
+        "en": "Kurzpraktika, diverse Software-Unternehmen",
+        "de": "Kurzpraktika, diverse Software-Unternehmen",
+        "ja": "Kurzpraktika, diverse Software-Unternehmen"
+      },
+      "url": null,
+      "onTimeline": false,
+      "summary": {
+        "en": "Short internships at various software companies",
+        "de": "Kurzpraktika in versch. Software-Entwicklungs-Unternehmen",
+        "ja": "各種ソフトウェア企業での短期インターンシップ"
+      },
+      "bullets": {
+        "en": [
+          "Multi-day internship at OrgaData, software development with C#",
+          "One-day internship at Tridem Leer, web design",
+          "One-day internship at BussData Leer, software development",
+          "One-day internship at ConneData Leer, software development"
+        ],
+        "de": [
+          "Mehrtägiges Praktikum bei OrgaData in der Software-Entwicklung mit C#",
+          "Eintägiges Praktikum bei Tridem Leer im Bereich WebDesign",
+          "Eintägiges Praktikum bei BussData Leer im Bereich Software-Entwicklung",
+          "Eintägiges Praktikum bei ConneData Leer im Bereich Software-Entwicklung"
+        ],
+        "ja": [
+          "OrgaData での数日間のインターンシップ（C# によるソフトウェア開発）",
+          "Tridem Leer での 1 日間のインターンシップ（ウェブデザイン）",
+          "BussData Leer での 1 日間のインターンシップ（ソフトウェア開発）",
+          "ConneData Leer での 1 日間のインターンシップ（ソフトウェア開発）"
+        ]
+      }
+    },
+    {
+      "id": "dhbw",
+      "section": "education",
+      "from": "2014",
+      "to": "2017",
+      "org": {
+        "en": "Duale Hochschule Baden-Württemberg",
+        "de": "Duale Hochschule Baden-Württemberg",
+        "ja": "Duale Hochschule Baden-Württemberg"
+      },
+      "url": null,
+      "onTimeline": true,
+      "summary": {
+        "en": "Applied Computer Science, Bachelor of Science",
+        "de": "Angewandte Informatik, Abschluss: Bachelor of Science",
+        "ja": "応用情報学、学士（Bachelor of Science）"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "gymnasium",
+      "section": "education",
+      "from": "2006",
+      "to": "2014",
+      "org": {
+        "en": "Gymnasium Rhauderfehn",
+        "de": "Gymnasium Rhauderfehn",
+        "ja": "Gymnasium Rhauderfehn"
+      },
+      "url": null,
+      "onTimeline": false,
+      "summary": {
+        "en": "Abitur (German university entrance qualification)",
+        "de": "Abschluss: Abitur",
+        "ja": "アビトゥア（ドイツの大学入学資格）"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "sitzkrieger",
+      "section": "freelance",
+      "from": "2019",
+      "to": null,
+      "org": {
+        "en": "Trainingsinsel GmbH / Sitzkrieger",
+        "de": "Trainingsinsel GmbH / Sitzkrieger",
+        "ja": "Trainingsinsel GmbH / Sitzkrieger"
+      },
+      "url": "https://sitzkrieger.com",
+      "onTimeline": false,
+      "summary": {
+        "en": "Tech lead",
+        "de": "Techlead",
+        "ja": "テックリード"
+      },
+      "bullets": {
+        "en": [
+          "Since 2022: building trainer software to test and evaluate employee fitness in companies (including a video platform, courses, and analytics)",
+          "Concept, implementation and hosting of the Sitzkrieger.com website on PimCore, Symfony, ReactJS and Rust",
+          "Before: Support and further development of the Trainingsinsel WordPress instances"
+        ],
+        "de": [
+          "Seit 2022: Entwicklung einer Trainer-Software zum Testen und Auswerten der Fitness von Mitarbeitenden in Unternehmen (inklusive Videoplattform, Kursen und Auswertungen)",
+          "Konzeption, Umsetzung und Hosting der Sitzkrieger.com Website basierend auf PimCore, Symfony, ReactJS und Rust",
+          "Vorher: Support und Weiterentwicklung der Trainingsinsel-WordPress-Instanzen"
+        ],
+        "ja": [
+          "2022年より: 企業向けに、従業員の体力を測定・評価するトレーナー向けソフトウェアを開発（動画プラットフォーム、コース、分析機能を含む）",
+          "PimCore、Symfony、ReactJS、Rust による Sitzkrieger.com の設計・実装・ホスティング",
+          "それ以前: Trainingsinsel の WordPress 環境のサポートと機能拡張"
+        ]
+      }
+    },
+    {
+      "id": "sanogym",
+      "section": "freelance",
+      "from": "2018",
+      "to": null,
+      "org": {
+        "en": "SanoGym GbR",
+        "de": "SanoGym GbR",
+        "ja": "SanoGym GbR"
+      },
+      "url": "https://sanogym.com",
+      "onTimeline": false,
+      "summary": {
+        "en": "",
+        "de": "",
+        "ja": ""
+      },
+      "bullets": {
+        "en": [
+          "Until 2021: relaunch of the Sanogym.com website (WordPress with Gutenberg and a custom Sage theme, ReactJS, Elementor)",
+          "After: individual Gutenberg and Elementor blocks, integrated with MindBody",
+          "Now: Sitzkrieger for SanoGym"
+        ],
+        "de": [
+          "Bis 2021: Relaunch der Sanogym.com-Website (WordPress mit Gutenberg und Custom Sage-Theme, ReactJS, Elementor)",
+          "Danach: einzelne Gutenberg- und Elementor-Blöcke, Integration mit MindBody",
+          "Jetzt: Sitzkrieger für SanoGym"
+        ],
+        "ja": [
+          "2021年まで: Sanogym.com のリニューアル（WordPress、Gutenberg、カスタム Sage テーマ、ReactJS、Elementor）",
+          "その後: Gutenberg と Elementor の個別ブロック開発、MindBody との連携",
+          "現在: SanoGym 向けの Sitzkrieger"
+        ]
+      }
+    },
+    {
+      "id": "managerohnegrenzen",
+      "section": "freelance",
+      "from": "2016",
+      "to": "2022",
+      "org": {
+        "en": "Stiftung managerohnegrenzen gGmbH",
+        "de": "Stiftung managerohnegrenzen gGmbH",
+        "ja": "Stiftung managerohnegrenzen gGmbH"
+      },
+      "url": "https://stiftung-managerohnegrenzen.de",
+      "onTimeline": false,
+      "summary": {
+        "en": "",
+        "de": "",
+        "ja": ""
+      },
+      "bullets": {
+        "en": [
+          "2016-2017: website relaunch with WordPress",
+          "Since 2017: support and further development of the website",
+          "Digitalisation of internal processes"
+        ],
+        "de": [
+          "2016-2017: Relaunch der Website mit WordPress",
+          "Seit 2017: Support und Weiterentwicklung der Website",
+          "Digitalisierung interner Prozesse"
+        ],
+        "ja": [
+          "2016年〜2017年: WordPress によるウェブサイトのリニューアル",
+          "2017年より: ウェブサイトの保守と機能拡張",
+          "社内業務プロセスのデジタル化"
+        ]
+      }
+    },
+    {
+      "id": "geniocon",
+      "section": "freelance",
+      "from": "2020",
+      "to": "2021",
+      "org": {
+        "en": "Geniocon Online Marketing",
+        "de": "Geniocon Online Marketing",
+        "ja": "Geniocon Online Marketing"
+      },
+      "url": null,
+      "onTimeline": false,
+      "summary": {
+        "en": "",
+        "de": "",
+        "ja": ""
+      },
+      "bullets": {
+        "en": [
+          "Consulting, support, upgrades and further development of the WordPress-based website instances"
+        ],
+        "de": [
+          "Consulting, Support, Upgrades und Weiterentwicklung für die Website-Instanzen basierend auf WordPress"
+        ],
+        "ja": [
+          "WordPress ベースのウェブサイト群に対するコンサルティング、サポート、アップグレード、機能拡張"
+        ]
+      }
+    },
+    {
+      "id": "lauer-repair",
+      "section": "freelance",
+      "from": "2015",
+      "to": "2018",
+      "org": {
+        "en": "Lauer-Repair GmbH",
+        "de": "Lauer-Repair GmbH",
+        "ja": "Lauer-Repair GmbH"
+      },
+      "url": "https://lauer-repair.de",
+      "onTimeline": false,
+      "summary": {
+        "en": "",
+        "de": "",
+        "ja": ""
+      },
+      "bullets": {
+        "en": [
+          "Built a plugin to manage invoices (with PDF export), products and customers inside the website"
+        ],
+        "de": [
+          "Entwicklung eines Plugins zur Verwaltung von Rechnungen (+PDF), Produkten und Kunden innerhalb der Website"
+        ],
+        "ja": ["請求書（PDF 出力対応）、商品、顧客をウェブサイト内で管理するプラグインの開発"]
+      }
+    },
+    {
+      "id": "phpsu",
+      "section": "opensource",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "phpsu/phpsu",
+        "de": "phpsu/phpsu",
+        "ja": "phpsu/phpsu"
+      },
+      "url": "https://phpsu.de",
+      "onTimeline": false,
+      "onPdf": true,
+      "summary": {
+        "en": "A tool for synchronising files and databases between environments",
+        "de": "Werkzeug zur Synchronisation von Dateien und Datenbanken zwischen Umgebungen",
+        "ja": "環境間でファイルとデータベースを同期するツール"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "shell-command-builder",
+      "section": "opensource",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "phpsu/ShellCommandBuilder",
+        "de": "phpsu/ShellCommandBuilder",
+        "ja": "phpsu/ShellCommandBuilder"
+      },
+      "url": "https://github.com/phpsu/ShellCommandBuilder",
+      "onTimeline": false,
+      "onPdf": true,
+      "summary": {
+        "en": "A library for composing (complex) shell commands in PHP, OOP style",
+        "de": "Bibliothek um (komplexere) Shell-Befehle in PHP im OOP-Stil zu generieren",
+        "ja": "（複雑な）シェルコマンドを PHP のオブジェクト指向スタイルで組み立てるライブラリ"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "rust-dockerfile-generator",
+      "section": "opensource",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "rust_dockerfile_generator",
+        "de": "rust_dockerfile_generator",
+        "ja": "rust_dockerfile_generator"
+      },
+      "url": "https://github.com/ChrisB9/rust_dockerfile_generator",
+      "onTimeline": false,
+      "onPdf": false,
+      "summary": {
+        "en": "Dockerfile generator driven by handlebars templates",
+        "de": "Dockerfile-Generator mit Handlebar-Templates",
+        "ja": "Handlebars テンプレートによる Dockerfile ジェネレーター"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "terminal-color-builder",
+      "section": "opensource",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "terminal_color_builder",
+        "de": "terminal_color_builder",
+        "ja": "terminal_color_builder"
+      },
+      "url": "https://crates.io/crates/terminal_color_builder",
+      "onTimeline": false,
+      "onPdf": false,
+      "summary": {
+        "en": "Rust crate for colouring terminal output in a builder style",
+        "de": "Rust-Crate zum Einfärben von Terminal-Ausgaben im Builder-Stil",
+        "ja": "ターミナル出力をビルダースタイルで色付けする Rust クレート"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "docker-images",
+      "section": "opensource",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "Docker images",
+        "de": "Docker images",
+        "ja": "Docker images"
+      },
+      "url": "https://github.com/ChrisB9/php8-xdebug",
+      "onTimeline": false,
+      "onPdf": false,
+      "summary": {
+        "en": "Authored several Docker images",
+        "de": "Erstellen verschiedener Docker-Images",
+        "ja": "各種 Docker イメージの作成"
+      },
+      "bullets": {
+        "en": [
+          "pimcore-dev: github.com/ChrisB9/pimcore-docker",
+          "php8: github.com/ChrisB9/php8-xdebug"
+        ],
+        "de": [
+          "pimcore-dev: github.com/ChrisB9/pimcore-docker",
+          "php8: github.com/ChrisB9/php8-xdebug"
+        ],
+        "ja": [
+          "pimcore-dev: github.com/ChrisB9/pimcore-docker",
+          "php8: github.com/ChrisB9/php8-xdebug"
+        ]
+      }
+    },
+    {
+      "id": "pimcorex-docker",
+      "section": "opensource",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "chrisb9/pimcorex-docker",
+        "de": "chrisb9/pimcorex-docker",
+        "ja": "chrisb9/pimcorex-docker"
+      },
+      "url": "https://github.com/ChrisB9/pimcorex-docker",
+      "onTimeline": false,
+      "onPdf": true,
+      "summary": {
+        "en": "Dockerfiles for Pimcore X on nginx, for production and development. The successor to pimcore-dev.",
+        "de": "Dockerfiles für Pimcore X auf nginx, für Produktiv- und Entwicklungsumgebungen. Nachfolger von pimcore-dev.",
+        "ja": "本番・開発環境向けの、nginx 上で動く Pimcore X 用 Dockerfile。pimcore-dev の後継。"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "ai-inline-review",
+      "section": "opensource",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "ai-inline-review",
+        "de": "ai-inline-review",
+        "ja": "ai-inline-review"
+      },
+      "url": "https://github.com/ChrisB9/ai-inline-review",
+      "onTimeline": false,
+      "onPdf": true,
+      "summary": {
+        "en": "Human-curated code review inside PhpStorm and IntelliJ, driven by a Claude Code loop. Written in Kotlin.",
+        "de": "Von Hand kuratiertes Code-Review in PhpStorm und IntelliJ, angetrieben von einer Claude-Code-Schleife. In Kotlin geschrieben.",
+        "ja": "PhpStorm・IntelliJ 内で行う人手によるコードレビュー。Claude Code のループで動作。Kotlin 製。"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "manga-epub-creator",
+      "section": "opensource",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "manga_epub_creator",
+        "de": "manga_epub_creator",
+        "ja": "manga_epub_creator"
+      },
+      "url": "https://github.com/ChrisB9/manga_epub_creator",
+      "onTimeline": false,
+      "onPdf": true,
+      "summary": {
+        "en": "Fetches manga chapters and packages them into EPUB files for an e-reader. Rust, with a Dioxus interface.",
+        "de": "Lädt Manga-Kapitel und verpackt sie als EPUB für den E-Reader. Rust, mit einer Dioxus-Oberfläche.",
+        "ja": "マンガの話を取得して EPUB にまとめ、電子書籍リーダーで読めるようにするツール。Rust と Dioxus。"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "delta-mental-math",
+      "section": "project",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "delta mental math",
+        "de": "delta mental math",
+        "ja": "delta mental math"
+      },
+      "url": "https://github.com/ChrisB9/delta-test-mental-math",
+      "onTimeline": false,
+      "onPdf": false,
+      "summary": {
+        "en": "Flutter app for mental arithmetic: find the operators (e.g. 10 ? 3 ? 1 = 13)",
+        "de": "Flutter-App zum Kopfrechnen: Bestimmung von Formelzeichen (z.B. 10 ? 3 ? 1 = 13)",
+        "ja": "暗算用 Flutter アプリ: 演算子を当てる（例: 10 ? 3 ? 1 = 13）"
+      },
+      "bullets": {
+        "en": [
+          "Written in Flutter / Dart with fully randomised formulas and several difficulty levels"
+        ],
+        "de": [
+          "Programmiert in Flutter / Dart mit vollkommen randomisierten Formeln und verschiedenem Schwierigkeitsgrad"
+        ],
+        "ja": ["Flutter / Dart で開発。完全ランダムな数式と複数の難易度を搭載"]
+      }
+    },
+    {
+      "id": "adventure-3939",
+      "section": "project",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "3939adventure",
+        "de": "3939adventure",
+        "ja": "3939adventure"
+      },
+      "url": "https://3939adventure.cben.co/",
+      "onTimeline": false,
+      "onPdf": false,
+      "summary": {
+        "en": "A browser game for two, built with Flutter.",
+        "de": "Ein Browser-Spiel für zwei, gebaut mit Flutter.",
+        "ja": "二人用のブラウザゲーム。Flutter 製。"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "shiritori",
+      "section": "project",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "shiritori",
+        "de": "shiritori",
+        "ja": "shiritori"
+      },
+      "url": "https://shiritori.cben.co/",
+      "onTimeline": false,
+      "onPdf": true,
+      "summary": {
+        "en": "Single player and multiplayer shiritori in English and Japanese, for fun and for studying.",
+        "de": "Shiritori für einen oder zwei Spieler, auf Englisch und Japanisch, zum Spaß und zum Lernen.",
+        "ja": "一人でも二人でも遊べるしりとり。英語と日本語に対応し、遊びにも学習にも。"
+      },
+      "bullets": {
+        "en": [
+          "Five modes: local pass-and-play, single player against a CPU, solo survival, online multiplayer over a WebSocket relay, and SRS study",
+          "Cross-language play with one side in English and one in Japanese, the chain always tracked in kana",
+          "Word selection scores continuation, learnability and commonness, and never hands back a losing ん-word when a safe one exists",
+          "Two vocabulary layers: a curated ~22.5k pool the bot plays and teaches, and a full-JMdict acceptance set loaded as per-kana shards so rare words are accepted without ever being played against you"
+        ],
+        "de": [
+          "Fünf Modi: Pass-and-Play auf einem Gerät, Einzelspieler gegen den Computer, Solo-Survival, Online-Multiplayer über ein WebSocket-Relay und SRS-Lernmodus",
+          "Sprachübergreifendes Spiel: eine Seite Englisch, eine Japanisch, wobei die Kette durchgehend in Kana geführt wird",
+          "Die Wortauswahl bewertet Fortsetzbarkeit, Lernwert und Häufigkeit und gibt nie ein verlierendes ん-Wort zurück, solange ein sicheres existiert",
+          "Zwei Vokabel-Ebenen: ein kuratierter Pool von rund 22.500 Wörtern, aus dem der Computer spielt und der gelehrt wird, und ein vollständiger JMdict-Akzeptanzsatz, der als Shards pro Kana geladen wird, sodass seltene Wörter akzeptiert, aber nie gegen dich gespielt werden"
+        ],
+        "ja": [
+          "5 つのモード: 1 台で交代プレイ、CPU との対戦、ソロサバイバル、WebSocket リレーによるオンライン対戦、SRS 学習",
+          "言語をまたぐ対戦: 一方は英語、一方は日本語でプレイし、しりとりの連鎖は常にかなで管理",
+          "単語選択は継続可能性・学習価値・頻度で評価し、安全な語がある限り「ん」で終わる語は返さない",
+          "2 層の語彙データ: CPU が使い学習にも用いる約 22,500 語の厳選プールと、かな単位のシャードで読み込む JMdict 全体の受理用セット。珍しい語も入力は受理されるが、CPU が使うことはない"
+        ]
+      }
+    },
+    {
+      "id": "freelance-hub",
+      "section": "project",
+      "from": null,
+      "to": null,
+      "org": {
+        "en": "freelance-hub",
+        "de": "freelance-hub",
+        "ja": "freelance-hub"
+      },
+      "url": null,
+      "onTimeline": false,
+      "onPdf": true,
+      "summary": {
+        "en": "Symfony application for customers, work logs, invoices, expenses and exchange rates, with a Flutter companion app.",
+        "de": "Symfony-Anwendung für Kunden, Arbeitszeiten, Rechnungen, Ausgaben und Wechselkurse, mit einer Flutter-App.",
+        "ja": "フリーランス業務を回すための Symfony アプリケーション（顧客・作業記録・請求書・経費・為替）。Flutter のコンパニオンアプリ付き。"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "nomad-start",
+      "section": "milestone",
+      "from": "2024",
+      "to": null,
+      "org": null,
+      "url": null,
+      "onTimeline": true,
+      "summary": {
+        "en": "Started travelling as a digital nomad",
+        "de": "Beginn als digitaler Nomade",
+        "ja": "デジタルノマドとしての旅を開始"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "freelance-fulltime",
+      "section": "milestone",
+      "from": "2025",
+      "to": null,
+      "org": null,
+      "url": null,
+      "onTimeline": true,
+      "summary": {
+        "en": "Went full-time freelance",
+        "de": "Vollzeit als Freelancer",
+        "ja": "フリーランスを本業に"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "moved-japan",
+      "section": "milestone",
+      "from": "2025",
+      "to": null,
+      "org": {
+        "en": "Hadano",
+        "de": "Hadano",
+        "ja": "秦野"
+      },
+      "url": null,
+      "onTimeline": true,
+      "coords": [35.3736, 139.2203],
+      "summary": {
+        "en": "Arrived in February",
+        "de": "Ankunft im Februar",
+        "ja": "2月に到着"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "moved-stuttgart-2021",
+      "section": "milestone",
+      "from": "2021",
+      "to": null,
+      "org": {
+        "en": "Stuttgart",
+        "de": "Stuttgart",
+        "ja": "シュトゥットガルト"
+      },
+      "url": null,
+      "onTimeline": true,
+      "coords": [48.7758, 9.1829],
+      "summary": {
+        "en": "",
+        "de": "",
+        "ja": ""
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "moved-kiel-2020",
+      "section": "milestone",
+      "from": "2020",
+      "to": null,
+      "org": {
+        "en": "Kiel",
+        "de": "Kiel",
+        "ja": "キール"
+      },
+      "url": null,
+      "onTimeline": true,
+      "coords": [54.3233, 10.1228],
+      "summary": {
+        "en": "",
+        "de": "",
+        "ja": ""
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "moved-stuttgart-2014",
+      "section": "milestone",
+      "from": "2014",
+      "to": null,
+      "org": {
+        "en": "Stuttgart",
+        "de": "Stuttgart",
+        "ja": "シュトゥットガルト"
+      },
+      "url": null,
+      "onTimeline": true,
+      "coords": [48.7758, 9.1829],
+      "summary": {
+        "en": "",
+        "de": "",
+        "ja": ""
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "freelance-start",
+      "section": "milestone",
+      "from": "2013",
+      "to": null,
+      "org": null,
+      "url": null,
+      "onTimeline": true,
+      "summary": {
+        "en": "First project as a freelance web developer",
+        "de": "Erstes Projekt als freiberuflicher Webentwickler",
+        "ja": "フリーランスのウェブ開発者としての初案件"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    },
+    {
+      "id": "born",
+      "section": "milestone",
+      "from": "1996",
+      "to": null,
+      "org": {
+        "en": "East Frisia",
+        "de": "Ostfriesland",
+        "ja": "東フリースラント"
+      },
+      "url": null,
+      "onTimeline": true,
+      "coords": [53.4, 7.5],
+      "summary": {
+        "en": "Born in a small town in East Frisia",
+        "de": "Geboren in einer Kleinstadt in Ostfriesland",
+        "ja": "東フリースラントの小さな町で生まれる"
+      },
+      "bullets": {
+        "en": [],
+        "de": [],
+        "ja": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "_comment": "Flattened on purpose: the nested Frameworks/CMS/Testing levels read as an inventory. Each group is one row, rendered as label + mono item list. Use \"label\" for a name that is the same in every language (PHP, Rust); use \"key\" for a real word, which resolves through stack.<key> in src/i18n/ui.ts.",
+  "stack": [
+    {
+      "label": "PHP",
+      "items": [
+        "Symfony",
+        "Laravel",
+        "PimCore",
+        "TYPO3",
+        "WordPress",
+        "PHPUnit",
+        "Codeception",
+        "infection",
+        "Psalm",
+        "phpstan",
+        "rector",
+        "xdebug"
+      ]
+    },
+    {
+      "label": "JavaScript / TypeScript",
+      "items": ["React", "Vue", "alpinejs", "bootstrap"]
+    },
+    {
+      "label": "Rust",
+      "items": ["dioxus", "tauri", "tui-rs"]
+    },
+    {
+      "label": "Dart",
+      "items": ["Flutter", "iOS", "Android"]
+    },
+    {
+      "key": "others",
+      "items": ["MySQL/MSSQL", "Bash", "C", "C#"]
+    },
+    {
+      "label": "DevOps",
+      "items": [
+        "docker",
+        "hetzner cloud",
+        "aws",
+        "azure",
+        "nginx",
+        "apache",
+        "gitlab",
+        "bitbucket",
+        "github"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "key": "editor",
+      "items": ["JetBrains", "Zed"]
+    },
+    {
+      "key": "ai",
+      "items": ["Lumo", "Claude Code", "Gemini"]
+    },
+    {
+      "key": "vcs",
+      "items": ["gitlab", "github", "bitbucket"]
+    },
+    {
+      "key": "os",
+      "items": ["CachyOS", "MacOS"]
+    },
+    {
+      "key": "pm",
+      "items": ["Jira", "Trello"]
+    }
+  ]
+}

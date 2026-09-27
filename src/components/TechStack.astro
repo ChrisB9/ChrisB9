@@ -1,0 +1,52 @@
+---
+import type { Locale } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+import stack from '../data/stack.json';
+import { skills as cvSkills, list } from '../lib/cv';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+const spoken = list(cvSkills.find((g) => g.key === 'languages')?.items, locale).map(
+  (item: string) => item.split(':')[0]!.trim(),
+);
+
+const groups = [
+  {
+    title: null,
+    rows: stack.stack.map((g) => ({
+      label: 'key' in g ? t(`stack.${g.key}` as 'stack.editor') : g.label,
+      items: g.items,
+    })),
+  },
+  {
+    title: t('stack.tools'),
+    rows: stack.tools.map((g) => ({
+      label: t(`stack.${g.key}` as 'stack.editor'),
+      items: g.items,
+    })),
+  },
+  { title: null, rows: [{ label: t('stack.languages'), items: spoken }] },
+];
+---
+
+{groups.map((group) => (
+  <section class="mt-8">
+    {group.title && <h3 class="eyebrow">{group.title}</h3>}
+    <dl class:list={['border-t border-line', group.title && 'mt-4']}>
+      {group.rows.map((row) => (
+        <div class="grid gap-x-8 gap-y-1 border-b border-line py-3.5 sm:grid-cols-[11rem_1fr]">
+          <dt class="font-medium">{row.label}</dt>
+          <dd class="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs text-ink-mute sm:pt-1">
+            {row.items.map((item) => (
+              <span>{item}</span>
+            ))}
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+))}

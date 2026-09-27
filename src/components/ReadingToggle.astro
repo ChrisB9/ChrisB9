@@ -1,0 +1,48 @@
+---
+import type { Locale } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+---
+
+<button
+  type="button"
+  data-reading-toggle
+  aria-pressed="false"
+  aria-label={t('a11y.reading')}
+  title={t('a11y.reading')}
+  class="flex items-baseline gap-0.5 rounded-full border border-line px-2.5 py-1 text-ink-mute transition-colors hover:border-primary hover:text-primary aria-pressed:border-primary aria-pressed:bg-primary aria-pressed:text-on-primary"
+>
+  <span aria-hidden="true" class="text-[0.6rem] leading-none font-semibold">
+    A
+  </span>
+  <span aria-hidden="true" class="text-sm leading-none font-semibold">
+    A
+  </span>
+</button>
+
+<script>
+  const root = document.documentElement;
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-reading-toggle]');
+
+  const paint = () => {
+    const on = root.classList.contains('reading');
+    for (const button of buttons) button.setAttribute('aria-pressed', String(on));
+  };
+
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      const on = root.classList.toggle('reading');
+      try {
+        localStorage.setItem('reading', on ? 'on' : 'off');
+      } catch {}
+      paint();
+    });
+  }
+
+  paint();
+</script>

@@ -1,2 +1,7 @@
-User-Agent: *
+User-agent: *
 Allow: /
+Disallow: /en/imprint
+Disallow: /de/imprint
+Disallow: /ja/imprint
+
+Sitemap: https://cben.dev/sitemap-index.xml
