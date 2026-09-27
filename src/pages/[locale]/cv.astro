@@ -1,0 +1,205 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { LOCALES, type Locale } from '../../i18n/ui';
+import { site } from '../../data/site';
+import { emailAttrs, emailReadable } from '../../lib/email';
+import { formatRange } from '../../i18n/utils';
+import {
+  labels as cvLabels,
+  skills as cvSkills,
+  intro as cvIntro,
+  contact as cvContact,
+  text,
+  list,
+} from '../../lib/cv';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+
+const labels = {
+  title: text(cvLabels.title, locale),
+  subtitle: text(cvLabels.subtitle, locale),
+  download: text(cvLabels.download, locale),
+  downloadRirekisho: text(cvLabels.downloadRirekisho, locale),
+  rangeSince: text(cvLabels.rangeSince, locale),
+  rangeBetween: text(cvLabels.rangeBetween, locale),
+  rangeAt: text(cvLabels.rangeAt, locale),
+  sections: Object.fromEntries(
+    Object.entries(cvLabels.sections).map(([key, value]) => [key, text(value, locale)]),
+  ) as Record<string, string>,
+};
+const intro = text(cvIntro, locale);
+const contact = [cvContact.site, text(cvContact.location, locale)].filter(Boolean);
+
+const all = await getCollection('cv');
+const order = ['employment', 'education', 'freelance', 'opensource', 'project'] as const;
+
+const newestFirst = (a: (typeof all)[number], b: (typeof all)[number]) =>
+  Number(b.data.from ?? 0) - Number(a.data.from ?? 0);
+
+const childrenOf = (id: string) => all.filter((e) => e.data.parent === id).sort(newestFirst);
+
+const sections = order
+  .map((key) => ({
+    key,
+    label: labels.sections[key],
+    items: all
+      .filter((e) => e.data.section === key && !e.data.parent)
+      .sort(newestFirst)
+      .map((entry) => ({ entry, engagements: childrenOf(entry.id) })),
+  }))
+  .filter((s) => s.items.length > 0);
+
+const skills = cvSkills.map((group) => ({
+  label: text(group.label, locale),
+  items: list(group.items, locale),
+}));
+
+const range = (from: string | null, to: string | null, section: string) =>
+  formatRange(labels, from, to, section !== 'milestone');
+---
+
+<Base
+  locale={locale}
+  slug="cv"
+  title={labels.title}
+  description={`${labels.title}, ${site.author}`}
+>
+  <header class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <p class="eyebrow">{site.name}</p>
+      <h1 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{labels.title}</h1>
+      <p class="mt-1 text-ink-soft">{labels.subtitle}</p>
+      {intro && <p class="mt-3 max-w-xl leading-relaxed">{intro}</p>}
+      <p class="print-only mt-3 text-sm text-ink-soft">
+        <span {...emailAttrs}>
+          <noscript>{emailReadable}</noscript>
+        </span>
+        {` · ${contact.join(' · ')}`}
+      </p>
+    </div>
+    <div class="no-print flex flex-col items-start gap-2 self-end sm:items-end">
+      <a
+        href={`/static/cv-${locale}.pdf`}
+        download={`cv-${site.author.toLowerCase().replaceAll(' ', '-')}-${locale}.pdf`}
+        class="group inline-flex items-center gap-3 text-sm text-ink-soft transition-colors hover:text-primary"
+      >
+        <span
+          aria-hidden="true"
+          class="h-1.5 w-1.5 rounded-full bg-ink-mute transition-colors group-hover:bg-primary"
+        />
+        {labels.download}
+      </a>
+      <a
+        href="/static/rirekisho.pdf"
+        download={`rirekisho-${site.author.toLowerCase().replaceAll(' ', '-')}.pdf`}
+        class="group inline-flex items-center gap-3 text-sm text-ink-mute transition-colors hover:text-primary"
+        lang={locale === 'ja' ? undefined : 'ja'}
+      >
+        <span
+          aria-hidden="true"
+          class="h-1.5 w-1.5 rounded-full bg-ink-mute/60 transition-colors group-hover:bg-primary"
+        />
+        {labels.downloadRirekisho}
+      </a>
+    </div>
+  </header>
+
+  {sections.map((section) => (
+    <section class="mt-10">
+      <h2 class="eyebrow border-b border-line pb-3">{section.label}</h2>
+      <ul class="mt-5 space-y-6">
+        {section.items.map(({ entry, engagements }) => {
+          const summary = text(entry.data.summary, locale);
+          const bullets = list(entry.data.bullets, locale);
+          const org = text(entry.data.org, locale);
+          return (
+            <li class="grid gap-x-6 gap-y-1 sm:grid-cols-[9rem_1fr]">
+              <p class="font-mono text-xs whitespace-nowrap uppercase tracking-wider text-ink-soft sm:pt-1">
+                {range(entry.data.from, entry.data.to, entry.data.section)}
+              </p>
+              <div>
+                {org && (
+                  <p class="font-medium">
+                    {entry.data.url ? (
+                      <a
+                        href={entry.data.url}
+                        class="text-primary underline underline-offset-4"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        {org}
+                      </a>
+                    ) : (
+                      org
+                    )}
+                  </p>
+                )}
+                {summary && <p class="text-sm text-ink-soft">{summary}</p>}
+                {bullets.length > 0 && (
+                  <ul class="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed">
+                    {bullets.map((b: string) => (
+                      <li>{b}</li>
+                    ))}
+                  </ul>
+                )}
+
+                {engagements.length > 0 && (
+                  <ul class="mt-3 flex flex-col gap-4 border-l border-line pl-4">
+                    {engagements.map((child) => {
+                      const inner = {
+                        summary: text(child.data.summary, locale),
+                        bullets: list(child.data.bullets, locale),
+                      };
+                      return (
+                        <li>
+                          <p class="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
+                            <span class="text-sm font-medium">{inner.summary}</span>
+                            <span class="font-mono text-xs whitespace-nowrap text-ink-mute">
+                              {range(child.data.from, child.data.to, child.data.section)}
+                            </span>
+                          </p>
+                          {inner.bullets.length > 0 && (
+                            <ul class="mt-1.5 list-disc space-y-1 pl-5 text-sm leading-relaxed">
+                              {inner.bullets.map((b: string) => (
+                                <li>{b}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  ))}
+
+  <section class="mt-10">
+    <h2 class="eyebrow border-b border-line pb-3">{labels.sections.skills}</h2>
+    <dl class="mt-5 space-y-5">
+      {skills.map((group) => (
+        <div class="grid gap-x-6 gap-y-1 sm:grid-cols-[9rem_1fr]">
+          <dt class="font-mono text-xs uppercase tracking-wider text-ink-soft sm:pt-1">
+            {group.label}
+          </dt>
+          <dd>
+            <ul class="list-disc space-y-1 pl-5 text-sm leading-relaxed">
+              {group.items.map((item: string) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+</Base>

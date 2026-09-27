@@ -1,0 +1,23 @@
+{
+  "_README": "Template only. Real values live encrypted in pdf/personal.age; run `mise run personal` to edit it. Nothing here is committed with real data in it. A null leaves that box blank on the form.",
+  "birth": { "year": null, "month": null, "day": null },
+  "address": {
+    "postal": "",
+    "furigana": "",
+    "text": ""
+  },
+  "phone": "",
+  "qualifications": [{ "year": null, "month": null, "text": "" }],
+  "months": {
+    "_README": "Fills the 月 column, which cv.json cannot: it records years only. The key is a cv.json entry id; `in` is 入学/入社, `out` is 卒業/退社.",
+    "gymnasium": { "in": null, "out": null },
+    "dhbw": { "in": null, "out": null },
+    "audius": { "in": null, "out": null },
+    "anders-und-sehr": { "in": null, "out": null },
+    "ecentral": { "in": null, "out": null },
+    "easybill": { "in": null },
+    "easybill-employed": { "out": null },
+    "easybill-freelance": { "in": null },
+    "freelance-fulltime": { "in": null }
+  }
+}

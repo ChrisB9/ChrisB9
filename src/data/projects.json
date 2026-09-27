@@ -1,0 +1,487 @@
+[
+  {
+    "id": 1,
+    "label": "phpsu/ShellCommandBuilder",
+    "active": true,
+    "client": false,
+    "source": "https://github.com/phpsu/ShellCommandBuilder",
+    "tags": ["bash", "dsl"],
+    "title": {
+      "en": "phpsu/ShellCommandBuilder",
+      "de": "phpsu/ShellCommandBuilder",
+      "ja": "phpsu/ShellCommandBuilder"
+    },
+    "description": {
+      "en": "Creating basic and more complex shell commands in an fluid object-oriented fashion. This makes it very straight forward to abstract the general mechanisms of bash behind a readable and debuggable layer.",
+      "de": "Erzeugt kleinere und komplexere Shell Commands in einer objektorientierten Schreibweise. Dies ermöglicht es, Bash-Mechanismen zu leserlichen und korrigierbaren Layern zu abstrahieren.",
+      "ja": "シンプルなものから複雑なものまで、シェルコマンドをオブジェクト指向の流れるような記法で生成します。Bash の仕組みを、読みやすくデバッグしやすい層に抽象化できます。"
+    }
+  },
+  {
+    "id": 2,
+    "label": "phpsu/phpsu",
+    "active": true,
+    "client": false,
+    "url": "https://phpsu.de",
+    "source": "https://github.com/phpsu/phpsu",
+    "tags": ["synchronization-tool", "dev-tools"],
+    "title": {
+      "en": "phpsu/phpsu",
+      "de": "phpsu/phpsu",
+      "ja": "phpsu/phpsu"
+    },
+    "description": {
+      "en": "Synchronize your local and/or remote database and filesystem between your projects",
+      "de": "Synchronisiere lokale oder remote Datenbanken und Dateisysteme deines Projektes",
+      "ja": "プロジェクト間で、ローカルおよびリモートのデータベースとファイルシステムを同期します"
+    }
+  },
+  {
+    "id": 3,
+    "label": "chrisb9/php8",
+    "active": false,
+    "client": false,
+    "source": "https://github.com/ChrisB9/php8-xdebug",
+    "tags": ["php 8.0", "docker image", "nginx", "dev-tools", "rust"],
+    "title": {
+      "en": "chrisb9/php8",
+      "de": "chrisb9/php8",
+      "ja": "chrisb9/php8"
+    },
+    "description": {
+      "en": "An extensive set of docker container for PHP 8.0 with nginx (with brotli enabled) aswell as xdebug, pcov, ffi, and more preinstalled<br />The images are build by a template generator built in rust and complex github-action pipeline",
+      "de": "Ein umfangreicher Satz Docker-Container für PHP 8.0 mit nginx (inklusive brotli) sowie vorinstalliertem xdebug, pcov, ffi und mehr<br />Die Images werden von einem in Rust geschriebenen Template-Generator und einer komplexen GitHub-Actions-Pipeline gebaut",
+      "ja": "PHP 8.0 向けの充実した Docker コンテナ群。nginx（brotli 有効）に加え、xdebug、pcov、ffi などをプリインストール<br />イメージは Rust 製のテンプレートジェネレーターと複雑な GitHub Actions パイプラインでビルドされます"
+    }
+  },
+  {
+    "id": 24,
+    "label": "terminal_color_builder",
+    "active": true,
+    "client": false,
+    "url": "https://crates.io/crates/terminal_color_builder",
+    "source": "https://github.com/ChrisB9/terminal_color_builder",
+    "tags": ["rust", "terminal", "cli", "builder", "colors"],
+    "title": {
+      "en": "terminal_color_builder for rust",
+      "de": "terminal_color_builder für rust",
+      "ja": "terminal_color_builder（Rust 用）"
+    },
+    "description": {
+      "en": "Printing colorful terminal outputs using a builder pattern.",
+      "de": "Farbenfrohe Ausgaben mithilfe des Builder Pattern im Terminal erstellen.",
+      "ja": "ビルダーパターンを使って、ターミナルに色付きの出力を表示します。"
+    }
+  },
+  {
+    "id": 4,
+    "label": "chrisb9/pimcore-dev",
+    "active": false,
+    "client": false,
+    "url": "https://hub.docker.com/r/chrisb9/pimcore-dev",
+    "source": "https://github.com/ChrisB9/pimcore-docker",
+    "tags": ["docker image", "pimcore"],
+    "title": {
+      "en": "chrisb9/pimcore-dev",
+      "de": "chrisb9/pimcore-dev",
+      "ja": "chrisb9/pimcore-dev"
+    },
+    "description": {
+      "en": "A docker container that is based on webdevops and pluswerk/php-dev and provides the toolchain for pimcore projects",
+      "de": "Ein Docker Container, welcher auf webdevops und pluswerk/php-dev basiert und eine Toolchain für Pimcore-Projekte bereitstellt",
+      "ja": "webdevops と pluswerk/php-dev をベースに、Pimcore プロジェクト向けのツールチェーンを提供する Docker コンテナ"
+    }
+  },
+  {
+    "id": 5,
+    "label": "pluswerk/php-dev",
+    "active": false,
+    "client": false,
+    "url": "https://hub.docker.com/r/pluswerk/php-dev/",
+    "tags": ["docker image", "dev-tools"],
+    "title": {
+      "en": "pluswerk/php-dev",
+      "de": "pluswerk/php-dev",
+      "ja": "pluswerk/php-dev"
+    },
+    "description": {
+      "en": "A docker container that is based on webdevops and has all necessary development tools for developing, debugging and profiling",
+      "de": "Ein Docker Container, welcher auf webdevops basiert und alle notwendigen Entwicklungstools zum Entwickeln, zum Debuggen und zum Profiling besitzt",
+      "ja": "webdevops をベースに、開発・デバッグ・プロファイリングに必要な開発ツールを一通り備えた Docker コンテナ"
+    }
+  },
+  {
+    "id": 8,
+    "label": "cben.dev",
+    "active": true,
+    "client": false,
+    "url": "https://cben.dev",
+    "source": "https://github.com/ChrisB9/ChrisB9",
+    "tags": ["astro", "typescript", "tailwindcss", "i18n", "static-site"],
+    "title": {
+      "en": "cben.dev",
+      "de": "cben.dev",
+      "ja": "cben.dev"
+    },
+    "description": {
+      "en": "This site. Static, trilingual, built with Astro and Tailwind; content in markdown, CV driven from structured data.",
+      "de": "Diese Seite. Statisch, dreisprachig, gebaut mit Astro und Tailwind; Inhalte in Markdown, Lebenslauf aus strukturierten Daten.",
+      "ja": "このサイト。Astro と Tailwind で構築した静的な三言語サイト。コンテンツは Markdown、履歴書は構造化データから生成しています。"
+    }
+  },
+  {
+    "id": 9,
+    "label": "React.js translation",
+    "active": true,
+    "client": false,
+    "source": "https://github.com/reactjs/de.reactjs.org/",
+    "tags": ["react", "translation", "documentation"],
+    "title": {
+      "en": "React.js translation",
+      "de": "React.js DE-Übersetzung",
+      "ja": "React.js ドイツ語訳"
+    },
+    "description": {
+      "en": "Co-Maintainer of the reactjs documentation effort to translate the entire documentation into german",
+      "de": "Co-Maintainer der reactjs Dokumentationsbestreben, die gesamte Dokumentation ins Deutsche zu übersetzen",
+      "ja": "React のドキュメントをドイツ語に全訳するプロジェクトの共同メンテナー"
+    }
+  },
+  {
+    "id": 10,
+    "label": "Weather-Prediction for the Bosch IoT Controller",
+    "active": false,
+    "client": false,
+    "source": "https://github.com/ChrisB9/Smart-Weather-Prediction",
+    "tags": ["IoT", "react", "react-native", "rethink-db"],
+    "title": {
+      "en": "Weather-Prediction for the Bosch IoT Controller",
+      "de": "Weather-Prediction für den Bosch IoT Controller",
+      "ja": "Bosch IoT コントローラー向け天気予測"
+    },
+    "description": {
+      "en": "University project: experimenting with Bosch IoT, React Native, and RethinkDB",
+      "de": "Universitäts-Projekt: Experimentieren mit Bosch IoT, React Native, und RethinkDB",
+      "ja": "大学のプロジェクト: Bosch IoT、React Native、RethinkDB を用いた実験"
+    }
+  },
+  {
+    "id": 11,
+    "label": "Labyrinth solving game against an AI",
+    "active": false,
+    "client": false,
+    "source": "https://github.com/derRest/derRest",
+    "tags": ["algorithm", "php"],
+    "title": {
+      "en": "Labyrinth solving game against an AI",
+      "de": "Labyrinth solving game against an AI",
+      "ja": "AI と競う迷路攻略ゲーム"
+    },
+    "description": {
+      "en": "University project: Solving randomly generated labyrinth",
+      "de": "Universitäts-Projekt: Ein zufällig generiertes Labyrinth lösen",
+      "ja": "大学のプロジェクト: ランダム生成された迷路を解く"
+    }
+  },
+  {
+    "id": 12,
+    "label": "Tic Tac Toe",
+    "active": false,
+    "client": false,
+    "internal": "playground/tictactoe",
+    "hidden": false,
+    "tags": ["game", "javascript"],
+    "title": {
+      "en": "Tic Tac Toe",
+      "de": "Tic Tac Toe",
+      "ja": "三目並べ"
+    },
+    "description": {
+      "en": "Play a round of tic tac toe",
+      "de": "Spiele eine Runde Tic Tac Toe",
+      "ja": "三目並べを一局遊ぶ"
+    }
+  },
+  {
+    "id": 13,
+    "label": "Sitzkrieger.com",
+    "active": true,
+    "client": true,
+    "url": "https://sitzkrieger.com",
+    "tags": [
+      "pimcore",
+      "react",
+      "symfony",
+      "php",
+      "livestream",
+      "rust",
+      "health-plattform",
+      "video-plattform",
+      "elasticsearch"
+    ],
+    "title": {
+      "en": "Sitzkrieger.com",
+      "de": "Sitzkrieger.com",
+      "ja": "Sitzkrieger.com"
+    },
+    "description": {
+      "en": "<i>A tailored platform for personal trainers with videoplatform, customer analysis and courses, </i><p>From Hosting to Implementation, this is a highly customized project with modern technologies and symfony powered backend</p>",
+      "de": "<i>Eine auf Personal Trainer zugeschnittene Plattform, mit u.a. Videoplattform, Kundenanalyse und Kurse, </i><p>Hosting bis zur Implementierung: Eine modernes Projekt, entwickelt mit einem Symfony-Backend, React-Frontend und Elasticsearch</p>",
+      "ja": "<i>パーソナルトレーナー向けの専用プラットフォーム。動画配信、顧客分析、コース機能などを搭載</i><p>ホスティングから実装まで。Symfony バックエンド、React フロントエンド、Elasticsearch で構築したモダンなプロジェクト</p>"
+    }
+  },
+  {
+    "id": 14,
+    "label": "Sanogym.com",
+    "active": false,
+    "client": true,
+    "url": "https://sanogym.com",
+    "tags": ["wordpress", "react", "tailwindcss", "design", "PWA"],
+    "title": {
+      "en": "Sanogym.com",
+      "de": "Sanogym.com",
+      "ja": "Sanogym.com"
+    },
+    "description": {
+      "en": "<i>Expert for healthoriented personal training, pilates and grouptraining</i><p>Maintenance of several elementor and gutenberg blocks</p>",
+      "de": "<i>Experte für gesundheitsorientieres Personal-Training, Pilates und Gruppentraining</i><p>Verwaltung mehrerer Elementor & Gutenberg-Plugins</p>",
+      "ja": "<i>健康志向のパーソナルトレーニング、ピラティス、グループトレーニングの専門スタジオ</i><p>複数の Elementor および Gutenberg ブロックの保守</p>"
+    }
+  },
+  {
+    "id": 15,
+    "label": "Trainingsinsel.de",
+    "active": false,
+    "client": true,
+    "url": "https://trainingsinsel.com",
+    "tags": ["wordpress"],
+    "title": {
+      "en": "Trainingsinsel.de",
+      "de": "Trainingsinsel.de",
+      "ja": "Trainingsinsel.de"
+    },
+    "description": {
+      "en": "<i>Personal Training for companies</i><p>Support and maintenance of a wordpress-system</p>",
+      "de": "<i>Personal Training für Unternehmen</i><p>Support und Maintenance eines WordPress-Systems</p>",
+      "ja": "<i>企業向けのパーソナルトレーニング</i><p>WordPress システムのサポートと保守</p>"
+    }
+  },
+  {
+    "id": 16,
+    "label": "geniocon.com",
+    "active": false,
+    "client": true,
+    "url": "https://geniocon.com",
+    "tags": ["wordpress", "woocommerce"],
+    "title": {
+      "en": "geniocon.com",
+      "de": "geniocon.com",
+      "ja": "geniocon.com"
+    },
+    "description": {
+      "en": "<i>Online-Marketing and business-oriented marketing courses</i><p>Maintenance and continuous development of multiple wordpress instances</p>",
+      "de": "<i>Online-Marketing und B2B-Marketing-Kurse</i><p>Maintenance und Weiterentwicklung mehrerer WordPress-Instanzen</p>",
+      "ja": "<i>オンラインマーケティングおよび B2B マーケティング講座</i><p>複数の WordPress インスタンスの保守と機能拡張</p>"
+    }
+  },
+  {
+    "id": 17,
+    "label": "Scheckhefte.com",
+    "active": false,
+    "client": true,
+    "url": "https://scheckhefte.com",
+    "tags": ["wordpress", "woocommerce"],
+    "title": {
+      "en": "Scheckhefte.com",
+      "de": "Scheckhefte.com",
+      "ja": "Scheckhefte.com"
+    },
+    "description": {
+      "en": "<i>check - and service-books for the car industry</i><p>Maintenance and Relaunch of a wordpress instance</p>",
+      "de": "<i>Scheck - und Servicebücher</i><p>Maintenance und Relaunch einer WordPress-Instanz</p>",
+      "ja": "<i>自動車業界向けの点検記録簿・整備手帳</i><p>WordPress インスタンスの保守とリニューアル</p>"
+    }
+  },
+  {
+    "id": 18,
+    "label": "Stiftung managerohnegrenzen",
+    "active": false,
+    "client": true,
+    "url": "https://managerohnegrenzen.de",
+    "tags": ["wordpress", "multi-language", "vuejs", "newsletter-system", "azure"],
+    "title": {
+      "en": "Stiftung managerohnegrenzen",
+      "de": "Stiftung managerohnegrenzen",
+      "ja": "managerohnegrenzen 財団"
+    },
+    "description": {
+      "en": "<i>Foundation: Business people against poverty</i><p>Continuous developement and improvement of a multi-language wordpress system</p>",
+      "de": "<i>Stiftung: Business people against poverty</i><p>Kontinuierliches Weiterentwickeln und Verbessern eines mehrsprachigen WordPress-Systems</p>",
+      "ja": "<i>財団: Business people against poverty</i><p>多言語 WordPress システムの継続的な改善と機能拡張</p>"
+    }
+  },
+  {
+    "id": 19,
+    "label": "Lauer-Repair.de",
+    "active": false,
+    "client": true,
+    "url": "https://lauer-repair.de",
+    "tags": ["wordpress-plugin", "customer-management", "invoices", "pdf-creation"],
+    "title": {
+      "en": "Lauer-Repair.de",
+      "de": "Lauer-Repair.de",
+      "ja": "Lauer-Repair.de"
+    },
+    "description": {
+      "en": "<i>Specialist in fixing smartphones and tables in stuttgart</i><p>Development of a fully-customized invoice and customer management tool with automated pdf-creation</p>",
+      "de": "<i>Spezialist zum Thema Handy Reparatur in Stuttgart</i><p>Entwickeln eines komplett auf das Unternehmen abgeschnittene Rechnungs- und Kundenmanagement-Plugins mit automatisierter PDF-Erstellung</p>",
+      "ja": "<i>シュトゥットガルトのスマートフォン・タブレット修理専門店</i><p>PDF 自動生成に対応した、完全オーダーメイドの請求・顧客管理ツールの開発</p>"
+    }
+  },
+  {
+    "id": 25,
+    "label": "manga_epub_creator",
+    "active": true,
+    "client": false,
+    "source": "https://github.com/ChrisB9/manga_epub_creator",
+    "tags": ["rust", "dioxus", "epub", "scraping"],
+    "title": {
+      "en": "manga_epub_creator",
+      "de": "manga_epub_creator",
+      "ja": "manga_epub_creator"
+    },
+    "description": {
+      "en": "Fetches manga chapters and packages them into EPUB files, so they can be read on an e-reader. Written in Rust with a Dioxus interface.",
+      "de": "Lädt Manga-Kapitel und verpackt sie in EPUB-Dateien, damit sie sich auf einem E-Reader lesen lassen. Geschrieben in Rust mit einer Dioxus-Oberfläche.",
+      "ja": "マンガの章を取得し、E リーダーで読めるよう EPUB ファイルにまとめます。Rust 製で、Dioxus のインターフェースを備えています。"
+    }
+  },
+  {
+    "id": 26,
+    "label": "chrisb9/pimcorex-docker",
+    "active": true,
+    "client": false,
+    "source": "https://github.com/ChrisB9/pimcorex-docker",
+    "tags": ["docker image", "pimcore", "nginx", "dev-tools"],
+    "title": {
+      "en": "chrisb9/pimcorex-docker",
+      "de": "chrisb9/pimcorex-docker",
+      "ja": "chrisb9/pimcorex-docker"
+    },
+    "description": {
+      "en": "Dockerfiles for Pimcore X on nginx, for both production and development environments. The successor to chrisb9/pimcore-dev.",
+      "de": "Dockerfiles für Pimcore X auf nginx, für Produktiv- und Entwicklungsumgebungen. Der Nachfolger von chrisb9/pimcore-dev.",
+      "ja": "nginx 上で動く Pimcore X 向けの Dockerfile。本番環境と開発環境の両方に対応。chrisb9/pimcore-dev の後継です。"
+    }
+  },
+  {
+    "id": 27,
+    "label": "ai-inline-review",
+    "active": true,
+    "client": false,
+    "source": "https://github.com/ChrisB9/ai-inline-review",
+    "tags": ["kotlin", "jetbrains", "plugin", "code-review"],
+    "title": {
+      "en": "ai-inline-review",
+      "de": "ai-inline-review",
+      "ja": "ai-inline-review"
+    },
+    "description": {
+      "en": "Human-curated code review inside PhpStorm and IntelliJ, driven by a Claude Code loop. Findings land as inline comments you accept or reject, not as a wall of text.",
+      "de": "Von Hand kuratiertes Code-Review direkt in PhpStorm und IntelliJ, angetrieben von einer Claude-Code-Schleife. Befunde erscheinen als Inline-Kommentare zum Annehmen oder Verwerfen, nicht als Textwand.",
+      "ja": "PhpStorm と IntelliJ の中で動く、人がキュレーションするコードレビュー。Claude Code のループが駆動し、指摘は長文ではなくインラインコメントとして届くので、その場で受け入れるか却下できます。"
+    }
+  },
+  {
+    "id": 28,
+    "label": "freelance-hub",
+    "active": true,
+    "client": false,
+    "tags": ["symfony", "php", "postgresql", "flutter", "self-hosted"],
+    "title": {
+      "en": "freelance-hub",
+      "de": "freelance-hub",
+      "ja": "freelance-hub"
+    },
+    "description": {
+      "en": "Symfony application for the freelance side: customers, work logs, invoices, expenses and exchange rates. Flutter companion app for desktop and mobile.",
+      "de": "Symfony-Anwendung für das Freelancing: Kunden, Arbeitszeiten, Rechnungen, Ausgaben und Wechselkurse. Flutter-App für Desktop und Mobil.",
+      "ja": "フリーランス業務のための Symfony アプリケーション: 顧客、作業記録、請求書、経費、為替レート。デスクトップとモバイル向けの Flutter コンパニオンアプリ付き。"
+    }
+  },
+  {
+    "id": 29,
+    "label": "shiritori",
+    "active": true,
+    "client": false,
+    "pinned": true,
+    "url": "https://shiritori.cben.co/",
+    "tags": ["flutter", "dart", "japanese", "game"],
+    "title": {
+      "en": "shiritori",
+      "de": "shiritori",
+      "ja": "shiritori"
+    },
+    "description": {
+      "en": "Single player and multiplayer shiritori in English and Japanese, for fun and for studying.",
+      "de": "Shiritori für einen oder zwei Spieler, auf Englisch und Japanisch, zum Spaß und zum Lernen.",
+      "ja": "一人でも二人でも遊べるしりとり。英語と日本語に対応し、遊びにも学習にも。"
+    },
+    "bullets": {
+      "en": [
+        "Five modes: local pass-and-play, single player against a CPU, solo survival, online multiplayer over a WebSocket relay, and SRS study",
+        "Cross-language play with one side in English and one in Japanese, the chain always tracked in kana",
+        "Word selection scores continuation, learnability and commonness, and never hands back a losing ん-word when a safe one exists",
+        "Two vocabulary layers: a curated ~22.5k pool the bot plays and teaches, and a full-JMdict acceptance set loaded as per-kana shards so rare words are accepted without ever being played against you"
+      ],
+      "de": [
+        "Fünf Modi: Pass-and-Play auf einem Gerät, Einzelspieler gegen den Computer, Solo-Survival, Online-Multiplayer über ein WebSocket-Relay und SRS-Lernmodus",
+        "Sprachübergreifendes Spiel: eine Seite Englisch, eine Japanisch, wobei die Kette durchgehend in Kana geführt wird",
+        "Die Wortauswahl bewertet Fortsetzbarkeit, Lernwert und Häufigkeit und gibt nie ein verlierendes ん-Wort zurück, solange ein sicheres existiert",
+        "Zwei Vokabel-Ebenen: ein kuratierter Pool von rund 22.500 Wörtern, aus dem der Computer spielt und der gelehrt wird, und ein vollständiger JMdict-Akzeptanzsatz, der als Shards pro Kana geladen wird, sodass seltene Wörter akzeptiert, aber nie gegen dich gespielt werden"
+      ],
+      "ja": [
+        "5 つのモード: 1 台で交代プレイ、CPU との対戦、ソロサバイバル、WebSocket リレーによるオンライン対戦、SRS 学習",
+        "言語をまたぐ対戦: 一方は英語、一方は日本語でプレイし、しりとりの連鎖は常にかなで管理",
+        "単語選択は継続可能性・学習価値・頻度で評価し、安全な語がある限り「ん」で終わる語は返さない",
+        "2 層の語彙データ: CPU が使い学習にも用いる約 22,500 語の厳選プールと、かな単位のシャードで読み込む JMdict 全体の受理用セット。珍しい語も入力は受理されるが、CPU が使うことはない"
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "label": "3939adventure",
+    "active": true,
+    "client": false,
+    "url": "https://3939adventure.cben.co/",
+    "tags": ["game", "browser", "flutter", "two-player", "mini-games"],
+    "title": {
+      "en": "3939adventure",
+      "de": "3939adventure",
+      "ja": "3939adventure"
+    },
+    "description": {
+      "en": "3939アドベンチャー: a browser and Flutter game for two, with positive, winning-only mini-games",
+      "de": "3939アドベンチャー: ein Browser/Flutter-Spiel für zwei, mit positiven, nicht-verlierbaren Mini-Spielen",
+      "ja": "3939アドベンチャー: 二人で遊べるブラウザ/Flutter ゲーム。負けることのない、前向きなミニゲームばかりです。"
+    }
+  },
+  {
+    "id": 31,
+    "label": "easybill",
+    "active": true,
+    "client": true,
+    "url": "https://www.easybill.de",
+    "tags": [],
+    "title": {
+      "en": "easybill",
+      "de": "easybill",
+      "ja": "easybill"
+    },
+    "description": {
+      "en": "<i>Invoicing software for freelancers, online retailers and companies</i>",
+      "de": "<i>Rechnungsprogramm für Selbstständige, Onlinehändler und Unternehmen</i>",
+      "ja": "<i>フリーランス、オンラインショップ、企業向けの請求書作成ソフト</i>"
+    }
+  }
+]

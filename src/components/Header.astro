@@ -1,0 +1,67 @@
+---
+import type { Locale } from '../i18n/ui';
+import LangSwitcher from './LangSwitcher.astro';
+import ReadingToggle from './ReadingToggle.astro';
+import { localePath, useTranslations } from '../i18n/utils';
+import { site } from '../data/site';
+
+interface Props {
+  locale: Locale;
+  slug: string;
+}
+const { locale, slug } = Astro.props;
+const t = useTranslations(locale);
+
+const nav = [
+  { key: 'about', label: t('nav.about') },
+  { key: 'work', label: t('nav.work') },
+  { key: 'cv', label: t('nav.cv') },
+];
+const current = slug.split('/')[0];
+---
+
+<header class="no-print border-b border-line">
+  <div class="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-3 px-6 py-5">
+    <a
+      href={localePath(locale)}
+      class="eyebrow transition-colors hover:text-primary"
+      aria-label={site.name}
+    >
+      {site.name}
+    </a>
+
+    <nav aria-label={t('nav.menu')} class="flex-1">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm">
+        {nav.map((item) => {
+          const isCurrent = current === item.key;
+          return (
+            <li>
+              <a
+                href={localePath(locale, item.key)}
+                aria-current={isCurrent ? 'page' : undefined}
+                class:list={[
+                  'inline-flex items-center gap-2 transition-colors',
+                  isCurrent ? 'text-ink' : 'text-ink-soft hover:text-primary',
+                ]}
+              >
+                <span
+                  aria-hidden="true"
+                  class:list={[
+                    'h-1.5 w-1.5 rounded-full',
+                    isCurrent ? 'bg-primary' : 'bg-transparent',
+                  ]}
+                />
+                {item.label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <ReadingToggle locale={locale} />
+      <LangSwitcher locale={locale} slug={slug} />
+    </div>
+  </div>
+</header>

@@ -1,0 +1,49 @@
+amends "package://github.com/jdx/hk/releases/download/v2.1.0/hk@2.1.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.1.0/hk@2.1.0#/Builtins.pkl"
+
+steps {
+  ["merge-conflict"] = Builtins.check_merge_conflict
+  ["private-key"] = Builtins.detect_private_key
+  ["large-files"] = Builtins.check_added_large_files
+
+  ["prettier"] = Builtins.prettier
+
+  ["astro-check"] = new Step {
+    glob = List("src/**/*.astro", "src/**/*.ts", "src/**/*.json", "*.mjs", "tsconfig.json")
+    exclusive = true
+    check = "astro check"
+  }
+
+  ["content"] = new Step {
+    glob = List("src/data/cv.json", "src/i18n/ui.ts")
+    exclusive = true
+    check = "node scripts/check-content.mjs"
+  }
+
+  ["actionlint"] = Builtins.actionlint
+  ["zizmor"] = Builtins.zizmor
+}
+
+hooks {
+  ["pre-commit"] {
+    fix = true
+    stash = "git"
+  }
+
+  ["pre-push"] {
+    fix = false
+    steps {
+      ["prettier"] = Builtins.prettier
+      ["astro-check"] = new Step {
+        exclusive = true
+        check = "astro check"
+      }
+      ["content"] = new Step {
+        exclusive = true
+        check = "node scripts/check-content.mjs"
+      }
+      ["actionlint"] = Builtins.actionlint
+      ["zizmor"] = Builtins.zizmor
+    }
+  }
+}

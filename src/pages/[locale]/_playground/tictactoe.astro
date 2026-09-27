@@ -1,0 +1,75 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { LOCALES, type Locale } from '../../../i18n/ui';
+import { localePath, useTranslations } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const t = useTranslations(locale);
+---
+
+<Base
+  locale={locale}
+  slug="playground/tictactoe"
+  title="Tic Tac Toe"
+  description={t('playground.tictactoe.blurb')}
+>
+  <p class="font-mono text-xs uppercase tracking-widest text-ink-soft">
+    <a href={localePath(locale, 'playground')} class="hover:text-primary">
+      {t('nav.playground')}
+    </a>
+  </p>
+  <h1 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Tic Tac Toe</h1>
+  <p class="mt-3 text-ink-soft">{t('playground.tictactoe.blurb')}</p>
+
+  <div
+    id="tictactoe"
+    class="mt-8"
+    data-enjoy={t('tictactoe.enjoy')}
+    data-turn={t('tictactoe.turn', { symbol: '{symbol}' })}
+    data-wins={t('tictactoe.wins', { symbol: '{symbol}' })}
+    data-draw={t('tictactoe.draw')}
+    data-cell={t('tictactoe.cell', { n: '{n}' })}
+  >
+    <div
+      data-board
+      role="group"
+      aria-label="Tic Tac Toe"
+      class="mx-auto grid w-full max-w-sm grid-cols-3 overflow-hidden rounded-lg border border-line"
+    ></div>
+
+    <p data-status aria-live="polite" class="mt-5 text-center text-lg font-medium"></p>
+    <p data-scores class="mt-1 text-center font-mono text-sm text-ink-soft" hidden></p>
+
+    <div class="mt-5 flex justify-center">
+      <button
+        type="button"
+        data-reset
+        hidden
+        class="rounded-lg border border-line px-4 py-2 text-sm font-medium hover:border-primary hover:text-primary"
+      >
+        {t('tictactoe.reset')}
+      </button>
+    </div>
+  </div>
+
+  <p class="mt-10 text-sm text-ink-soft">
+    <a
+      href="https://github.com/ChrisB9/tictactoe"
+      target="_blank"
+      rel="noopener"
+      class="text-primary underline underline-offset-4"
+    >
+      Source on GitHub
+    </a>
+  </p>
+</Base>
+
+<script>
+  import { mountTicTacToe } from '../../../scripts/tictactoe';
+  const root = document.getElementById('tictactoe');
+  if (root) mountTicTacToe(root);
+</script>

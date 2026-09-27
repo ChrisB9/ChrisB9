@@ -1,0 +1,35 @@
+version: '2.2'
+services:
+  cben-dev:
+    image: ghcr.io/chrisb9/cben-dev:${APP_VERSION:-latest}
+    container_name: cben-dev
+    restart: unless-stopped
+    networks:
+      - freelancehub_freelance-network
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=freelancehub_freelance-network
+
+      - traefik.http.routers.cben.rule=Host(`cben.dev`)
+      - traefik.http.routers.cben.entrypoints=websecure
+      - traefik.http.routers.cben.tls.certresolver=letsencrypt
+      - traefik.http.routers.cben.middlewares=cben-hsts
+      - traefik.http.services.cben.loadbalancer.server.port=8080
+
+      - traefik.http.routers.cben-co.rule=Host(`cben.co`)
+      - traefik.http.routers.cben-co.entrypoints=websecure
+      - traefik.http.routers.cben-co.tls.certresolver=letsencrypt
+      - traefik.http.routers.cben-co.middlewares=cben-to-dev
+      - traefik.http.routers.cben-co.service=cben
+
+      - traefik.http.middlewares.cben-to-dev.redirectregex.regex=^https?://[^/]+/(.*)
+      - traefik.http.middlewares.cben-to-dev.redirectregex.replacement=https://cben.dev/$${1}
+      - traefik.http.middlewares.cben-to-dev.redirectregex.permanent=true
+
+      - traefik.http.middlewares.cben-hsts.headers.stsSeconds=31536000
+      - traefik.http.middlewares.cben-hsts.headers.stsIncludeSubdomains=true
+      - traefik.http.middlewares.cben-hsts.headers.stsPreload=true
+
+networks:
+  freelancehub_freelance-network:
+    external: true

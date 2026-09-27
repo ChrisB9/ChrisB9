@@ -1,0 +1,117 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  IMAGE: ghcr.io/chrisb9/cben-dev
+  DEPLOY_PATH: /var/www/website
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      version: ${{ steps.meta.outputs.version }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac
+        with:
+          experimental: true
+      - run: npm ci
+      - run: hk check --all
+
+      - name: Install CJK fonts for the Japanese CV
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk
+      - run: mise run build
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dist
+          path: dist
+          retention-days: 7
+
+      - name: Derive image tags
+        id: meta
+        run: |
+          {
+            echo "version=$(date -u +%Y.%m.%d).${GITHUB_RUN_NUMBER}"
+            echo "created=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            echo "short=sha-${GITHUB_SHA:0:7}"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Build the image
+        env:
+          VERSION: ${{ steps.meta.outputs.version }}
+          CREATED: ${{ steps.meta.outputs.created }}
+          SHORT: ${{ steps.meta.outputs.short }}
+        run: |
+          docker build \
+            --build-arg "VERSION=${VERSION}" \
+            --build-arg "REVISION=${GITHUB_SHA}" \
+            --build-arg "CREATED=${CREATED}" \
+            --tag "${IMAGE}:${VERSION}" \
+            --tag "${IMAGE}:${SHORT}" \
+            --tag "${IMAGE}:latest" \
+            .
+
+      - name: Push the image
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        env:
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          printf '%s' "$GHCR_TOKEN" | docker login ghcr.io -u "${GITHUB_ACTOR}" --password-stdin
+          docker push --all-tags "${IMAGE}"
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+
+      - name: Ship the compose file, pull and restart
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+          APP_VERSION: ${{ needs.build.outputs.version }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          if [ -n "$SSH_KNOWN_HOSTS" ]; then
+            printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          else
+            ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" > ~/.ssh/known_hosts 2>/dev/null
+          fi
+          chmod 600 ~/.ssh/known_hosts
+
+          ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" "${SSH_USER}@${SSH_HOST}" \
+            "mkdir -p '${DEPLOY_PATH}'"
+          scp -i ~/.ssh/deploy_key -P "$SSH_PORT" deploy/docker-compose.yml \
+            "${SSH_USER}@${SSH_HOST}:${DEPLOY_PATH}/docker-compose.yml"
+
+          ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" "${SSH_USER}@${SSH_HOST}" \
+            "cd '${DEPLOY_PATH}' \
+             && export APP_VERSION='${APP_VERSION}' \
+             && docker-compose pull \
+             && docker-compose up -d \
+             && docker image prune -f"

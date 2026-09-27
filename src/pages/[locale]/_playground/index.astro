@@ -1,0 +1,52 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { LOCALES, type Locale } from '../../../i18n/ui';
+import { localePath, useTranslations } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const t = useTranslations(locale);
+
+const experiments = [
+  {
+    slug: 'tictactoe',
+    title: 'Tic Tac Toe',
+    blurb: t('playground.tictactoe.blurb'),
+    tags: ['typescript', 'game'],
+  },
+];
+---
+
+<Base
+  locale={locale}
+  slug="playground"
+  title={t('nav.playground')}
+  description={t('playground.intro')}
+>
+  <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">{t('nav.playground')}</h1>
+  <p class="mt-4 text-lg leading-relaxed text-ink-soft">{t('playground.intro')}</p>
+
+  <ul class="mt-8 grid gap-4 sm:grid-cols-2">
+    {experiments.map((item) => (
+      <li>
+        <a
+          href={localePath(locale, 'playground', item.slug)}
+          class="flex h-full flex-col gap-2 rounded-lg border border-line bg-surface p-5 hover:border-primary"
+        >
+          <span class="text-lg font-medium text-primary">{item.title}</span>
+          <span class="text-sm leading-relaxed text-ink-soft">{item.blurb}</span>
+          <ul class="mt-1 flex flex-wrap gap-1.5">
+            {item.tags.map((tag) => (
+              <li class="rounded border border-line px-1.5 py-0.5 font-mono text-[0.68rem] text-ink-soft">
+                {tag}
+              </li>
+            ))}
+          </ul>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>

@@ -1,0 +1,61 @@
+[tools]
+node = "22"
+hk = "2.1.0"
+pkl = "latest"
+actionlint = "latest"
+zizmor = "latest"
+typst = "0.15.1"
+age = "latest"
+
+[env]
+
+_.path = ["{{config_root}}/node_modules/.bin"]
+
+[tasks.install]
+description = "Install dependencies and the git hooks"
+run = ["npm ci", "hk install"]
+
+[tasks.dev]
+description = "Run the dev server on http://localhost:4321"
+run = "npm run dev"
+
+[tasks.build]
+description = "Build the CV PDFs, then the static site into dist/"
+depends = ["build-pdf"]
+run = "npm run build"
+
+[tasks.build-pdf]
+description = "Typeset the CV PDFs from cv.json into public/static/"
+run = "node scripts/build-pdf.mjs"
+
+[tasks.personal]
+description = "Edit the encrypted personal data behind the 履歴書"
+run = "node scripts/personal.mjs"
+
+[tasks.rirekisho]
+description = "Build the filled-in 履歴書 into out/ (asks for the passphrase; never published)"
+run = "node scripts/build-rirekisho.mjs"
+
+[tasks.preview]
+description = "Serve the built output"
+run = "npm run preview"
+
+[tasks.check]
+description = "Type-check templates and TypeScript"
+run = "astro check"
+
+[tasks.fmt]
+description = "Format the project"
+run = "prettier --write ."
+
+[tasks."fmt:check"]
+description = "Check formatting without writing"
+run = "prettier --check ."
+
+[tasks.todo]
+description = "List copy slots still holding placeholder text"
+run = "node scripts/todo-copy.mjs"
+
+[tasks.lint]
+description = "Run every hk check against the whole repo"
+run = "hk check --all"

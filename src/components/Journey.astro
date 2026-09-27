@@ -1,0 +1,141 @@
+---
+import { getCollection } from 'astro:content';
+import type { Locale } from '../i18n/ui';
+import { formatRange } from '../i18n/utils';
+import { countryPaths } from '../lib/world';
+import MoveMap from './MoveMap.astro';
+import { labels as cvLabels, text, list } from '../lib/cv';
+
+interface Props {
+  locale: Locale;
+  moveLabel: string;
+  title: string;
+}
+const { locale, moveLabel, title } = Astro.props;
+
+const labels = {
+  rangeSince: text(cvLabels.rangeSince, locale),
+  rangeBetween: text(cvLabels.rangeBetween, locale),
+  rangeAt: text(cvLabels.rangeAt, locale),
+};
+
+const all = await getCollection('cv', (e) => e.data.onTimeline);
+
+const places = all
+  .filter((e) => e.data.coords)
+  .map((e) => e.data)
+  .sort((x, y) => Number(x.from ?? 0) - Number(y.from ?? 0));
+
+const previousPlace = new Map<string, (typeof places)[number]>();
+places.forEach((place, i) => {
+  if (i > 0) previousPlace.set(place.id, places[i - 1]!);
+});
+
+const entries = all.map((e) => e.data).sort((x, y) => Number(y.from ?? 0) - Number(x.from ?? 0));
+
+const worldPaths = countryPaths();
+---
+
+<svg width="0" height="0" aria-hidden="true" class="absolute">
+  <defs>
+    <g id="world-outline">
+      {worldPaths.map(({ d }) => (
+        <path
+          d={d}
+          class="fill-surface-hover"
+          stroke="var(--color-surface-alt)"
+          stroke-width="0.5"
+        />
+      ))}
+    </g>
+  </defs>
+</svg>
+
+<h2 class="mt-14 text-2xl font-semibold tracking-tight">{title}</h2>
+
+<ol class="mt-8 flex flex-col">
+  {entries.map((entry) => {
+    const summary = text(entry.summary, locale);
+    const bullets = list(entry.bullets, locale);
+    const isMove = Boolean(entry.coords);
+    const from = previousPlace.get(entry.id);
+
+    const org = text(entry.org, locale);
+    const fromOrg = from ? text(from.org, locale) : null;
+    const range = formatRange(
+      labels,
+      entry.from,
+      entry.to,
+      !isMove && entry.section !== 'milestone',
+    );
+
+    return (
+      <li class="relative grid gap-x-6 gap-y-2 border-l border-line pb-10 pl-7 last:pb-0 sm:grid-cols-[6rem_1fr] sm:gap-x-8">
+        <span
+          aria-hidden="true"
+          class:list={[
+            'absolute -left-[0.3rem] top-1.5 rounded-full',
+            isMove ? 'h-2.5 w-2.5 border-2 border-primary bg-canvas' : 'h-1.5 w-1.5 bg-ink-mute',
+          ]}
+        />
+
+        <p class="font-mono text-xs text-ink-mute tabular-nums sm:pt-0.5">{range}</p>
+
+        <div class="flex flex-col gap-2">
+          {isMove ? (
+            <>
+              <p class="flex flex-wrap items-baseline gap-2 font-medium">
+                {fromOrg && (
+                  <>
+                    <span class="text-ink-mute">{fromOrg}</span>
+                    <span aria-hidden="true" class="text-ink-mute">
+                      →
+                    </span>
+                  </>
+                )}
+                <span>{org}</span>
+              </p>
+              {from?.coords && entry.coords && (
+                <MoveMap
+                  from={from.coords as [number, number]}
+                  to={entry.coords as [number, number]}
+                  label={`${moveLabel}: ${fromOrg} → ${org}`}
+                />
+              )}
+              {summary && <p class="text-sm text-ink-soft">{summary}</p>}
+            </>
+          ) : (
+            <>
+              {org && (
+                <p class="font-medium">
+                  {entry.url ? (
+                    <a
+                      href={entry.url}
+                      class="underline decoration-line underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      {org}
+                    </a>
+                  ) : (
+                    org
+                  )}
+                </p>
+              )}
+              {summary && (
+                <p class:list={[org ? 'text-sm text-ink-soft' : 'font-medium']}>{summary}</p>
+              )}
+              {bullets.length > 0 && (
+                <ul class="flex flex-col gap-1 text-sm text-ink-soft">
+                  {bullets.map((b: string) => (
+                    <li>{b}</li>
+                  ))}
+                </ul>
+              )}
+            </>
+          )}
+        </div>
+      </li>
+    );
+  })}
+</ol>

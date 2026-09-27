@@ -1,0 +1,57 @@
+---
+import { projectPoint, MAP_WIDTH, MAP_HEIGHT } from '../lib/world';
+
+interface Props {
+  from: [number, number];
+  to: [number, number];
+  label: string;
+}
+const { from, to, label } = Astro.props;
+
+const a = projectPoint(from);
+const b = projectPoint(to);
+
+const MIN_SPAN = 150;
+const box = (() => {
+  if (!a || !b) return null;
+  const cx = (a.x + b.x) / 2;
+  const cy = (a.y + b.y) / 2;
+  const span = Math.max(Math.abs(a.x - b.x) * 1.9, Math.abs(a.y - b.y) * 3.4, MIN_SPAN);
+  const w = Math.min(span, MAP_WIDTH);
+  const h = w * 0.42;
+  return {
+    x: Math.max(0, Math.min(cx - w / 2, MAP_WIDTH - w)),
+    y: Math.max(0, Math.min(cy - h / 2, MAP_HEIGHT - h)),
+    w,
+    h,
+  };
+})();
+
+const arc =
+  a && b
+    ? `M ${a.x} ${a.y} Q ${(a.x + b.x) / 2} ${Math.min(a.y, b.y) - Math.hypot(b.x - a.x, b.y - a.y) * 0.22} ${b.x} ${b.y}`
+    : '';
+const scale = box ? box.w / 320 : 1;
+---
+
+{box && a && b && (
+  <svg
+    viewBox={`${box.x} ${box.y} ${box.w} ${box.h}`}
+    role="img"
+    aria-label={label}
+    class="w-full max-w-sm rounded-[0.4rem] bg-surface-alt"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <use href="#world-outline" />
+    <path
+      d={arc}
+      fill="none"
+      stroke="var(--color-primary)"
+      stroke-width={1.1 * scale}
+      stroke-linecap="round"
+      stroke-dasharray={`${2.5 * scale} ${2.5 * scale}`}
+    />
+    <circle cx={a.x} cy={a.y} r={2.2 * scale} class="fill-ink-mute" />
+    <circle cx={b.x} cy={b.y} r={3 * scale} class="fill-primary" />
+  </svg>
+)}

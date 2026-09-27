@@ -1,0 +1,143 @@
+---
+import { Font } from 'astro:assets';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site';
+import { LOCALES, localeTags, type Locale } from '../i18n/ui';
+import { localePath, useTranslations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  noindex?: boolean;
+
+  slug: string;
+  wide?: boolean;
+
+  full?: boolean;
+}
+
+const {
+  locale,
+  title,
+  description,
+  noindex = false,
+  slug,
+  wide = false,
+  full = false,
+} = Astro.props;
+const t = useTranslations(locale);
+
+const canonical = new URL(localePath(locale, slug), site.url).href;
+const shareImage = new URL('/static/share.jpg', site.url).href;
+const pageTitle = slug === '' ? `${site.author} | ${site.name}` : `${title} | ${site.name}`;
+---
+
+<!doctype html>
+<html lang={localeTags[locale]}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-jetbrains" />
+
+    {LOCALES.map((alt) => (
+      <link
+        rel="alternate"
+        hreflang={localeTags[alt]}
+        href={new URL(localePath(alt, slug), site.url).href}
+      />
+    ))}
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(localePath('en', slug), site.url).href}
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={shareImage} />
+    <meta property="og:locale" content={localeTags[locale]} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={shareImage} />
+
+    <meta name="theme-color" content={site.themeColor} />
+    <link rel="icon" href="/static/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/static/icon-192x192.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: site.author,
+        url: site.url,
+        sameAs: 'https://github.com/ChrisB9',
+        jobTitle: 'Software Engineer',
+      })}
+    />
+    <script is:inline>
+      try {
+        if (localStorage.getItem('reading') === 'on') {
+          document.documentElement.classList.add('reading');
+        }
+      } catch {}
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col font-sans">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded-full focus:bg-primary focus:px-4 focus:py-2 focus:text-on-primary"
+    >
+      {t('skip')}
+    </a>
+    {!full && <Header locale={locale} slug={slug} />}
+    <main id="main" class="w-full flex-1">
+      {full ? (
+        <slot />
+      ) : (
+        <div
+          class={
+            wide ? 'mx-auto w-full max-w-5xl px-6 py-14' : 'mx-auto w-full max-w-3xl px-6 py-14'
+          }
+        >
+          <slot />
+        </div>
+      )}
+    </main>
+    {!full && <Footer locale={locale} />}
+  </body>
+</html>
+
+<script>
+  const reverse = (value: string) => [...value].reverse().join('');
+
+  for (const el of document.querySelectorAll<HTMLElement>('[data-email-u]')) {
+    const address = `${reverse(el.dataset.emailU ?? '')}@${reverse(el.dataset.emailD ?? '')}`;
+
+    if (el instanceof HTMLAnchorElement) {
+      el.href = `mailto:${address}`;
+      el.removeAttribute('data-email-u');
+      el.removeAttribute('data-email-d');
+      continue;
+    }
+
+    const link = document.createElement('a');
+    link.href = `mailto:${address}`;
+    link.textContent = address;
+    link.className = el.className;
+    el.replaceWith(link);
+  }
+</script>

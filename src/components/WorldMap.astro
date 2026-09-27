@@ -1,0 +1,69 @@
+---
+import {
+  countryPaths,
+  microMarkers,
+  unmappable,
+  countryName,
+  MAP_WIDTH,
+  MAP_HEIGHT,
+} from '../lib/world';
+import visited from '../data/visited.json';
+import type { Locale } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+  label: string;
+  class?: string;
+}
+const { locale, label, class: className } = Astro.props;
+
+const lived = new Set(visited.lived);
+const been = new Set(visited.visited);
+const all = [...visited.lived, ...visited.visited];
+
+const paths = countryPaths();
+const markers = microMarkers(all);
+
+const missing = unmappable(all);
+if (missing.length > 0) {
+  console.warn(`[WorldMap] no geometry for: ${missing.join(', ')}`);
+}
+---
+
+<svg
+  viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}
+  role="img"
+  aria-label={label}
+  class:list={['w-full', className]}
+  preserveAspectRatio="xMidYMid meet"
+>
+  {paths.map(({ code, d }) => {
+    const hasLived = code !== null && lived.has(code);
+    const hasVisited = code !== null && been.has(code);
+    return (
+      <path
+        d={d}
+        class:list={[
+          hasLived ? 'fill-primary' : hasVisited ? 'fill-visited' : 'fill-surface-hover',
+        ]}
+        stroke="var(--color-canvas)"
+        stroke-width="0.7"
+      >
+        {(hasLived || hasVisited) && <title>{countryName(code!, locale)}</title>}
+      </path>
+    );
+  })}
+
+  {markers.map((marker) => (
+    <circle
+      cx={marker.x}
+      cy={marker.y}
+      r="3.5"
+      class={lived.has(marker.code) ? 'fill-primary' : 'fill-visited'}
+      stroke="var(--color-canvas)"
+      stroke-width="1"
+    >
+      <title>{countryName(marker.code, locale)}</title>
+    </circle>
+  ))}
+</svg>
