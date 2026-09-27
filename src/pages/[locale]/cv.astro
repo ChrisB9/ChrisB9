@@ -82,7 +82,7 @@ const range = (from: string | null, to: string | null, section: string) =>
         {` · ${contact.join(' · ')}`}
       </p>
     </div>
-    <div class="no-print flex flex-col items-start gap-2 self-end sm:items-end">
+    <div class="no-print flex flex-col items-start gap-2 self-end">
       <a
         href={`/static/cv-${locale}.pdf`}
         download={`cv-${site.author.toLowerCase().replaceAll(' ', '-')}-${locale}.pdf`}
@@ -94,18 +94,19 @@ const range = (from: string | null, to: string | null, section: string) =>
         />
         {labels.download}
       </a>
-      <a
-        href="/static/rirekisho.pdf"
-        download={`rirekisho-${site.author.toLowerCase().replaceAll(' ', '-')}.pdf`}
-        class="group inline-flex items-center gap-3 text-sm text-ink-mute transition-colors hover:text-primary"
-        lang={locale === 'ja' ? undefined : 'ja'}
-      >
-        <span
-          aria-hidden="true"
-          class="h-1.5 w-1.5 rounded-full bg-ink-mute/60 transition-colors group-hover:bg-primary"
-        />
-        {labels.downloadRirekisho}
-      </a>
+      {locale === 'ja' && (
+        <a
+          href="/static/rirekisho.pdf"
+          download={`rirekisho-${site.author.toLowerCase().replaceAll(' ', '-')}.pdf`}
+          class="group inline-flex items-center gap-3 text-sm text-ink-mute transition-colors hover:text-primary"
+        >
+          <span
+            aria-hidden="true"
+            class="h-1.5 w-1.5 rounded-full bg-ink-mute/60 transition-colors group-hover:bg-primary"
+          />
+          {labels.downloadRirekisho}
+        </a>
+      )}
     </div>
   </header>
 
