@@ -104,17 +104,22 @@ const pageTitle = slug === '' ? `${site.author} | ${site.name}` : `${title} | ${
       {t('skip')}
     </a>
     {!full && <Header locale={locale} slug={slug} />}
-    <main id="main" class="w-full flex-1">
+    <main id="main" class="relative isolate w-full flex-1 overflow-clip">
       {full ? (
         <slot />
       ) : (
-        <div
-          class={
-            wide ? 'mx-auto w-full max-w-5xl px-6 py-14' : 'mx-auto w-full max-w-3xl px-6 py-14'
-          }
-        >
-          <slot />
-        </div>
+        <>
+          <div class="bloom no-print" aria-hidden="true" />
+          <div
+            class={
+              wide
+                ? 'relative mx-auto w-full max-w-5xl px-6 py-14'
+                : 'relative mx-auto w-full max-w-3xl px-6 py-14'
+            }
+          >
+            <slot />
+          </div>
+        </>
       )}
     </main>
     {!full && <Footer locale={locale} />}
