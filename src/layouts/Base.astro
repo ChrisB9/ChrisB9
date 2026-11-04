@@ -89,11 +89,17 @@ const pageTitle = slug === '' ? `${site.author} | ${site.name}` : `${title} | ${
       })}
     />
     <script is:inline>
-      try {
-        if (localStorage.getItem('reading') === 'on') {
-          document.documentElement.classList.add('reading');
-        }
-      } catch {}
+      {
+        const root = document.documentElement;
+        const month = new Date(Date.now() + 9 * 3600e3).getUTCMonth();
+        root.dataset.season = ['winter', 'spring', 'summer', 'autumn'][
+          Math.floor(((month + 1) % 12) / 3)
+        ];
+        try {
+          if (localStorage.getItem('reading') === 'on') root.classList.add('reading');
+          if (localStorage.getItem('seasons') === 'off') root.dataset.seasons = 'off';
+        } catch {}
+      }
     </script>
   </head>
   <body class="min-h-screen flex flex-col font-sans">
@@ -103,6 +109,7 @@ const pageTitle = slug === '' ? `${site.author} | ${site.name}` : `${title} | ${
     >
       {t('skip')}
     </a>
+    {!full && <canvas data-seasons-canvas class="seasons-canvas no-print" aria-hidden="true" />}
     {!full && <Header locale={locale} slug={slug} />}
     <main id="main" class="relative isolate w-full flex-1 overflow-clip">
       {full ? (
@@ -127,6 +134,11 @@ const pageTitle = slug === '' ? `${site.author} | ${site.name}` : `${title} | ${
 </html>
 
 <script>
+  import { mountSeasons } from '../scripts/seasons';
+
+  const seasonsCanvas = document.querySelector<HTMLCanvasElement>('[data-seasons-canvas]');
+  if (seasonsCanvas) mountSeasons(seasonsCanvas);
+
   const reverse = (value: string) => [...value].reverse().join('');
 
   for (const el of document.querySelectorAll<HTMLElement>('[data-email-u]')) {

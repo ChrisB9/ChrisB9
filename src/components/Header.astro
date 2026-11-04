@@ -2,6 +2,7 @@
 import type { Locale } from '../i18n/ui';
 import LangSwitcher from './LangSwitcher.astro';
 import ReadingToggle from './ReadingToggle.astro';
+import SeasonToggle from './SeasonToggle.astro';
 import { localePath, useTranslations } from '../i18n/utils';
 import { site } from '../data/site';
 
@@ -20,7 +21,7 @@ const nav = [
 const current = slug.split('/')[0];
 ---
 
-<header class="no-print border-b border-line">
+<header class="no-print relative border-b border-line">
   <div class="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-3 px-6 py-5">
     <a
       href={localePath(locale)}
@@ -60,6 +61,7 @@ const current = slug.split('/')[0];
     </nav>
 
     <div class="flex items-center gap-2">
+      <SeasonToggle locale={locale} />
       <ReadingToggle locale={locale} />
       <LangSwitcher locale={locale} slug={slug} />
     </div>
