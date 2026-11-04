@@ -125,7 +125,7 @@ We point out that, depending on the country in which the service provider named 
 
 This website sets no cookies. Neither technically necessary cookies nor statistics, marketing or personalisation cookies are used, and no consent is obtained for them because none is required.
 
-For exactly one setting we use your browser's local storage (localStorage): the reading mode (larger text, higher contrast). The stored value is only ever "on" or "off", has no personal connection, remains on your device, is at no point transmitted to us or to third parties, and can be deleted at any time through your browser settings.
+For exactly two settings we use your browser's local storage (localStorage): the reading mode (larger text, higher contrast) and the seasonal effects (falling leaves, petals or snow). The stored values are only ever "on" or "off", have no personal connection, remain on your device, are at no point transmitted to us or to third parties, and can be deleted at any time through your browser settings.
 
 **Data concerned:** none
 

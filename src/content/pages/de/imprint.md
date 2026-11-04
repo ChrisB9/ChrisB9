@@ -140,7 +140,7 @@ Wir weisen darauf hin, dass je nach Sitzland des nachstehend genannten Dienstean
 
 Diese Website setzt keine Cookies. Es werden weder technisch notwendige noch Statistik-, Marketing- oder Personalisierungs-Cookies verwendet, und es wird keine Einwilligung hierfür eingeholt, weil keine erforderlich ist.
 
-Für genau eine Einstellung nutzen wir den lokalen Speicher (localStorage) Ihres Browsers: den Lesemodus (größere Schrift, höherer Kontrast). Der gespeicherte Wert lautet ausschließlich "on" oder "off", weist keinen Personenbezug auf, verbleibt auf Ihrem Gerät, wird zu keinem Zeitpunkt an uns oder Dritte übertragen und kann über die Einstellungen Ihres Browsers jederzeit gelöscht werden.
+Für genau zwei Einstellungen nutzen wir den lokalen Speicher (localStorage) Ihres Browsers: den Lesemodus (größere Schrift, höherer Kontrast) und die Jahreszeiten-Effekte (fallende Blätter, Blüten oder Schnee). Die gespeicherten Werte lauten ausschließlich "on" oder "off", weisen keinen Personenbezug auf, verbleiben auf Ihrem Gerät, werden zu keinem Zeitpunkt an uns oder Dritte übertragen und können über die Einstellungen Ihres Browsers jederzeit gelöscht werden.
 
 **Betroffene Daten:** keine
 

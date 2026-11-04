@@ -1,0 +1,91 @@
+---
+import type { Locale } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+---
+
+<button
+  type="button"
+  data-season-toggle
+  aria-pressed="true"
+  aria-label={t('a11y.seasons')}
+  title={t('a11y.seasons')}
+  class="season-toggle flex items-center rounded-full border border-line px-2.5 py-1 text-ink-mute transition-colors hover:border-primary hover:text-primary aria-pressed:border-primary aria-pressed:bg-primary aria-pressed:text-on-primary"
+>
+  <svg
+    data-icon="spring"
+    aria-hidden="true"
+    width="14"
+    height="14"
+    viewBox="-9 -9 18 18"
+    fill="currentColor"
+  >
+    <path d="M0 8 C-6 4 -6 -4 -2 -8 L0 -5 L2 -8 C6 -4 6 4 0 8 Z" />
+  </svg>
+  <svg
+    data-icon="summer"
+    aria-hidden="true"
+    width="14"
+    height="14"
+    viewBox="-9 -9 18 18"
+    fill="currentColor"
+  >
+    <circle r="3.2" />
+    <circle r="6.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3" />
+  </svg>
+  <svg
+    data-icon="autumn"
+    aria-hidden="true"
+    width="14"
+    height="14"
+    viewBox="-12 -12 24 24"
+    fill="currentColor"
+  >
+    <path d="M0 -11 L2.4 -4.6 L8.6 -7.6 L5.6 -1.6 L11 0.6 L5 2.6 L6.8 8 L1.2 4.6 L0 11 L-1.2 4.6 L-6.8 8 L-5 2.6 L-11 0.6 L-5.6 -1.6 L-8.6 -7.6 L-2.4 -4.6 Z" />
+  </svg>
+  <svg
+    data-icon="winter"
+    aria-hidden="true"
+    width="14"
+    height="14"
+    viewBox="-9 -9 18 18"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.6"
+    stroke-linecap="round"
+  >
+    <path d="M0 -8 V8 M-6.9 -4 L6.9 4 M-6.9 4 L6.9 -4 M-2 -6 L0 -4 L2 -6 M-2 6 L0 4 L2 6" />
+  </svg>
+</button>
+
+<script>
+  const root = document.documentElement;
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-season-toggle]');
+
+  const paint = () => {
+    const on = root.dataset.seasons !== 'off';
+    for (const button of buttons) button.setAttribute('aria-pressed', String(on));
+  };
+
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      const on = root.dataset.seasons === 'off';
+      try {
+        if (on) localStorage.removeItem('seasons');
+        else localStorage.setItem('seasons', 'off');
+      } catch {}
+      if (on) delete root.dataset.seasons;
+      else root.dataset.seasons = 'off';
+      document.dispatchEvent(new Event('seasons-change'));
+      paint();
+    });
+  }
+
+  document.addEventListener('seasons-change', paint);
+  paint();
+</script>

@@ -59,6 +59,7 @@ type Dict = {
   'lang.switch': string;
   skip: string;
   'a11y.reading': string;
+  'a11y.seasons': string;
   untranslated: string;
 };
 
@@ -108,6 +109,7 @@ export const ui: Record<Locale, Dict> = {
     'lang.switch': 'Change language',
     skip: 'Skip to content',
     'a11y.reading': 'Larger text and higher contrast',
+    'a11y.seasons': 'Seasonal effects',
     untranslated: 'This page has not been translated yet. Showing the English version.',
   },
   de: {
@@ -155,6 +157,7 @@ export const ui: Record<Locale, Dict> = {
     'lang.switch': 'Sprache wechseln',
     skip: 'Zum Inhalt springen',
     'a11y.reading': 'Größere Schrift und mehr Kontrast',
+    'a11y.seasons': 'Jahreszeiten-Effekte',
     untranslated: 'Diese Seite ist noch nicht übersetzt. Angezeigt wird die englische Fassung.',
   },
   ja: {
@@ -202,6 +205,7 @@ export const ui: Record<Locale, Dict> = {
     'lang.switch': '言語を変更',
     skip: '本文へスキップ',
     'a11y.reading': '文字を大きく、コントラストを強く',
+    'a11y.seasons': '季節の演出',
     untranslated: 'このページはまだ翻訳されていません。英語版を表示しています。',
   },
 };

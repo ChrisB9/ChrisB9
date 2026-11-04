@@ -122,6 +122,50 @@ html.reading .prose-page:lang(ja) li {
   }
 }
 
+:root {
+  --season-glow: var(--color-primary);
+}
+:root[data-season='spring'] {
+  --season-glow: #ff8fb8;
+}
+:root[data-season='summer'] {
+  --season-glow: #f2b544;
+}
+:root[data-season='autumn'] {
+  --season-glow: #e5533a;
+}
+:root[data-season='winter'] {
+  --season-glow: #7fb2ff;
+}
+
+:root[data-season]:not([data-seasons='off']) .bloom {
+  background: radial-gradient(
+    circle at 50% 50%,
+    color-mix(in srgb, var(--season-glow) 24%, transparent),
+    color-mix(in srgb, var(--color-primary) 10%, transparent) 45%,
+    transparent 70%
+  );
+}
+
+.seasons-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.season-toggle svg {
+  display: none;
+}
+:root[data-season='spring'] .season-toggle [data-icon='spring'],
+:root[data-season='summer'] .season-toggle [data-icon='summer'],
+:root[data-season='autumn'] .season-toggle [data-icon='autumn'],
+:root[data-season='winter'] .season-toggle [data-icon='winter'] {
+  display: block;
+}
+
 .prose-page > * + * {
   margin-top: 1.5rem;
 }
